@@ -1,0 +1,218 @@
+{
+  "studio": {
+    "nome": "Studio Legale Cascasi",
+    "sottoTitolo": "Avvocato a Milano",
+    "avvocato": "Avv. Diego Cascasi",
+    "telefono": "02 1234 5678",
+    "telefonoLink": "tel:+390212345678",
+    "email": "info@studiolegalecascasi.it",
+    "indirizzo": "Via Roma 12, 20121 Milano (MI)",
+    "indirizzoMappa": "Via Roma 12, 20121 Milano",
+    "piva": "12345678901",
+    "annoFondazione": "2006",
+    "orari": "Solo su appuntamento — Lun/Ven: 9:00 – 18:00"
+  },
+
+  "nav": {
+    "home": "Home",
+    "chiSiamo": "Chi siamo",
+    "aree": "Aree di attività",
+    "contatti": "Contatti",
+    "chiama": "Chiama ora"
+  },
+
+  "topbar": {
+    "testo": "Per fissare un appuntamento chiamare il numero"
+  },
+
+  "footer": {
+    "descrizione": "Consulenza e assistenza legale professionale in diritto penale, civile e di famiglia a Milano dal",
+    "navTitolo": "Navigazione",
+    "contattiTitolo": "Contatti",
+    "legaleTitolo": "Legale",
+    "privacyLink": "Privacy Policy",
+    "cookieLink": "Cookie Policy"
+  },
+
+  "cookieBanner": {
+    "testo": "Utilizziamo cookie tecnici (necessari) e, previo tuo consenso, cookie analitici. Leggi la",
+    "linkTesto": "Cookie Policy",
+    "btnAccetta": "Accetta tutti",
+    "btnRifiuta": "Solo necessari",
+    "btnPersonalizza": "Personalizza"
+  },
+
+  "home": {
+    "heroOcchio": "Studio Legale a Milano",
+    "heroTitolo": "Difendiamo i tuoi diritti con dedizione e rigore",
+    "heroTitoloEm": "dedizione",
+    "heroSottotitolo": "Avvocato Diego Cascasi offre consulenza e assistenza legale in diritto penale, civile e di famiglia. Ogni cliente riceve attenzione personale e un approccio su misura.",
+    "heroBtnPrimario": "Le nostre specializzazioni",
+    "heroBtnSecondario": "Prenota una consulenza",
+    "sezioneOcchio": "Cosa offriamo",
+    "sezioneTitolo": "Un supporto completo per ogni esigenza legale",
+    "cards": [
+      {
+        "titolo": "Chi siamo",
+        "testo": "Scopri il profilo professionale dell'Avvocato Cascasi e la storia dello studio fondato nel 2006.",
+        "link": "chi-siamo.html",
+        "linkTesto": "Leggi di più →"
+      },
+      {
+        "titolo": "Aree di attività",
+        "testo": "Diritto penale, diritto di famiglia e diritto minorile. Assistenza completa in ogni fase del procedimento.",
+        "link": "aree.html",
+        "linkTesto": "Leggi di più →"
+      },
+      {
+        "titolo": "Contatti",
+        "testo": "Lo studio riceve su appuntamento. Contattaci per fissare una consulenza personalizzata.",
+        "link": "contatti.html",
+        "linkTesto": "Scrivici →"
+      }
+    ],
+    "ctaTitolo": "Lo studio si trova a Milano e riceve su appuntamento",
+    "ctaSottotitolo": "Contattaci per una prima consulenza e scopri come possiamo aiutarti.",
+    "ctaBottone": "Chiama ora"
+  },
+
+  "chiSiamo": {
+    "heroOcchio": "Lo Studio",
+    "heroTitolo": "Chi siamo",
+    "heroSottotitolo": "Un professionista al tuo fianco con oltre 18 anni di esperienza nel diritto penale, civile e di famiglia.",
+    "sezioneOcchio": "Il professionista",
+    "sezioneTitolo": "Avv. Diego Cascasi",
+    "fotoPlaceholder": "Foto avvocato",
+    "paragrafo1": "L'Avvocato Diego Cascasi è iscritto all'Ordine degli Avvocati di Milano dal 2006. Ha maturato una solida esperienza in diritto penale, con particolare attenzione al diritto di famiglia e minorile, assistendo centinaia di clienti in procedimenti complessi.",
+    "paragrafo2": "Prima di fondare lo studio, ha collaborato con primari studi legali milanesi specializzati in diritto penale internazionale, acquisendo una visione ampia e approfondita del sistema giuridico italiano ed europeo.",
+    "paragrafo3": "È iscritto nelle liste predisposte dall'Ordine degli Avvocati di Milano dei difensori disponibili al Patrocinio a spese dello Stato.",
+    "statistiche": [
+      { "numero": 18,  "suffisso": "+", "etichetta": "Anni di esperienza" },
+      { "numero": 500, "suffisso": "+", "etichetta": "Clienti assistiti" },
+      { "numero": 3,   "suffisso": "",  "etichetta": "Aree di specialità" }
+    ],
+    "valoriOcchio": "I nostri valori",
+    "valoriTitolo": "Come lavoriamo",
+    "valori": [
+      {
+        "titolo": "Attenzione al cliente",
+        "testo": "Ogni cliente è accolto con ascolto attivo e comprensione. Lo studio riceve solo su appuntamento per garantire riservatezza e cura in ogni consulenza."
+      },
+      {
+        "titolo": "Puntualità e rigore",
+        "testo": "Ogni scadenza processuale viene seguita con precisione. La preparazione accurata di ogni atto e memoria è la base del nostro lavoro quotidiano."
+      },
+      {
+        "titolo": "Riservatezza",
+        "testo": "Il segreto professionale è un pilastro irrinunciabile. Ogni informazione condivisa dal cliente è trattata con la massima discrezione e tutela."
+      }
+    ],
+    "ctaTitolo": "Vuoi conoscerci meglio?",
+    "ctaSottotitolo": "Contattaci per fissare un appuntamento e ricevere una prima consulenza personalizzata.",
+    "ctaBottone": "Contattaci"
+  },
+
+  "aree": {
+    "heroOcchio": "Specializzazioni",
+    "heroTitolo": "Aree di attività",
+    "heroSottotitolo": "Lo studio offre assistenza qualificata nelle seguenti aree del diritto, con esperienza maturata in oltre 500 casi seguiti.",
+    "specializzazioni": [
+      {
+        "numero": "01",
+        "titolo": "Diritto Penale",
+        "testo": "Lo studio offre difesa e assistenza in ogni fase del procedimento penale: dalle indagini preliminari al dibattimento, fino ai gradi di impugnazione. L'Avvocato Cascasi assiste sia le persone indagate o imputate, sia le vittime di reato che intendono costituirsi parte civile.",
+        "voci": [
+          "Difesa in udienza preliminare e dibattimento",
+          "Assistenza durante interrogatori e perquisizioni",
+          "Impugnazioni in appello e Cassazione",
+          "Patteggiamento e riti alternativi",
+          "Patrocinio a spese dello Stato"
+        ]
+      },
+      {
+        "numero": "02",
+        "titolo": "Diritto di Famiglia",
+        "testo": "Il diritto penale della famiglia si occupa di reati commessi o subiti nell'ambito delle relazioni familiari. Lo studio assiste genitori, figli e coniugi in situazioni spesso delicate, con un approccio empatico e orientato al benessere di tutti i soggetti coinvolti.",
+        "voci": [
+          "Separazione e divorzio",
+          "Affidamento e mantenimento dei figli",
+          "Reati in ambito familiare (maltrattamenti, stalking)",
+          "Violenza domestica e misure cautelari",
+          "Mediazione familiare"
+        ]
+      },
+      {
+        "numero": "03",
+        "titolo": "Diritto Minorile",
+        "testo": "Nella rappresentanza e assistenza dei minori imputati di un reato, l'Avvocato Cascasi si avvale della collaborazione di mediatori familiari qualificati. L'obiettivo è sempre la tutela del minore e il suo reinserimento nel contesto sociale.",
+        "voci": [
+          "Difesa di minori imputati davanti al Tribunale per i Minorenni",
+          "Tutela dei diritti del minore vittima di reato",
+          "Affidamento e adozione",
+          "Provvedimenti limitativi della responsabilità genitoriale",
+          "Collaborazione con mediatori familiari"
+        ]
+      }
+    ],
+    "attivitaOcchio": "Nel dettaglio",
+    "attivitaTitolo": "Tutte le attività dello studio",
+    "attivita": [
+      "Affidamento minori",
+      "Diritto di famiglia",
+      "Diritto minorile",
+      "Tutela dei diritti dei minori",
+      "Assistenza legale penale",
+      "Avvocato penalista della famiglia",
+      "Consulenza legale stragiudiziale",
+      "Patrocinio a spese dello Stato"
+    ],
+    "ctaBoxTitolo": "Hai bisogno di assistenza?",
+    "ctaBoxTesto": "Lo studio riceve su appuntamento per garantire la massima attenzione a ogni singolo caso.",
+    "ctaBoxBottone": "Prenota un appuntamento",
+    "ctaTitolo": "Non sai da dove iniziare?",
+    "ctaSottotitolo": "Contattaci per una prima valutazione gratuita del tuo caso. Siamo qui per aiutarti.",
+    "ctaBottone": "Contattaci ora"
+  },
+
+  "contatti": {
+    "heroOcchio": "Parliamo",
+    "heroTitolo": "Contatti",
+    "heroSottotitolo": "Lo studio riceve esclusivamente su appuntamento per garantire ad ogni cliente tutta l'attenzione necessaria.",
+    "infoOcchio": "Dove siamo",
+    "infoTitolo": "Vieni a trovarci",
+    "labelIndirizzo": "Indirizzo",
+    "labelTelefono": "Telefono",
+    "labelEmail": "Email",
+    "labelOrari": "Orari di ricevimento",
+    "formOcchio": "Scrivici",
+    "formTitolo": "Richiedi una consulenza",
+    "formSottotitolo": "Compila il modulo e ti risponderemo entro 24 ore lavorative.",
+    "formLabelNome": "Nome",
+    "formLabelCognome": "Cognome",
+    "formLabelEmail": "Email",
+    "formLabelTelefono": "Telefono",
+    "formLabelOggetto": "Oggetto",
+    "formLabelMessaggio": "Messaggio",
+    "formPlaceholderNome": "Mario",
+    "formPlaceholderCognome": "Rossi",
+    "formPlaceholderEmail": "mario@email.it",
+    "formPlaceholderTelefono": "+39 333 1234567",
+    "formPlaceholderOggetto": "Seleziona un'area",
+    "formPlaceholderMessaggio": "Descrivi brevemente la tua situazione...",
+    "formOpzioni": [
+      { "value": "penale",   "testo": "Diritto Penale" },
+      { "value": "famiglia", "testo": "Diritto di Famiglia" },
+      { "value": "minorile", "testo": "Diritto Minorile" },
+      { "value": "altro",    "testo": "Altro" }
+    ],
+    "formPrivacy": "Ho letto e accetto la",
+    "formPrivacyLink": "Privacy Policy",
+    "formBottone": "Invia messaggio",
+    "formBottoneInvio": "Invio in corso…",
+    "formNota": "* Campi obbligatori. I tuoi dati sono trattati nel rispetto del GDPR.",
+    "successTitolo": "Messaggio inviato!",
+    "successTesto": "Ti risponderemo entro 24 ore lavorative.",
+    "mappaTasto": "Apri in Google Maps",
+    "mappaLink": "https://maps.google.com/?q=Via+Roma+12+Milano"
+  }
+}

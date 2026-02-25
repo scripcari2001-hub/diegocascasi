@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy – Studio Legale Cascasi</title>
+  <meta name="description" content="Informativa sull'uso dei cookie del sito Studio Legale Cascasi ai sensi del D.Lgs. 196/2003 e del GDPR 2016/679.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+  <style>
+    .legal-body { max-width: 780px; margin: 0 auto; }
+    .legal-body h2 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; color:var(--navy); margin:40px 0 12px; padding-top:16px; border-top:1px solid var(--border); }
+    .legal-body h2:first-of-type { border-top:none; margin-top:0; }
+    .legal-body p { font-size:15px; color:#444; font-weight:300; margin-bottom:14px; max-width:100%; }
+    .legal-body ul { list-style:none; margin:0 0 16px; padding:0; display:flex; flex-direction:column; gap:8px; }
+    .legal-body ul li { font-size:15px; color:#444; font-weight:300; padding-left:18px; position:relative; }
+    .legal-body ul li::before { content:''; position:absolute; left:0; top:10px; width:6px; height:6px; border-radius:50%; background:var(--gold); }
+    .legal-body strong { font-weight:600; color:var(--navy); }
+    .legal-body a { color:var(--gold); }
+    .legal-meta { display:inline-block; background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:10px 18px; font-size:13px; color:var(--muted); margin-bottom:36px; }
+
+    /* Tabella cookie */
+    .cookie-table { width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:14px; }
+    .cookie-table th { background:var(--navy); color:var(--white); padding:12px 14px; text-align:left; font-weight:500; font-size:12px; letter-spacing:0.5px; }
+    .cookie-table td { padding:11px 14px; border-bottom:1px solid var(--border); color:#444; font-weight:300; vertical-align:top; }
+    .cookie-table tr:last-child td { border-bottom:none; }
+    .cookie-table tr:nth-child(even) td { background:var(--cream); }
+
+    /* Pannello preferenze */
+    .cookie-prefs { background:var(--cream); border:1px solid var(--border); border-radius:16px; padding:32px; margin:28px 0; }
+    .cookie-prefs h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--navy); margin-bottom:20px; }
+    .pref-row { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; border-bottom:1px solid var(--border); }
+    .pref-row:last-of-type { border-bottom:none; }
+    .pref-info h4 { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:4px; }
+    .pref-info p { font-size:13px; color:var(--muted); margin:0; max-width:100%; }
+
+    /* Toggle switch */
+    .toggle { position:relative; width:46px; height:26px; flex-shrink:0; }
+    .toggle input { opacity:0; width:0; height:0; }
+    .toggle-slider { position:absolute; inset:0; background:#ccc; border-radius:26px; cursor:pointer; transition:background 0.3s; }
+    .toggle-slider::before { content:''; position:absolute; width:20px; height:20px; left:3px; top:3px; background:white; border-radius:50%; transition:transform 0.3s; }
+    .toggle input:checked + .toggle-slider { background:var(--navy); }
+    .toggle input:checked + .toggle-slider::before { transform:translateX(20px); }
+    .toggle input:disabled + .toggle-slider { background:var(--gold); cursor:not-allowed; }
+    .toggle input:disabled:checked + .toggle-slider::before { transform:translateX(20px); }
+
+    .pref-actions { display:flex; gap:12px; margin-top:24px; flex-wrap:wrap; }
+    .btn-save-prefs { padding:12px 28px; background:var(--navy); color:var(--white); font-family:'Jost',sans-serif; font-size:13px; font-weight:600; letter-spacing:1px; text-transform:uppercase; border:none; border-radius:8px; cursor:pointer; transition:background 0.2s; }
+    .btn-save-prefs:hover { background:var(--navy2); }
+    .btn-reject-all { padding:12px 28px; background:transparent; color:var(--muted); font-family:'Jost',sans-serif; font-size:13px; font-weight:500; border:1px solid var(--border); border-radius:8px; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
+    .btn-reject-all:hover { border-color:var(--muted); color:var(--text); }
+    .pref-saved { display:none; font-size:13px; color:#4caf50; font-weight:500; align-items:center; gap:6px; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    Per fissare un appuntamento chiamare il numero &nbsp;<a href="tel:+390212345678">02 1234 5678</a>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="brand">Studio Legale Cascasi<span>Avvocato a Milano</span></a>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="aree.html">Aree di attività</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="tel:+390212345678" class="btn-call">Chiama ora</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Documenti legali</p>
+      <h1>Cookie Policy</h1>
+      <p class="page-hero-sub">Informativa sull'uso dei cookie ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="legal-body">
+
+        <span class="legal-meta">Ultimo aggiornamento: gennaio 2025 &nbsp;·&nbsp; Versione 1.0</span>
+
+        <h2>1. Cosa sono i cookie</h2>
+        <p>I cookie sono piccoli file di testo che i siti web visitati dall'utente inviano al terminale (computer, tablet, smartphone), dove vengono memorizzati e trasmessi agli stessi siti alla visita successiva. Grazie ai cookie, il sito ricorda le preferenze dell'utente e migliora la sua esperienza di navigazione.</p>
+
+        <h2>2. Tipologie di cookie utilizzati</h2>
+        <p>Il sito <strong>www.studiolegalecascasi.it</strong> utilizza le seguenti categorie di cookie:</p>
+
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Nome</th>
+              <th>Finalità</th>
+              <th>Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tecnici (necessari)</strong></td>
+              <td>cookie_consent</td>
+              <td>Salva le preferenze sui cookie espresse dall'utente</td>
+              <td>12 mesi</td>
+            </tr>
+            <tr>
+              <td><strong>Tecnici (necessari)</strong></td>
+              <td>session_id</td>
+              <td>Gestisce la sessione di navigazione</td>
+              <td>Sessione</td>
+            </tr>
+            <tr>
+              <td><strong>Analitici (opzionali)</strong></td>
+              <td>_ga, _gid</td>
+              <td>Google Analytics – analisi statistica anonimizzata del traffico</td>
+              <td>2 anni / 24 ore</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>3. Cookie tecnici (necessari)</h2>
+        <p>I cookie tecnici sono strettamente necessari al funzionamento del sito e non richiedono il consenso dell'utente ai sensi dell'art. 122 del D.Lgs. 196/2003. Questi cookie consentono di ricordare le preferenze sulla gestione dei cookie e di mantenere attiva la sessione di navigazione.</p>
+
+        <h2>4. Cookie analitici (opzionali)</h2>
+        <p>Previo consenso dell'utente, il sito utilizza Google Analytics per raccogliere informazioni statistiche aggregate e anonimizzate sull'utilizzo del sito (pagine visitate, durata della sessione, provenienza geografica). Questi dati sono elaborati da Google LLC secondo la propria informativa privacy disponibile su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+        <p>L'anonimizzazione degli indirizzi IP è attivata. I dati non vengono utilizzati per identificare i singoli utenti.</p>
+
+        <h2>5. Gestisci le tue preferenze</h2>
+        <p>Puoi modificare in qualsiasi momento le tue preferenze sui cookie tramite il pannello qui sotto. I cookie tecnici non possono essere disattivati in quanto necessari al funzionamento del sito.</p>
+
+        <div class="cookie-prefs">
+          <h3>Le tue preferenze sui cookie</h3>
+
+          <div class="pref-row">
+            <div class="pref-info">
+              <h4>Cookie tecnici (necessari)</h4>
+              <p>Indispensabili per il corretto funzionamento del sito. Non possono essere disattivati.</p>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-tecnici" checked disabled>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="pref-row">
+            <div class="pref-info">
+              <h4>Cookie analitici</h4>
+              <p>Ci aiutano a capire come gli utenti utilizzano il sito, in forma anonima e aggregata.</p>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-analitici">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="pref-actions">
+            <button class="btn-save-prefs" id="savePrefs">Salva preferenze</button>
+            <button class="btn-reject-all" id="rejectAll">Rifiuta tutti i facoltativi</button>
+            <span class="pref-saved" id="prefSaved">✓ Preferenze salvate</span>
+          </div>
+        </div>
+
+        <h2>6. Come disabilitare i cookie dal browser</h2>
+        <p>In alternativa al pannello sopra, è possibile disabilitare i cookie direttamente dalle impostazioni del proprio browser:</p>
+        <ul>
+          <li><strong>Chrome:</strong> Impostazioni → Privacy e sicurezza → Cookie e altri dati dei siti</li>
+          <li><strong>Firefox:</strong> Impostazioni → Privacy e sicurezza → Cookie e dati dei siti web</li>
+          <li><strong>Safari:</strong> Preferenze → Privacy → Gestisci dati dei siti web</li>
+          <li><strong>Edge:</strong> Impostazioni → Cookie e autorizzazioni sito → Cookie e dati archiviati</li>
+        </ul>
+        <p>La disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento del sito.</p>
+
+        <h2>7. Opt-out Google Analytics</h2>
+        <p>Per disattivare il tracciamento di Google Analytics su tutti i siti web, è possibile installare il componente aggiuntivo del browser disponibile su <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+
+        <h2>8. Contatti e modifiche</h2>
+        <p>Per qualsiasi richiesta relativa ai cookie o alla privacy, è possibile contattare lo studio all'indirizzo <a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a>.</p>
+        <p>Il Titolare si riserva il diritto di modificare questa Cookie Policy in qualsiasi momento. Le modifiche saranno efficaci dalla data di pubblicazione sul sito.</p>
+        <p>Per informazioni complete sul trattamento dei dati personali, si rimanda alla <a href="privacy.html">Privacy Policy</a>.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Studio Legale Cascasi<span>Avvocato a Milano</span></div>
+          <p class="footer-desc">Consulenza e assistenza legale professionale in diritto penale, civile e di famiglia a Milano dal 2006.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi siamo</a></li>
+            <li><a href="aree.html">Aree di attività</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legale</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookie.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Studio Legale Cascasi – P.IVA 12345678901</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    /* ── Pannello preferenze cookie ── */
+    const saved = JSON.parse(localStorage.getItem('cookiePrefs') || '{}');
+    if (saved.analitici) document.getElementById('toggle-analitici').checked = true;
+
+    document.getElementById('savePrefs').addEventListener('click', () => {
+      const prefs = { analitici: document.getElementById('toggle-analitici').checked };
+      localStorage.setItem('cookiePrefs', JSON.stringify(prefs));
+      localStorage.setItem('cookieConsent', 'custom');
+      const msg = document.getElementById('prefSaved');
+      msg.style.display = 'flex';
+      setTimeout(() => msg.style.display = 'none', 3000);
+    });
+
+    document.getElementById('rejectAll').addEventListener('click', () => {
+      document.getElementById('toggle-analitici').checked = false;
+      localStorage.setItem('cookiePrefs', JSON.stringify({ analitici: false }));
+      localStorage.setItem('cookieConsent', 'rejected');
+      const msg = document.getElementById('prefSaved');
+      msg.style.display = 'flex';
+      setTimeout(() => msg.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>

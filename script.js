@@ -546,8 +546,13 @@ fetch('contenuti.json', { cache: 'no-store' })
 
     popolaComuni(data);
 
-const path = window.location.pathname.replace(/\/$/, ''); // toglie "/" finale
-const page = (path.split('/').pop() || 'index').toLowerCase();
+const path = window.location.pathname.replace(/\/$/, '');
+let page = (path.split('/').pop() || 'index').toLowerCase();
+
+if (location.hostname.endsWith('github.io')) {
+  const repo = (location.pathname.split('/')[1] || '').toLowerCase();
+  if (page === repo) page = 'index';
+}
 
 if (page === 'index' || page === 'index.html') {
   popolaHome(data);

@@ -536,7 +536,7 @@ function initCookieBanner(cb) {
 /* ════════════════════════════════════════
   Caricamento JSON
 ════════════════════════════════════════ */
-fetch('/contenuti.json', { cache: 'no-store' })
+fetch('contenuti.json', { cache: 'no-store' })
   .then(res => {
     if (!res.ok) throw new Error('File non trovato');
     return res.json();

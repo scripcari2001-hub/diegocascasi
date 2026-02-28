@@ -452,6 +452,13 @@ function initForm() {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
+    if (!validate()) {
+        // Scrolla al primo errore
+        const firstError = form.querySelector('.invalid, .form-check.error input');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
     let valid = true;
     form.querySelectorAll('[required]').forEach(field => {
       field.style.borderColor = '';

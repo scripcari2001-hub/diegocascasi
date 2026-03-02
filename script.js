@@ -549,7 +549,9 @@ fetch('contenuti.json', { cache: 'no-store' })
 const path = window.location.pathname.replace(/\/$/, '');
 let page = (path.split('/').pop() || 'index').toLowerCase();
 
-if (location.hostname.endsWith('github.io')) {
+const host = location.hostname.toLowerCase();
+const isGithubPages = host === 'github.io' || host.endsWith('.github.io');
+if (isGithubPages) {
   const repo = (location.pathname.split('/')[1] || '').toLowerCase();
   if (page === repo) page = 'index';
 }

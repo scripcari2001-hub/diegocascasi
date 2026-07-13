@@ -13,9 +13,8 @@
   border: 0;
 }
 
-/* Checkbox: evita che regole globali rompano la spunta nativa */
-.form-check input[type="checkbox"],
-.cookie-prefs input[type="checkbox"] {
+/* Checkbox del form contatti: evita che regole globali rompano la spunta nativa */
+.form-check input[type="checkbox"] {
   appearance: auto !important;
   -webkit-appearance: checkbox !important;
   width: 17px !important;

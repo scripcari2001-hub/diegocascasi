@@ -10,13 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accessibility-fixes.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
 </head>
 <body>
 
   <div class="topbar">
-  &nbsp;<a href="#"></a>
+    <span>Per fissare un appuntamento chiamare il numero&nbsp;</span><a href="tel:+390212345678">02 1234 5678</a>
   </div>
 
   <header class="header">
@@ -32,88 +33,90 @@
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <p class="hero-eyebrow"></p>
-      <h1></h1>
-      <p class="page-hero-sub"></p>
-    </div>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="hero-eyebrow">Lo Studio</p>
+        <h1>Chi siamo</h1>
+        <p class="page-hero-sub">Un professionista al tuo fianco con oltre 18 anni di esperienza nel diritto penale, civile e di famiglia.</p>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="studio-grid">
-        <div class="studio-img-wrap">
-          <div class="img-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="8" r="4"/><path d="M12 14c-5 0-8 2-8 4v2h16v-2c0-2-3-4-8-4z"/></svg>
-            <span></span>
+    <section class="section">
+      <div class="container">
+        <div class="studio-grid">
+          <div class="studio-img-wrap">
+            <div class="img-placeholder" role="img" aria-label="Foto dell'Avvocato Diego Cascasi da inserire">
+              <svg aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="4"/><path d="M12 14c-5 0-8 2-8 4v2h16v-2c0-2-3-4-8-4z"/></svg>
+              <span>Foto avvocato</span>
+            </div>
           </div>
-        </div>
-        <div class="studio-text">
-          <p class="section-label"></p>
-          <div class="divider"></div>
-          <h2></h2>
-          <p></p>
-          <p></p>
-          <p></p>
-          <div class="studio-detail">
-            <div class="detail-item">
-              <span class="detail-num" data-target="18" data-suffix="+"></span>
-              <span class="detail-label"></span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-num" data-target="500" data-suffix="+"></span>
-              <span class="detail-label"></span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-num" data-target="3" data-suffix=""></span>
-              <span class="detail-label"></span>
+          <div class="studio-text">
+            <p class="section-label">Il professionista</p>
+            <div class="divider"></div>
+            <h2>Avv. Diego Cascasi</h2>
+            <p>L'Avvocato Diego Cascasi è iscritto all'Ordine degli Avvocati di Milano dal 2006. Ha maturato una solida esperienza in diritto penale, con particolare attenzione al diritto di famiglia e minorile, assistendo centinaia di clienti in procedimenti complessi.</p>
+            <p>Prima di fondare lo studio, ha collaborato con primari studi legali milanesi specializzati in diritto penale internazionale, acquisendo una visione ampia e approfondita del sistema giuridico italiano ed europeo.</p>
+            <p>È iscritto nelle liste predisposte dall'Ordine degli Avvocati di Milano dei difensori disponibili al Patrocinio a spese dello Stato.</p>
+            <div class="studio-detail" aria-label="Dati sintetici dello studio">
+              <div class="detail-item">
+                <span class="detail-num" data-target="18" data-suffix="+">18+</span>
+                <span class="detail-label">Anni di esperienza</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-num" data-target="500" data-suffix="+">500+</span>
+                <span class="detail-label">Clienti assistiti</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-num" data-target="3" data-suffix="">3</span>
+                <span class="detail-label">Aree di specialità</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-cream">
-    <div class="container">
-      <p class="section-label"></p>
-      <div class="divider"></div>
-      <h2></h2>
-      <div class="valori-grid">
-        <div class="valore-card">
-          <div class="spec-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <section class="section section-cream">
+      <div class="container">
+        <p class="section-label">I nostri valori</p>
+        <div class="divider"></div>
+        <h2>Come lavoriamo</h2>
+        <div class="valori-grid">
+          <div class="valore-card">
+            <div class="spec-icon">
+              <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Attenzione al cliente</h3>
+            <p>Ogni cliente è accolto con ascolto attivo e comprensione. Lo studio riceve solo su appuntamento per garantire riservatezza e cura in ogni consulenza.</p>
           </div>
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="valore-card">
-          <div class="spec-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div class="valore-card">
+            <div class="spec-icon">
+              <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Puntualità e rigore</h3>
+            <p>Ogni scadenza processuale viene seguita con precisione. La preparazione accurata di ogni atto e memoria è la base del nostro lavoro quotidiano.</p>
           </div>
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="valore-card">
-          <div class="spec-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="valore-card">
+            <div class="spec-icon">
+              <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Riservatezza</h3>
+            <p>Il segreto professionale è un pilastro irrinunciabile. Ogni informazione condivisa dal cliente è trattata con la massima discrezione e tutela.</p>
           </div>
-          <h3></h3>
-          <p></p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta-banner">
-    <div class="container">
-      <h2></h2>
-      <p></p>
-      <a href="contatti.html" class="btn-primary"></a>
-    </div>
-  </section>
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Vuoi conoscerci meglio?</h2>
+        <p>Contattaci per fissare un appuntamento e ricevere una prima consulenza personalizzata.</p>
+        <a href="contatti.html" class="btn-primary">Contattaci</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -139,13 +142,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Studio Legale Cascasi – P.IVA 12345678901</span>
+        <span>© 2026 Studio Legale Cascasi – P.IVA 12345678901</span>
         <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
+  <script src="site-enhancements.js" defer></script>
 </body>
 </html>
-

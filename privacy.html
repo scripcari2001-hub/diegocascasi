@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accessibility-fixes.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
   <style>
@@ -28,7 +29,7 @@
 <body>
 
   <div class="topbar">
-    Per fissare un appuntamento chiamare il numero &nbsp;<a href="tel:+390212345678">02 1234 5678</a>
+    <span>Per fissare un appuntamento chiamare il numero&nbsp;</span><a href="tel:+390212345678">02 1234 5678</a>
   </div>
 
   <header class="header">
@@ -44,82 +45,83 @@
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <p class="hero-eyebrow">Documenti legali</p>
-      <h1>Privacy Policy</h1>
-      <p class="page-hero-sub">Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR).</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="legal-body">
-
-        <span class="legal-meta">Ultimo aggiornamento: marzo 2026 &nbsp;·&nbsp; Versione 1.0</span>
-
-        <h2>1. Titolare del trattamento</h2>
-        <p>Il Titolare del trattamento dei dati personali raccolti tramite il sito web <strong>www.studiolegalecascasi.it</strong> è:</p>
-        <p>
-          <strong>Studio Legale Cascasi</strong><br>
-          Avv. Diego Cascasi<br>
-          Via Roma 12, 20121 Milano (MI)<br>
-          P.IVA: 12345678901<br>
-          Email: <a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a><br>
-          Tel: <a href="tel:+390212345678">02 1234 5678</a>
-        </p>
-
-        <h2>2. Tipologie di dati raccolti</h2>
-        <p>Il sito raccoglie le seguenti categorie di dati personali:</p>
-        <ul>
-          <li><strong>Dati di navigazione:</strong> indirizzo IP, tipo di browser, sistema operativo, pagine visitate, orario di accesso. Questi dati sono raccolti automaticamente e non vengono associati a utenti identificati.</li>
-          <li><strong>Dati forniti volontariamente:</strong> nome, cognome, indirizzo email, numero di telefono e qualsiasi altra informazione inserita nel modulo di contatto.</li>
-          <li><strong>Cookie:</strong> file di piccole dimensioni salvati sul dispositivo dell'utente (vedi la Cookie Policy per i dettagli).</li>
-        </ul>
-
-        <h2>3. Finalità e base giuridica del trattamento</h2>
-        <p>I dati personali sono trattati per le seguenti finalità:</p>
-        <ul>
-          <li><strong>Risposta alle richieste di contatto</strong> (art. 6, par. 1, lett. b GDPR): i dati inseriti nel form sono utilizzati esclusivamente per rispondere alla richiesta dell'utente.</li>
-          <li><strong>Obblighi di legge</strong> (art. 6, par. 1, lett. c GDPR): il trattamento può essere necessario per adempiere a obblighi normativi, fiscali o professionali cui è soggetto lo studio.</li>
-          <li><strong>Interesse legittimo</strong> (art. 6, par. 1, lett. f GDPR): analisi statistiche anonime sulla navigazione del sito al fine di migliorarne i contenuti e le funzionalità.</li>
-        </ul>
-
-        <h2>4. Modalità del trattamento e conservazione</h2>
-        <p>I dati sono trattati con strumenti informatici e telematici, adottando le misure di sicurezza tecniche e organizzative adeguate a prevenire la perdita, l'accesso non autorizzato, la divulgazione o la modifica non autorizzata degli stessi.</p>
-        <p>I dati forniti attraverso il modulo di contatto sono conservati per il tempo strettamente necessario a evadere la richiesta e, successivamente, per il periodo previsto dagli obblighi di legge applicabili (generalmente 10 anni per la documentazione fiscale e professionale).</p>
-        <p>I dati di navigazione vengono cancellati entro 90 giorni dalla raccolta.</p>
-
-        <h2>5. Comunicazione e diffusione dei dati</h2>
-        <p>I dati personali non sono diffusi a terzi salvo nei seguenti casi:</p>
-        <ul>
-          <li>Soggetti che forniscono servizi tecnici indispensabili all'operatività del sito (hosting provider, servizi email), designati come Responsabili del trattamento ai sensi dell'art. 28 GDPR.</li>
-          <li>Autorità pubbliche o soggetti terzi quando richiesto dalla legge, da un regolamento o da un provvedimento dell'autorità.</li>
-        </ul>
-        <p>I dati non vengono trasferiti al di fuori dello Spazio Economico Europeo.</p>
-
-        <h2>6. Diritti dell'interessato</h2>
-        <p>Ai sensi degli artt. 15–22 del GDPR, l'utente ha il diritto di:</p>
-        <ul>
-          <li><strong>Accesso:</strong> ottenere conferma del trattamento e ricevere copia dei dati.</li>
-          <li><strong>Rettifica:</strong> richiedere la correzione di dati inesatti o incompleti.</li>
-          <li><strong>Cancellazione ("diritto all'oblio"):</strong> richiedere la cancellazione dei dati nei casi previsti dalla legge.</li>
-          <li><strong>Limitazione:</strong> richiedere la limitazione del trattamento in determinate circostanze.</li>
-          <li><strong>Portabilità:</strong> ricevere i dati in formato strutturato e leggibile da dispositivo automatico.</li>
-          <li><strong>Opposizione:</strong> opporsi al trattamento basato sull'interesse legittimo del titolare.</li>
-          <li><strong>Revoca del consenso:</strong> revocare in qualsiasi momento il consenso eventualmente prestato, senza pregiudicare la liceità del trattamento precedente.</li>
-        </ul>
-        <p>Per esercitare i propri diritti, l'utente può scrivere a: <a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a></p>
-
-        <h2>7. Reclamo all'Autorità di controllo</h2>
-        <p>L'utente ha il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it), qualora ritenga che il trattamento dei propri dati personali violi il GDPR.</p>
-
-        <h2>8. Modifiche alla presente informativa</h2>
-        <p>Il Titolare si riserva il diritto di apportare modifiche alla presente informativa in qualsiasi momento, dandone pubblicità sul sito. Si prega di consultare questa pagina periodicamente, prendendo come riferimento la data di ultima modifica indicata in cima al documento.</p>
-
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="hero-eyebrow">Documenti legali</p>
+        <h1>Privacy Policy</h1>
+        <p class="page-hero-sub">Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR).</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="legal-body">
+
+          <span class="legal-meta">Ultimo aggiornamento: giugno 2026 &nbsp;·&nbsp; Versione 1.1</span>
+
+          <h2>1. Titolare del trattamento</h2>
+          <p>Il Titolare del trattamento dei dati personali raccolti tramite il sito web <strong>www.studiolegalecascasi.it</strong> è:</p>
+          <p>
+            <strong>Studio Legale Cascasi</strong><br>
+            Avv. Diego Cascasi<br>
+            Via Roma 12, 20121 Milano (MI)<br>
+            P.IVA: 12345678901<br>
+            Email: <a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a><br>
+            Tel: <a href="tel:+390212345678">02 1234 5678</a>
+          </p>
+
+          <h2>2. Tipologie di dati raccolti</h2>
+          <p>Il sito può raccogliere le seguenti categorie di dati personali:</p>
+          <ul>
+            <li><strong>Dati di navigazione:</strong> indirizzo IP, tipo di browser, sistema operativo, pagine visitate e orario di accesso.</li>
+            <li><strong>Dati forniti volontariamente:</strong> nome, cognome, indirizzo email, numero di telefono e testo del messaggio inviato tramite il modulo di contatto.</li>
+            <li><strong>Preferenze locali:</strong> scelta relativa al banner cookie e alle preferenze analitiche, salvata nel browser dell'utente.</li>
+          </ul>
+
+          <h2>3. Finalità e base giuridica del trattamento</h2>
+          <p>I dati personali sono trattati per le seguenti finalità:</p>
+          <ul>
+            <li><strong>Risposta alle richieste di contatto</strong> (art. 6, par. 1, lett. b GDPR): i dati inseriti nel form sono usati per rispondere alla richiesta dell'utente.</li>
+            <li><strong>Obblighi di legge</strong> (art. 6, par. 1, lett. c GDPR): il trattamento può essere necessario per obblighi normativi, fiscali o professionali.</li>
+            <li><strong>Funzionamento tecnico del sito</strong> (art. 6, par. 1, lett. f GDPR): le preferenze locali sono usate per ricordare le scelte dell'utente.</li>
+            <li><strong>Cookie analitici</strong> (consenso dell'utente): eventuali strumenti analitici sono attivati solo se l'utente presta il consenso.</li>
+          </ul>
+
+          <h2>4. Modalità del trattamento e conservazione</h2>
+          <p>I dati sono trattati con strumenti informatici e telematici, adottando misure di sicurezza tecniche e organizzative adeguate.</p>
+          <p>I dati forniti tramite il modulo di contatto sono conservati per il tempo necessario a gestire la richiesta e, quando applicabile, per i periodi previsti dagli obblighi di legge o professionali.</p>
+          <p>Le preferenze cookie sono conservate nel browser dell'utente fino alla cancellazione dei dati locali.</p>
+
+          <h2>5. Comunicazione dei dati e fornitori tecnici</h2>
+          <p>I dati personali non sono diffusi. Possono essere trattati da soggetti che forniscono servizi tecnici necessari all'operatività del sito, come hosting, email, font e gestione del modulo di contatto.</p>
+          <p>Quando necessario, tali soggetti operano come responsabili del trattamento o autonomi titolari secondo i rispettivi ruoli.</p>
+          <p>Per servizi tecnici esterni, è opportuno verificare le condizioni contrattuali e le garanzie previste per eventuali trasferimenti di dati fuori dallo Spazio Economico Europeo.</p>
+
+          <h2>6. Diritti dell'interessato</h2>
+          <p>Ai sensi degli artt. 15–22 del GDPR, l'utente ha il diritto di:</p>
+          <ul>
+            <li><strong>Accesso:</strong> ottenere conferma del trattamento e ricevere copia dei dati.</li>
+            <li><strong>Rettifica:</strong> richiedere la correzione di dati inesatti o incompleti.</li>
+            <li><strong>Cancellazione:</strong> richiedere la cancellazione dei dati nei casi previsti dalla legge.</li>
+            <li><strong>Limitazione:</strong> richiedere la limitazione del trattamento.</li>
+            <li><strong>Portabilità:</strong> ricevere i dati in formato strutturato e leggibile da dispositivo automatico.</li>
+            <li><strong>Opposizione:</strong> opporsi al trattamento basato sull'interesse legittimo.</li>
+            <li><strong>Revoca del consenso:</strong> revocare il consenso prestato, senza pregiudicare il trattamento precedente.</li>
+          </ul>
+          <p>Per esercitare i propri diritti, l'utente può scrivere a: <a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a></p>
+
+          <h2>7. Reclamo all'Autorità di controllo</h2>
+          <p>L'utente ha il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong>, qualora ritenga che il trattamento dei propri dati personali violi il GDPR.</p>
+
+          <h2>8. Modifiche alla presente informativa</h2>
+          <p>Il Titolare può modificare questa informativa. Le modifiche saranno pubblicate su questa pagina e saranno efficaci dalla data di pubblicazione.</p>
+          <p>Per maggiori dettagli sulle preferenze locali e sui cookie, consulta la <a href="cookie.html">Cookie Policy</a>.</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -146,12 +148,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Studio Legale Cascasi – P.IVA 12345678901</span>
+        <span>© 2026 Studio Legale Cascasi – P.IVA 12345678901</span>
         <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
+  <script src="site-enhancements.js" defer></script>
 </body>
 </html>

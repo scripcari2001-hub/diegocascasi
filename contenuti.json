@@ -170,7 +170,7 @@
     "ctaBoxTesto": "Lo studio riceve su appuntamento per garantire la massima attenzione a ogni singolo caso.",
     "ctaBoxBottone": "Prenota un appuntamento",
     "ctaTitolo": "Non sai da dove iniziare?",
-    "ctaSottotitolo": "Contattaci per una prima valutazione gratuita del tuo caso. Siamo qui per aiutarti.",
+    "ctaSottotitolo": "Contattaci per un primo inquadramento del tuo caso. Lo studio valuterà le modalità più adatte per assisterti.",
     "ctaBottone": "Contattaci ora"
   },
 
@@ -186,7 +186,7 @@
     "labelOrari": "Orari di ricevimento",
     "formOcchio": "Scrivici",
     "formTitolo": "Richiedi una consulenza",
-    "formSottotitolo": "Compila il modulo e ti risponderemo entro 24 ore lavorative.",
+    "formSottotitolo": "Compila il modulo e ti risponderemo nel più breve tempo possibile.",
     "formLabelNome": "Nome",
     "formLabelCognome": "Cognome",
     "formLabelEmail": "Email",
@@ -211,7 +211,7 @@
     "formBottoneInvio": "Invio in corso…",
     "formNota": "* Campi obbligatori. I tuoi dati sono trattati nel rispetto del GDPR.",
     "successTitolo": "Messaggio inviato!",
-    "successTesto": "Ti risponderemo entro 24 ore lavorative.",
+    "successTesto": "Ti risponderemo nel più breve tempo possibile.",
     "mappaTasto": "Apri in Google Maps",
     "mappaLink": "https://maps.google.com/?q=Via+Roma+12+Milano"
   }

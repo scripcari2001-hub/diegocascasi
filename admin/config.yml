@@ -1,7 +1,9 @@
 backend:
-  name: github
+  name: git-gateway
   repo: scripcari2001-hub/diegocascasi
   branch: main
+  identity_url: https://auth.decapbridge.com/sites/388e5fc0-dff1-468d-ab02-2eb67fc887dd
+  gateway_url: https://gateway.decapbridge.com
 
 publish_mode: simple
 locale: it

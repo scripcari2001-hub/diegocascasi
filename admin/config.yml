@@ -1,0 +1,219 @@
+backend:
+  name: github
+  repo: scripcari2001-hub/diegocascasi
+  branch: main
+
+publish_mode: simple
+locale: it
+site_url: https://scripcari2001-hub.github.io/diegocascasi/
+display_url: https://scripcari2001-hub.github.io/diegocascasi/
+
+editor:
+  preview: false
+
+collections:
+  - name: contenuti
+    label: Contenuti del sito
+    files:
+      - name: testi_sito
+        label: Modifica testi del sito
+        file: contenuti.json
+        format: json
+        fields:
+          - label: Dati dello studio
+            name: studio
+            widget: object
+            collapsed: false
+            fields:
+              - { label: Nome studio, name: nome, widget: string }
+              - { label: Sottotitolo, name: sottoTitolo, widget: string }
+              - { label: Nome avvocato, name: avvocato, widget: string }
+              - { label: Telefono visibile, name: telefono, widget: string }
+              - { label: Link telefono, name: telefonoLink, widget: string, hint: "Esempio: tel:+390212345678" }
+              - { label: Email, name: email, widget: string }
+              - { label: Indirizzo, name: indirizzo, widget: string }
+              - { label: Indirizzo per la mappa, name: indirizzoMappa, widget: string }
+              - { label: Partita IVA, name: piva, widget: string }
+              - { label: Anno di fondazione, name: annoFondazione, widget: string }
+              - { label: Orari, name: orari, widget: text }
+
+          - label: Menu di navigazione
+            name: nav
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Home, name: home, widget: string }
+              - { label: Chi siamo, name: chiSiamo, widget: string }
+              - { label: Aree di attività, name: aree, widget: string }
+              - { label: Contatti, name: contatti, widget: string }
+              - { label: Pulsante chiama, name: chiama, widget: string }
+
+          - label: Barra superiore
+            name: topbar
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Testo, name: testo, widget: string }
+
+          - label: Footer
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Descrizione, name: descrizione, widget: text }
+              - { label: Titolo navigazione, name: navTitolo, widget: string }
+              - { label: Titolo contatti, name: contattiTitolo, widget: string }
+              - { label: Titolo legale, name: legaleTitolo, widget: string }
+              - { label: Testo link privacy, name: privacyLink, widget: string }
+              - { label: Testo link cookie, name: cookieLink, widget: string }
+
+          - label: Banner cookie
+            name: cookieBanner
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Testo, name: testo, widget: text }
+              - { label: Testo link policy, name: linkTesto, widget: string }
+              - { label: Pulsante accetta, name: btnAccetta, widget: string }
+              - { label: Pulsante rifiuta, name: btnRifiuta, widget: string }
+              - { label: Pulsante personalizza, name: btnPersonalizza, widget: string }
+
+          - label: Homepage
+            name: home
+            widget: object
+            collapsed: false
+            fields:
+              - { label: Testo piccolo sopra il titolo, name: heroOcchio, widget: string }
+              - { label: Titolo principale, name: heroTitolo, widget: string }
+              - { label: Parola evidenziata nel titolo, name: heroTitoloEm, widget: string }
+              - { label: Sottotitolo principale, name: heroSottotitolo, widget: text }
+              - { label: Testo pulsante principale, name: heroBtnPrimario, widget: string }
+              - { label: Testo pulsante secondario, name: heroBtnSecondario, widget: string }
+              - { label: Etichetta sezione, name: sezioneOcchio, widget: string }
+              - { label: Titolo sezione, name: sezioneTitolo, widget: string }
+              - label: Riquadri della homepage
+                name: cards
+                widget: list
+                summary: "{{fields.titolo}}"
+                fields:
+                  - { label: Titolo, name: titolo, widget: string }
+                  - { label: Testo, name: testo, widget: text }
+                  - { label: Link, name: link, widget: string }
+                  - { label: Testo del link, name: linkTesto, widget: string }
+              - { label: Titolo fascia finale, name: ctaTitolo, widget: string }
+              - { label: Sottotitolo fascia finale, name: ctaSottotitolo, widget: text }
+              - { label: Testo pulsante fascia finale, name: ctaBottone, widget: string }
+
+          - label: Pagina Chi siamo
+            name: chiSiamo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Testo piccolo sopra il titolo, name: heroOcchio, widget: string }
+              - { label: Titolo principale, name: heroTitolo, widget: string }
+              - { label: Sottotitolo principale, name: heroSottotitolo, widget: text }
+              - { label: Etichetta sezione, name: sezioneOcchio, widget: string }
+              - { label: Titolo sezione, name: sezioneTitolo, widget: string }
+              - { label: Testo segnaposto foto, name: fotoPlaceholder, widget: string }
+              - { label: Paragrafo 1, name: paragrafo1, widget: text }
+              - { label: Paragrafo 2, name: paragrafo2, widget: text }
+              - { label: Paragrafo 3, name: paragrafo3, widget: text }
+              - label: Statistiche
+                name: statistiche
+                widget: list
+                summary: "{{fields.numero}}{{fields.suffisso}} - {{fields.etichetta}}"
+                fields:
+                  - { label: Numero, name: numero, widget: number, value_type: int }
+                  - { label: Suffisso, name: suffisso, widget: string, required: false }
+                  - { label: Etichetta, name: etichetta, widget: string }
+              - { label: Etichetta valori, name: valoriOcchio, widget: string }
+              - { label: Titolo valori, name: valoriTitolo, widget: string }
+              - label: Valori
+                name: valori
+                widget: list
+                summary: "{{fields.titolo}}"
+                fields:
+                  - { label: Titolo, name: titolo, widget: string }
+                  - { label: Testo, name: testo, widget: text }
+              - { label: Titolo fascia finale, name: ctaTitolo, widget: string }
+              - { label: Sottotitolo fascia finale, name: ctaSottotitolo, widget: text }
+              - { label: Testo pulsante fascia finale, name: ctaBottone, widget: string }
+
+          - label: Pagina Aree di attività
+            name: aree
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Testo piccolo sopra il titolo, name: heroOcchio, widget: string }
+              - { label: Titolo principale, name: heroTitolo, widget: string }
+              - { label: Sottotitolo principale, name: heroSottotitolo, widget: text }
+              - label: Specializzazioni
+                name: specializzazioni
+                widget: list
+                summary: "{{fields.numero}} - {{fields.titolo}}"
+                fields:
+                  - { label: Numero, name: numero, widget: string }
+                  - { label: Titolo, name: titolo, widget: string }
+                  - { label: Testo, name: testo, widget: text }
+                  - label: Voci elenco
+                    name: voci
+                    widget: list
+                    field: { label: Voce, name: voce, widget: string }
+              - { label: Etichetta attività, name: attivitaOcchio, widget: string }
+              - { label: Titolo attività, name: attivitaTitolo, widget: string }
+              - label: Elenco attività
+                name: attivita
+                widget: list
+                field: { label: Attività, name: attivita, widget: string }
+              - { label: Titolo riquadro, name: ctaBoxTitolo, widget: string }
+              - { label: Testo riquadro, name: ctaBoxTesto, widget: text }
+              - { label: Testo pulsante riquadro, name: ctaBoxBottone, widget: string }
+              - { label: Titolo fascia finale, name: ctaTitolo, widget: string }
+              - { label: Sottotitolo fascia finale, name: ctaSottotitolo, widget: text }
+              - { label: Testo pulsante fascia finale, name: ctaBottone, widget: string }
+
+          - label: Pagina Contatti
+            name: contatti
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Testo piccolo sopra il titolo, name: heroOcchio, widget: string }
+              - { label: Titolo principale, name: heroTitolo, widget: string }
+              - { label: Sottotitolo principale, name: heroSottotitolo, widget: text }
+              - { label: Etichetta informazioni, name: infoOcchio, widget: string }
+              - { label: Titolo informazioni, name: infoTitolo, widget: string }
+              - { label: Etichetta indirizzo, name: labelIndirizzo, widget: string }
+              - { label: Etichetta telefono, name: labelTelefono, widget: string }
+              - { label: Etichetta email, name: labelEmail, widget: string }
+              - { label: Etichetta orari, name: labelOrari, widget: string }
+              - { label: Etichetta modulo, name: formOcchio, widget: string }
+              - { label: Titolo modulo, name: formTitolo, widget: string }
+              - { label: Sottotitolo modulo, name: formSottotitolo, widget: text }
+              - { label: Etichetta nome, name: formLabelNome, widget: string }
+              - { label: Etichetta cognome, name: formLabelCognome, widget: string }
+              - { label: Etichetta email, name: formLabelEmail, widget: string }
+              - { label: Etichetta telefono, name: formLabelTelefono, widget: string }
+              - { label: Etichetta oggetto, name: formLabelOggetto, widget: string }
+              - { label: Etichetta messaggio, name: formLabelMessaggio, widget: string }
+              - { label: Esempio nome, name: formPlaceholderNome, widget: string }
+              - { label: Esempio cognome, name: formPlaceholderCognome, widget: string }
+              - { label: Esempio email, name: formPlaceholderEmail, widget: string }
+              - { label: Esempio telefono, name: formPlaceholderTelefono, widget: string }
+              - { label: Testo iniziale oggetto, name: formPlaceholderOggetto, widget: string }
+              - { label: Esempio messaggio, name: formPlaceholderMessaggio, widget: text }
+              - label: Opzioni oggetto
+                name: formOpzioni
+                widget: list
+                summary: "{{fields.testo}}"
+                fields:
+                  - { label: Valore tecnico, name: value, widget: string }
+                  - { label: Testo visibile, name: testo, widget: string }
+              - { label: Testo consenso privacy, name: formPrivacy, widget: string }
+              - { label: Testo link Privacy Policy, name: formPrivacyLink, widget: string }
+              - { label: Testo pulsante invio, name: formBottone, widget: string }
+              - { label: Testo durante invio, name: formBottoneInvio, widget: string }
+              - { label: Nota sotto il modulo, name: formNota, widget: text }
+              - { label: Titolo messaggio inviato, name: successTitolo, widget: string }
+              - { label: Testo messaggio inviato, name: successTesto, widget: text }
+              - { label: Testo pulsante mappa, name: mappaTasto, widget: string }
+              - { label: Link Google Maps, name: mappaLink, widget: string }

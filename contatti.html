@@ -2,15 +2,19 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatti – Studio Legale Cascasi</title>
-  <meta name="description" content="Contatta lo Studio Legale Cascasi a Milano. Siamo disponibili su appuntamento per una consulenza personalizzata.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contatti – Studio Legale Cascasi &amp; Bianchi</title>
+  <meta name="description" content="Contatta lo Studio Legale Cascasi &amp; Bianchi per richiedere un appuntamento e descrivere brevemente la tua esigenza legale.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contatti – Studio Legale Cascasi &amp; Bianchi">
+  <meta property="og:description" content="Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="accessibility-fixes.css">
+  <link rel="stylesheet" href="site-features.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
 </head>
@@ -22,10 +26,10 @@
 
   <header class="header">
     <div class="container">
-      <a href="index.html" class="brand">Studio Legale Cascasi<span>Avvocato a Milano</span></a>
+      <a href="index.html" class="brand">Studio Legale Cascasi &amp; Bianchi<span>Avvocato a Milano e Monza</span></a>
       <nav class="nav" aria-label="Navigazione principale">
         <a href="index.html">Home</a>
-        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="chi-siamo.html">Lo Studio</a>
         <a href="aree.html">Aree di attività</a>
         <a href="contatti.html" class="active">Contatti</a>
         <a href="tel:+390212345678" class="btn-call">Chiama ora</a>
@@ -36,9 +40,9 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="hero-eyebrow">Parliamo</p>
-        <h1>Contatti</h1>
-        <p class="page-hero-sub">Lo studio riceve esclusivamente su appuntamento per garantire ad ogni cliente tutta l'attenzione necessaria.</p>
+        <p class="hero-eyebrow">Contatti</p>
+        <h1>Parliamo del tuo caso</h1>
+        <p class="page-hero-sub">Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.</p>
       </div>
     </section>
 
@@ -49,7 +53,7 @@
           <div class="contatti-info">
             <p class="section-label">Dove siamo</p>
             <div class="divider"></div>
-            <h2>Vieni a trovarci</h2>
+            <h2>Contatta lo Studio</h2>
 
             <div class="info-block">
               <div class="info-icon">
@@ -87,7 +91,7 @@
               </div>
               <div>
                 <p class="info-label">Orari di ricevimento</p>
-                <p class="info-value">Solo su appuntamento<br>Lun – Ven: 9:00 – 18:00</p>
+                <p class="info-value">Solo su appuntamento<br>Lun/Ven: 9:00 – 18:00</p>
               </div>
             </div>
           </div>
@@ -95,11 +99,11 @@
           <div class="contatti-form-wrap">
             <p class="section-label">Scrivici</p>
             <div class="divider"></div>
-            <h2>Richiedi una consulenza</h2>
-            <p>Compila il modulo e ti risponderemo nel più breve tempo possibile.</p>
+            <h2>Richiedi un appuntamento</h2>
+            <p>Compila il modulo descrivendo brevemente la tua esigenza. Lo Studio ti ricontatterà nel più breve tempo possibile.</p>
 
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgelvek" method="POST" novalidate>
-              <input type="hidden" name="_subject" value="Nuova richiesta di consulenza dal sito">
+              <input type="hidden" name="_subject" value="Nuova richiesta di appuntamento dal sito">
 
               <div class="form-row">
                 <div class="form-group">
@@ -120,12 +124,19 @@
                 <input type="tel" id="telefono" name="telefono" placeholder="+39 333 1234567" autocomplete="tel" inputmode="tel" maxlength="20">
               </div>
               <div class="form-group">
-                <label for="oggetto">Oggetto *</label>
+                <label for="oggetto">Area di interesse *</label>
                 <select id="oggetto" name="oggetto" required>
-                  <option value="" disabled selected>Seleziona un'area</option>
-                  <option value="penale">Diritto Penale</option>
-                  <option value="famiglia">Diritto di Famiglia</option>
-                  <option value="minorile">Diritto Minorile</option>
+                  <option value="" disabled selected>Seleziona un’area</option>
+                  <option value="immobiliare">Diritto immobiliare</option>
+                  <option value="condominiale">Diritto condominiale</option>
+                  <option value="locazioni">Locazioni</option>
+                  <option value="contratti">Contratti e obbligazioni</option>
+                  <option value="appalti">Appalti e lavori edili</option>
+                  <option value="responsabilita">Responsabilità civile e risarcimento</option>
+                  <option value="crediti">Recupero crediti ed esecuzioni</option>
+                  <option value="famiglia">Diritto di famiglia e successioni</option>
+                  <option value="societario">Diritto societario e commerciale</option>
+                  <option value="consumatore">Tutela del consumatore</option>
                   <option value="altro">Altro</option>
                 </select>
               </div>
@@ -137,14 +148,14 @@
                 <input type="checkbox" id="privacy" name="privacy" value="Accettata" required>
                 <label for="privacy">Ho letto e accetto la <a href="privacy.html">Privacy Policy</a> *</label>
               </div>
-              <button type="submit" class="btn-submit">Invia messaggio</button>
-              <p class="form-note">* Campi obbligatori. I tuoi dati sono trattati nel rispetto del GDPR.</p>
+              <button type="submit" class="btn-submit">Invia richiesta</button>
+              <p class="form-note">* Campi obbligatori. I dati sono trattati secondo quanto indicato nella Privacy Policy.</p>
             </form>
 
             <div class="form-success" id="formSuccess" style="display:none;" role="status" aria-live="polite">
               <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <h3>Messaggio inviato!</h3>
-              <p>Ti risponderemo nel più breve tempo possibile.</p>
+              <h3>Richiesta inviata</h3>
+              <p>Lo Studio ti ricontatterà nel più breve tempo possibile.</p>
             </div>
           </div>
 
@@ -165,14 +176,14 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">Studio Legale Cascasi<span>Avvocato a Milano</span></div>
-          <p class="footer-desc">Consulenza e assistenza legale professionale in diritto penale, civile e di famiglia a Milano dal 2006.</p>
+          <div class="footer-brand">Studio Legale Cascasi &amp; Bianchi<span>Avvocato a Milano e Monza</span></div>
+          <p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano dal 2007.</p>
         </div>
         <div class="footer-col">
           <h4>Navigazione</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="chi-siamo.html">Chi siamo</a></li>
+            <li><a href="chi-siamo.html">Lo Studio</a></li>
             <li><a href="aree.html">Aree di attività</a></li>
             <li><a href="contatti.html">Contatti</a></li>
           </ul>
@@ -185,7 +196,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Studio Legale Cascasi – P.IVA 12345678901</span>
+        <span>© 2026 Studio Legale Cascasi &amp; Bianchi – P.IVA 12345678901</span>
         <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
       </div>
     </div>
@@ -193,5 +204,6 @@
 
   <script src="script.js" defer></script>
   <script src="site-enhancements.js" defer></script>
+  <script src="site-features.js" defer></script>
 </body>
 </html>

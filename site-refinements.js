@@ -13,6 +13,67 @@
     document.head.appendChild(link);
   }
 
+  function isContactsPage() {
+    const page = (window.location.pathname.split('/').pop() || '').toLowerCase();
+    return page === 'contatti' || page === 'contatti.html';
+  }
+
+  function injectContactExtras() {
+    if (!isContactsPage()) return;
+
+    const formWrap = qs('.contatti-form-wrap');
+    const form = qs('#contactForm');
+    if (formWrap && form && !qs('.appointment-notice', formWrap)) {
+      const notice = document.createElement('div');
+      notice.className = 'appointment-notice';
+      notice.innerHTML = `
+        <span class="appointment-notice-icon" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+        </span>
+        <div>
+          <strong>Ricevimento esclusivamente su appuntamento</strong>
+          <p>Dopo l’invio della richiesta tramite il modulo o via email, lo Studio ricontatterà l’interessato per concordare data e orario dell’incontro.</p>
+        </div>`;
+      formWrap.insertBefore(notice, form);
+    }
+
+    const map = qs('.map-placeholder');
+    if (map && !qs('.faq-section')) {
+      const section = document.createElement('section');
+      section.className = 'section faq-section';
+      section.setAttribute('aria-labelledby', 'faqTitle');
+      section.innerHTML = `
+        <div class="container">
+          <p class="section-label">Informazioni utili</p>
+          <div class="divider"></div>
+          <h2 id="faqTitle">Domande frequenti</h2>
+          <div class="faq-wrap">
+            <div class="faq-item">
+              <button class="faq-question">Lo Studio riceve senza appuntamento?</button>
+              <div class="faq-answer"><p>No. Lo Studio riceve esclusivamente su appuntamento, così da poter dedicare a ogni incontro il tempo necessario.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">In quali città opera lo Studio?</button>
+              <div class="faq-answer"><p>Lo Studio ha i propri riferimenti a Milano e Monza e presta assistenza in ambito stragiudiziale e giudiziale secondo le esigenze del caso.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Come posso inviare i documenti?</button>
+              <div class="faq-answer"><p>Dopo il primo contatto, lo Studio indicherà il canale più appropriato per trasmettere la documentazione in modo ordinato e riservato.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">In quanto tempo riceverò una risposta?</button>
+              <div class="faq-answer"><p>Le richieste vengono esaminate nel più breve tempo possibile. I tempi possono variare in base alla complessità della situazione descritta.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">È possibile richiedere una consulenza online?</button>
+              <div class="faq-answer"><p>La modalità dell’incontro viene valutata caso per caso. Nella richiesta è possibile indicare l’eventuale preferenza per un colloquio da remoto.</p></div>
+            </div>
+          </div>
+        </div>`;
+      map.parentNode.insertBefore(section, map);
+    }
+  }
+
   function initFaq() {
     qsa('.faq-item').forEach((item, index) => {
       const button = qs('.faq-question', item);
@@ -93,6 +154,7 @@
 
   function init() {
     loadStyles();
+    injectContactExtras();
     initFaq();
     enhanceFooter();
     waitForDynamicContent();

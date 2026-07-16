@@ -1,234 +1,325 @@
 {
+  "studio": {
+    "nome": "Studio Legale Cascasi",
+    "sottoTitolo": "Avvocato a Milano",
+    "avvocato": "Avv. Diego Cascasi",
+    "telefono": "02 1234 5678",
+    "telefonoLink": "tel:+390212345678",
+    "email": "info@studiolegalecascasi.it",
+    "indirizzo": "Via Roma 12, 20121 Milano (MI)",
+    "indirizzoMappa": "Via Roma 12, 20121 Milano",
+    "piva": "12345678901",
+    "annoFondazione": "2007",
+    "orari": "Solo su appuntamento — Lun/Ven: 9:00 – 18:00"
+  },
   "nav": {
     "home": "Home",
-    "chiSiamo": "Chi siamo",
+    "chiSiamo": "Lo Studio",
     "aree": "Aree di attività",
     "contatti": "Contatti",
     "chiama": "Chiama ora"
   },
-  "chiSiamo": {
-    "ctaTitolo": "Vuoi conoscerci meglio?",
-    "valoriOcchio": "I nostri valori",
-    "sezioneOcchio": "Il professionista",
-    "valori": [
-      {
-        "titolo": "Attenzione al cliente",
-        "testo": "Ogni cliente è accolto con ascolto attivo e comprensione. Lo studio riceve solo su appuntamento per garantire riservatezza e cura in ogni consulenza."
-      },
-      {
-        "titolo": "Puntualità e rigore",
-        "testo": "Ogni scadenza processuale viene seguita con precisione. La preparazione accurata di ogni atto e memoria è la base del nostro lavoro quotidiano."
-      },
-      {
-        "titolo": "Riservatezza",
-        "testo": "Il segreto professionale è un pilastro irrinunciabile. Ogni informazione condivisa dal cliente è trattata con la massima discrezione e tutela."
-      }
-    ],
-    "ctaBottone": "Contattaci",
-    "heroSottotitolo": "Un professionista al tuo fianco con oltre 18 anni di esperienza nel diritto penale, civile e di famiglia.",
-    "heroTitolo": "Chi siamo",
-    "statistiche": [
-      {
-        "numero": 18,
-        "suffisso": "+",
-        "etichetta": "Anni di esperienza"
-      },
-      {
-        "numero": 500,
-        "suffisso": "+",
-        "etichetta": "Clienti assistiti"
-      },
-      {
-        "numero": 3,
-        "suffisso": "",
-        "etichetta": "Aree di specialità"
-      }
-    ],
-    "fotoPlaceholder": "Foto avvocato",
-    "paragrafo1": "L'Avvocato Diego Cascasi è iscritto all'Ordine degli Avvocati di Milano dal 2006. Ha maturato una solida esperienza in diritto penale, con particolare attenzione al diritto di famiglia e minorile, assistendo centinaia di clienti in procedimenti complessi.",
-    "paragrafo2": "Prima di fondare lo studio, ha collaborato con primari studi legali milanesi specializzati in diritto penale internazionale, acquisendo una visione ampia e approfondita del sistema giuridico italiano ed europeo.",
-    "paragrafo3": "È iscritto nelle liste predisposte dall'Ordine degli Avvocati di Milano dei difensori disponibili al Patrocinio a spese dello Stato.",
-    "ctaSottotitolo": "Contattaci per fissare un appuntamento e ricevere una prima consulenza personalizzata.",
-    "valoriTitolo": "Come lavoriamo",
-    "sezioneTitolo": "Avv. Diego Cascasi",
-    "heroOcchio": "Lo Studio"
-  },
-  "cookieBanner": {
-    "testo": "Utilizziamo cookie tecnici (necessari) e, previo tuo consenso, cookie analitici. Leggi la",
-    "linkTesto": "Cookie Policy",
-    "btnAccetta": "Accetta tutti",
-    "btnRifiuta": "Solo necessari",
-    "btnPersonalizza": "Personalizza"
-  },
-  "aree": {
-    "ctaBoxTesto": "Lo studio riceve su appuntamento per garantire la massima attenzione a ogni singolo caso.",
-    "ctaTitolo": "Non sai da dove iniziare?",
-    "attivitaOcchio": "Nel dettaglio",
-    "attivita": [
-      "Affidamento minori",
-      "Diritto di famiglia",
-      "Diritto minorile",
-      "Tutela dei diritti dei minori",
-      "Assistenza legale penale",
-      "Avvocato penalista della famiglia",
-      "Consulenza legale stragiudiziale",
-      "Patrocinio a spese dello Stato"
-    ],
-    "ctaBottone": "Contattaci ora",
-    "specializzazioni": [
-      {
-        "numero": "01",
-        "titolo": "Diritto Penale",
-        "testo": "Lo studio offre difesa e assistenza in ogni fase del procedimento penale: dalle indagini preliminari al dibattimento, fino ai gradi di impugnazione. L'Avvocato Cascasi assiste sia le persone indagate o imputate, sia le vittime di reato che intendono costituirsi parte civile.",
-        "voci": [
-          "Difesa in udienza preliminare e dibattimento",
-          "Assistenza durante interrogatori e perquisizioni",
-          "Impugnazioni in appello e Cassazione",
-          "Patteggiamento e riti alternativi",
-          "Patrocinio a spese dello Stato"
-        ]
-      },
-      {
-        "numero": "02",
-        "titolo": "Diritto di Famiglia",
-        "testo": "Il diritto penale della famiglia si occupa di reati commessi o subiti nell'ambito delle relazioni familiari. Lo studio assiste genitori, figli e coniugi in situazioni spesso delicate, con un approccio empatico e orientato al benessere di tutti i soggetti coinvolti.",
-        "voci": [
-          "Separazione e divorzio",
-          "Affidamento e mantenimento dei figli",
-          "Reati in ambito familiare (maltrattamenti, stalking)",
-          "Violenza domestica e misure cautelari",
-          "Mediazione familiare"
-        ]
-      },
-      {
-        "numero": "03",
-        "titolo": "Diritto Minorile",
-        "testo": "Nella rappresentanza e assistenza dei minori imputati di un reato, l'Avvocato Cascasi si avvale della collaborazione di mediatori familiari qualificati. L'obiettivo è sempre la tutela del minore e il suo reinserimento nel contesto sociale.",
-        "voci": [
-          "Difesa di minori imputati davanti al Tribunale per i Minorenni",
-          "Tutela dei diritti del minore vittima di reato",
-          "Affidamento e adozione",
-          "Provvedimenti limitativi della responsabilità genitoriale",
-          "Collaborazione con mediatori familiari"
-        ]
-      }
-    ],
-    "heroSottotitolo": "Lo studio offre assistenza qualificata nelle seguenti aree del diritto, con esperienza maturata in oltre 500 casi seguiti.",
-    "heroTitolo": "Aree di attività",
-    "ctaBoxTitolo": "Hai bisogno di assistenza?",
-    "ctaSottotitolo": "Contattaci per un primo inquadramento del tuo caso. Lo studio valuterà le modalità più adatte per assisterti.",
-    "heroOcchio": "Specializzazioni",
-    "attivitaTitolo": "Tutte le attività dello studio",
-    "ctaBoxBottone": "Prenota un appuntamento"
-  },
-  "studio": {
-    "annoFondazione": "2006",
-    "piva": "12345678901",
-    "sottoTitolo": "Avvocati a Milano e Monza",
-    "avvocato": "Avv. Diego Cascasi",
-    "telefonoLink": "tel:+390212345678",
-    "indirizzo": "Via Roma 12, 20121 Milano (MI)",
-    "telefono": "02 1234 5678",
-    "orari": "Solo su appuntamento — Lun/Ven: 9:00 – 18:00",
-    "nome": "Studio Legale Cascasi & Bianchi",
-    "email": "info@studiolegalecascasi.it",
-    "indirizzoMappa": "Via Roma 12, 20121 Milano"
-  },
-  "contatti": {
-    "formPlaceholderMessaggio": "Descrivi brevemente la tua situazione...",
-    "labelOrari": "Orari di ricevimento",
-    "infoTitolo": "Vieni a trovarci",
-    "formSottotitolo": "Compila il modulo e ti risponderemo nel più breve tempo possibile.",
-    "formBottoneInvio": "Invio in corso…",
-    "formOcchio": "Scrivici",
-    "formPlaceholderTelefono": "+39 333 1234567",
-    "formLabelCognome": "Cognome",
-    "formPrivacy": "Ho letto e accetto la",
-    "formLabelTelefono": "Telefono",
-    "formPlaceholderCognome": "Rossi",
-    "mappaLink": "https://maps.google.com/?q=Via+Roma+12+Milano",
-    "labelEmail": "Email",
-    "formPlaceholderNome": "Mario",
-    "labelTelefono": "Telefono",
-    "formLabelOggetto": "Oggetto",
-    "formLabelNome": "Nome",
-    "formPlaceholderOggetto": "Seleziona un'area",
-    "heroSottotitolo": "Lo studio riceve esclusivamente su appuntamento per garantire ad ogni cliente tutta l'attenzione necessaria.",
-    "formLabelEmail": "Email",
-    "heroTitolo": "Contatti",
-    "infoOcchio": "Dove siamo",
-    "formPlaceholderEmail": "mario@email.it",
-    "formNota": "* Campi obbligatori. I tuoi dati sono trattati nel rispetto del GDPR.",
-    "mappaTasto": "Apri in Google Maps",
-    "formBottone": "Invia messaggio",
-    "formOpzioni": [
-      {
-        "value": "penale",
-        "testo": "Diritto Penale"
-      },
-      {
-        "value": "famiglia",
-        "testo": "Diritto di Famiglia"
-      },
-      {
-        "value": "minorile",
-        "testo": "Diritto Minorile"
-      },
-      {
-        "value": "altro",
-        "testo": "Altro"
-      }
-    ],
-    "successTitolo": "Messaggio inviato!",
-    "formTitolo": "Richiedi una consulenza",
-    "heroOcchio": "Parliamo",
-    "labelIndirizzo": "Indirizzo",
-    "successTesto": "Ti risponderemo nel più breve tempo possibile.",
-    "formPrivacyLink": "Privacy Policy",
-    "formLabelMessaggio": "Messaggio"
+  "topbar": {
+    "testo": "Per fissare un appuntamento chiamare il numero"
   },
   "footer": {
-    "descrizione": "Consulenza e assistenza legale professionale in diritto penale, civile e di famiglia a Milano dal",
+    "descrizione": "Consulenza, assistenza e rappresentanza legale in ambito civile a Milano dal",
     "navTitolo": "Navigazione",
     "contattiTitolo": "Contatti",
     "legaleTitolo": "Legale",
     "privacyLink": "Privacy Policy",
     "cookieLink": "Cookie Policy"
   },
-  "topbar": {
-    "testo": "Per fissare un appuntamento chiamare il numero"
+  "cookieBanner": {
+    "testo": "Utilizziamo cookie tecnici necessari e, previo consenso, eventuali cookie analitici. Leggi la",
+    "linkTesto": "Cookie Policy",
+    "btnAccetta": "Accetta tutti",
+    "btnRifiuta": "Solo necessari",
+    "btnPersonalizza": "Personalizza"
   },
   "home": {
-    "ctaTitolo": "Lo studio si trova a Milano e riceve su appuntamento",
+    "heroOcchio": "Studio Legale a Milano",
+    "heroTitolo": "Competenza, dedizione e attenzione al cliente",
+    "heroTitoloEm": "dedizione",
+    "heroSottotitolo": "Lo Studio Legale dell’Avv. Diego Cascasi offre consulenza, assistenza e rappresentanza legale in ambito civile, con particolare esperienza nel diritto immobiliare e condominiale.",
+    "heroBtnPrimario": "Scopri le aree di attività",
+    "heroBtnSecondario": "Richiedi un appuntamento",
+    "sezioneOcchio": "Attività dello Studio",
+    "sezioneTitolo": "Assistenza legale personalizzata, concreta ed efficace",
     "cards": [
       {
-        "titolo": "Chi siamo",
-        "testo": "Scopri il profilo professionale dell'Avvocato Cascasi e la storia dello studio fondato nel 2006.",
-        "link": "chi-siamo.html",
-        "linkTesto": "Leggi di più →"
-      },
-      {
-        "titolo": "Aree di attività",
-        "testo": "Diritto penale, diritto di famiglia e diritto minorile. Assistenza completa in ogni fase del procedimento.",
+        "titolo": "Diritto immobiliare",
+        "testo": "Assistenza nella compravendita, gestione e tutela degli immobili, con particolare attenzione alla fase preventiva e contrattuale.",
         "link": "aree.html",
-        "linkTesto": "Leggi di più →"
+        "linkTesto": "Scopri di più →"
       },
       {
-        "titolo": "Contatti",
-        "testo": "Lo studio riceve su appuntamento. Contattaci per fissare una consulenza personalizzata.",
-        "link": "contatti.html",
-        "linkTesto": "Scrivici →"
+        "titolo": "Diritto condominiale",
+        "testo": "Consulenza e difesa per amministratori, condomìni e singoli condòmini nelle questioni relative alla gestione delle parti comuni.",
+        "link": "aree.html",
+        "linkTesto": "Scopri di più →"
+      },
+      {
+        "titolo": "Contratti e contenzioso civile",
+        "testo": "Assistenza stragiudiziale e giudiziale in materia di contratti, appalti, responsabilità civile, crediti, locazioni e successioni.",
+        "link": "aree.html",
+        "linkTesto": "Tutte le attività →"
       }
     ],
-    "sezioneOcchio": "Cosa offriamo",
-    "ctaBottone": "Chiama ora",
-    "heroSottotitolo": "Avvocato Diego Cascasi offre consulenza e assistenza legale in diritto penale, civile e di famiglia. Ogni cliente riceve attenzione personale e un approccio su misura.",
-    "heroBtnSecondario": "Prenota una consulenza",
-    "heroTitolo": "Difendiamo i tuoi diritti con dedizione e rigore",
-    "heroTitoloEm": "dedizione",
-    "ctaSottotitolo": "Contattaci per una prima consulenza e scopri come possiamo aiutarti.",
-    "sezioneTitolo": "Un supporto completo per ogni esigenza legale",
-    "heroOcchio": "Studio Legale a Milano",
-    "heroBtnPrimario": "Le nostre specializzazioni"
+    "ctaTitolo": "Un rapporto diretto e trasparente con il cliente",
+    "ctaSottotitolo": "Ogni pratica viene seguita con continuità, chiarezza nelle comunicazioni e costante aggiornamento.",
+    "ctaBottone": "Fissa un appuntamento"
+  },
+  "chiSiamo": {
+    "heroOcchio": "Lo Studio Legale",
+    "heroTitolo": "Lo Studio",
+    "heroSottotitolo": "Consulenza, assistenza e rappresentanza legale a Milano dal 2007, in ambito stragiudiziale e giudiziale.",
+    "sezioneOcchio": "Il professionista",
+    "sezioneTitolo": "Avv. Diego Cascasi",
+    "fotoPlaceholder": "Foto dell’Avv. Diego Cascasi",
+    "paragrafo1": "Lo Studio Legale dell’Avv. Diego Cascasi opera a Milano dal 2007, anno di iscrizione dell’Avv. Cascasi all’Albo degli Avvocati di Milano. Lo Studio si rivolge a privati, professionisti, amministratori di condominio, imprese e società.",
+    "paragrafo2": "L’attività professionale è prevalentemente concentrata nel diritto civile, con specifica competenza nelle questioni di diritto immobiliare e condominiale, maturata attraverso controversie, procedimenti giudiziari, consulenza e assistenza nella redazione e negoziazione di contratti.",
+    "paragrafo3": "Ogni incarico viene affrontato esaminando le esigenze del cliente e individuando la soluzione giuridica più adeguata. Lo Studio valuta, ove possibile, soluzioni stragiudiziali e conciliative, senza rinunciare a una tutela rigorosa quando sia necessario ricorrere all’autorità giudiziaria.",
+    "statistiche": [
+      { "numero": 2007, "suffisso": "", "etichetta": "Anno di iscrizione all’Albo" },
+      { "numero": 10, "suffisso": "", "etichetta": "Principali aree di attività" },
+      { "numero": 1, "suffisso": "", "etichetta": "Unico punto di riferimento" }
+    ],
+    "valoriOcchio": "Metodo di lavoro",
+    "valoriTitolo": "Competenza, chiarezza e cura personale",
+    "valori": [
+      {
+        "titolo": "Rapporto diretto e trasparente",
+        "testo": "Lo Studio garantisce disponibilità, chiarezza nelle comunicazioni e aggiornamento costante sull’andamento delle pratiche, illustrando soluzioni, rischi, tempi e costi."
+      },
+      {
+        "titolo": "Prevenzione e soluzione delle controversie",
+        "testo": "Particolare attenzione è riservata alla fase preventiva e contrattuale, valutando soluzioni stragiudiziali e conciliative quando possano tutelare efficacemente il cliente."
+      },
+      {
+        "titolo": "Rete di professionisti",
+        "testo": "Lo Studio collabora con professionisti e consulenti qualificati, tra cui notai, commercialisti, consulenti del lavoro, medici legali, ingegneri, architetti, geometri e altri tecnici."
+      }
+    ],
+    "ctaTitolo": "Hai bisogno di un inquadramento legale?",
+    "ctaSottotitolo": "Contatta lo Studio per esporre la tua situazione e valutare il percorso più adeguato.",
+    "ctaBottone": "Contatta lo Studio"
+  },
+  "aree": {
+    "heroOcchio": "Diritto civile",
+    "heroTitolo": "Aree di attività",
+    "heroSottotitolo": "Lo Studio presta assistenza stragiudiziale e giudiziale, con particolare esperienza nel diritto immobiliare e condominiale.",
+    "specializzazioni": [
+      {
+        "numero": "01",
+        "titolo": "Diritto immobiliare",
+        "testo": "Lo Studio assiste privati, società, investitori e operatori del settore nelle problematiche connesse alla proprietà, al trasferimento e alla gestione degli immobili. Particolare attenzione è riservata alla fase preventiva e contrattuale.",
+        "voci": [
+          "Consulenza nella compravendita di immobili",
+          "Redazione e verifica di proposte irrevocabili, preliminari e accordi collegati",
+          "Vizi, difformità urbanistiche, edilizie e catastali",
+          "Garanzie contrattuali e formalità pregiudizievoli",
+          "Controversie su proprietà, possesso, confini e servitù",
+          "Divisioni immobiliari e comunioni",
+          "Immobili gravati da ipoteche, pignoramenti o altre trascrizioni",
+          "Responsabilità di venditori, acquirenti, mediatori e professionisti"
+        ]
+      },
+      {
+        "numero": "02",
+        "titolo": "Diritto condominiale",
+        "testo": "Il diritto condominiale rappresenta una delle principali aree di attività dello Studio. L’assistenza è rivolta ad amministratori, condomìni e singoli condòmini, sia nella fase preventiva sia nel contenzioso.",
+        "voci": [
+          "Regolamento condominiale e tabelle millesimali",
+          "Ripartizione delle spese ordinarie e straordinarie",
+          "Impugnazione e difesa delle deliberazioni assembleari",
+          "Recupero dei contributi condominiali insoluti",
+          "Responsabilità dell’amministratore e dei condòmini",
+          "Infiltrazioni, allagamenti, rumori, immissioni e danni",
+          "Uso e occupazione delle parti comuni",
+          "Decoro architettonico, impianti e opere",
+          "Lavori di manutenzione e rapporti con imprese e tecnici",
+          "Mediazione e contenzioso condominiale"
+        ]
+      },
+      {
+        "numero": "03",
+        "titolo": "Locazioni e rapporti tra proprietari e conduttori",
+        "testo": "Lo Studio presta consulenza e assistenza nei rapporti di locazione a uso abitativo e commerciale, occupandosi della redazione, interpretazione e cessazione dei contratti.",
+        "voci": [
+          "Redazione e revisione dei contratti di locazione",
+          "Pagamento e aggiornamento del canone",
+          "Ripartizione delle spese",
+          "Morosità e recupero dei canoni",
+          "Sfratto per morosità o per finita locazione",
+          "Deposito cauzionale e danni all’immobile",
+          "Recesso, disdetta e risoluzione",
+          "Occupazione successiva alla cessazione del rapporto"
+        ]
+      },
+      {
+        "numero": "04",
+        "titolo": "Contratti e obbligazioni",
+        "testo": "Lo Studio assiste privati, professionisti e imprese nella predisposizione, interpretazione ed esecuzione dei contratti, con attenzione alla tutela preventiva e alla corretta regolamentazione degli obblighi.",
+        "voci": [
+          "Redazione e revisione di contratti",
+          "Inadempimento contrattuale",
+          "Diffide ad adempiere",
+          "Risoluzione del contratto",
+          "Clausole penali e risarcimento del danno",
+          "Caparra confirmatoria e acconti",
+          "Contestazione di clausole contrattuali",
+          "Accordi transattivi"
+        ]
+      },
+      {
+        "numero": "05",
+        "titolo": "Appalti e lavori edili",
+        "testo": "Nell’ambito degli appalti privati, lo Studio assiste committenti, condomìni, imprese e professionisti nelle controversie relative all’esecuzione di lavori edili e di ristrutturazione.",
+        "voci": [
+          "Esame e redazione dei contratti di appalto",
+          "Vizi e difetti delle opere",
+          "Ritardi nell’esecuzione e penali",
+          "Richieste di pagamento e contestazione dei corrispettivi",
+          "Responsabilità dell’impresa, del progettista e del direttore dei lavori",
+          "Danni provocati durante l’esecuzione",
+          "Accertamenti tecnici preventivi e consulenze tecniche",
+          "Risoluzione del contratto e richieste risarcitorie"
+        ]
+      },
+      {
+        "numero": "06",
+        "titolo": "Responsabilità civile e risarcimento del danno",
+        "testo": "Lo Studio presta assistenza nelle controversie relative a danni patrimoniali e non patrimoniali derivanti da inadempimenti, fatti illeciti, attività professionali, lavori edili o cattiva manutenzione degli immobili.",
+        "voci": [
+          "Ricostruzione dei fatti",
+          "Valutazione delle responsabilità",
+          "Quantificazione del danno",
+          "Rapporti con compagnie assicurative e responsabili civili",
+          "Richieste risarcitorie e contenzioso"
+        ]
+      },
+      {
+        "numero": "07",
+        "titolo": "Recupero crediti ed esecuzioni",
+        "testo": "Lo Studio assiste privati, condomìni, professionisti e imprese nel recupero dei crediti, dalla richiesta stragiudiziale di pagamento sino all’eventuale esecuzione forzata.",
+        "voci": [
+          "Solleciti e diffide di pagamento",
+          "Ricorsi per decreto ingiuntivo",
+          "Opposizioni a decreto ingiuntivo",
+          "Atti di precetto",
+          "Pignoramenti mobiliari, immobiliari e presso terzi",
+          "Procedure esecutive",
+          "Accordi di rientro e transazioni"
+        ]
+      },
+      {
+        "numero": "08",
+        "titolo": "Diritto di famiglia e successioni",
+        "testo": "Lo Studio presta assistenza nelle principali questioni di diritto di famiglia e successorio, con un approccio riservato e attento alla delicatezza dei rapporti personali coinvolti.",
+        "voci": [
+          "Separazioni e divorzi",
+          "Rapporti tra genitori e figli",
+          "Modifica delle condizioni di separazione o divorzio",
+          "Tutela patrimoniale nei rapporti familiari",
+          "Successioni e divisioni ereditarie",
+          "Tutela dei legittimari",
+          "Impugnazione di disposizioni testamentarie",
+          "Controversie tra coeredi"
+        ]
+      },
+      {
+        "numero": "09",
+        "titolo": "Diritto societario e commerciale",
+        "testo": "Lo Studio assiste società, soci e amministratori nelle questioni civilistiche connesse alla costituzione, gestione e cessazione dell’attività imprenditoriale.",
+        "voci": [
+          "Rapporti tra soci",
+          "Responsabilità degli amministratori",
+          "Interpretazione degli accordi societari",
+          "Recupero dei crediti commerciali",
+          "Controversie derivanti dai rapporti contrattuali dell’impresa"
+        ]
+      },
+      {
+        "numero": "10",
+        "titolo": "Tutela del consumatore",
+        "testo": "Lo Studio presta assistenza ai consumatori nelle controversie relative all’acquisto di beni e servizi, con riferimento a difetti di conformità, vizi, garanzie legali e inadempimenti.",
+        "voci": [
+          "Contestazioni al venditore o al fornitore",
+          "Riparazione o sostituzione del bene",
+          "Riduzione del prezzo",
+          "Risoluzione del contratto",
+          "Risarcimento dei danni"
+        ]
+      }
+    ],
+    "attivitaOcchio": "Assistenza completa",
+    "attivitaTitolo": "Dalla consulenza preventiva al contenzioso",
+    "attivita": [
+      "Consulenza e pareri legali",
+      "Redazione e revisione di contratti",
+      "Diffide e comunicazioni",
+      "Negoziazione e accordi transattivi",
+      "Mediazione e soluzioni conciliative",
+      "Procedimenti giudiziari civili",
+      "Decreti ingiuntivi ed esecuzioni",
+      "Accertamenti tecnici e consulenze",
+      "Rapporti con imprese, tecnici e assicurazioni",
+      "Coordinamento con professionisti specializzati"
+    ],
+    "ctaBoxTitolo": "Una rete di professionisti",
+    "ctaBoxTesto": "Quando la pratica lo richiede, lo Studio coordina il supporto di notai, commercialisti, consulenti del lavoro, medici legali, ingegneri, architetti, geometri e altri tecnici.",
+    "ctaBoxBottone": "Contatta lo Studio",
+    "ctaTitolo": "Esporre il problema è il primo passo",
+    "ctaSottotitolo": "Lo Studio valuterà il caso, le possibili soluzioni, i rischi, i tempi e i costi dell’attività da intraprendere.",
+    "ctaBottone": "Richiedi un appuntamento"
+  },
+  "contatti": {
+    "heroOcchio": "Contatti",
+    "heroTitolo": "Parliamo del tuo caso",
+    "heroSottotitolo": "Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.",
+    "infoOcchio": "Dove siamo",
+    "infoTitolo": "Contatta lo Studio",
+    "labelIndirizzo": "Indirizzo",
+    "labelTelefono": "Telefono",
+    "labelEmail": "Email",
+    "labelOrari": "Orari di ricevimento",
+    "formOcchio": "Scrivici",
+    "formTitolo": "Richiedi un appuntamento",
+    "formSottotitolo": "Compila il modulo descrivendo brevemente la tua esigenza. Lo Studio ti ricontatterà nel più breve tempo possibile.",
+    "formLabelNome": "Nome",
+    "formLabelCognome": "Cognome",
+    "formLabelEmail": "Email",
+    "formLabelTelefono": "Telefono",
+    "formLabelOggetto": "Area di interesse",
+    "formLabelMessaggio": "Messaggio",
+    "formPlaceholderNome": "Mario",
+    "formPlaceholderCognome": "Rossi",
+    "formPlaceholderEmail": "mario@email.it",
+    "formPlaceholderTelefono": "+39 333 1234567",
+    "formPlaceholderOggetto": "Seleziona un’area",
+    "formPlaceholderMessaggio": "Descrivi brevemente la tua situazione...",
+    "formOpzioni": [
+      { "value": "immobiliare", "testo": "Diritto immobiliare" },
+      { "value": "condominiale", "testo": "Diritto condominiale" },
+      { "value": "locazioni", "testo": "Locazioni" },
+      { "value": "contratti", "testo": "Contratti e obbligazioni" },
+      { "value": "appalti", "testo": "Appalti e lavori edili" },
+      { "value": "responsabilita", "testo": "Responsabilità civile e risarcimento" },
+      { "value": "crediti", "testo": "Recupero crediti ed esecuzioni" },
+      { "value": "famiglia", "testo": "Diritto di famiglia e successioni" },
+      { "value": "societario", "testo": "Diritto societario e commerciale" },
+      { "value": "consumatore", "testo": "Tutela del consumatore" },
+      { "value": "altro", "testo": "Altro" }
+    ],
+    "formPrivacy": "Ho letto e accetto la",
+    "formPrivacyLink": "Privacy Policy",
+    "formBottone": "Invia richiesta",
+    "formBottoneInvio": "Invio in corso…",
+    "formNota": "* Campi obbligatori. I dati sono trattati secondo quanto indicato nella Privacy Policy.",
+    "successTitolo": "Richiesta inviata",
+    "successTesto": "Lo Studio ti ricontatterà nel più breve tempo possibile.",
+    "mappaTasto": "Apri in Google Maps",
+    "mappaLink": "https://maps.google.com/?q=Via+Roma+12+Milano"
   }
 }

@@ -93,6 +93,7 @@
   function updateSeo(data) {
     if (!data?.studio) return;
     const page = currentPage();
+    if (page === 'privacy' || page === 'cookie') return;
     const studio = data.studio.nome || 'Studio Legale Cascasi';
     let title = `${studio} – ${data.studio.sottoTitolo || 'Avvocato'}`;
     let description = data.home?.heroSottotitolo || '';

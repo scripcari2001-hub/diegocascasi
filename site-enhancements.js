@@ -10,6 +10,21 @@
     return Array.from(root.querySelectorAll(selector));
   }
 
+  function loadSiteFeatures() {
+    if (!qs('link[href="site-features.css"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'site-features.css';
+      document.head.appendChild(link);
+    }
+    if (!qs('script[src="site-features.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'site-features.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }
+
   function escapeHtml(value) {
     return String(value)
       .replace(/&/g, '&amp;')
@@ -153,13 +168,13 @@
   }
 
   function secureDynamicHtmlFromJson() {
-    // Funzione disponibile per eventuali evoluzioni del sito: evita di costruire HTML non sanificato da JSON.
     window.safeListHtml = function safeListHtml(items) {
       return Array.isArray(items) ? items.map(item => `<li>${escapeHtml(item)}</li>`).join('') : '';
     };
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    loadSiteFeatures();
     setDecorativeSvgAccessibility();
     initBetterFormValidation();
     initCookiePreferencesPage();

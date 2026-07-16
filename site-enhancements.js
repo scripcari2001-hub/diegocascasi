@@ -23,6 +23,12 @@
       script.defer = true;
       document.head.appendChild(script);
     }
+    if (!qs('script[src="site-refinements.js"]')) {
+      const refinements = document.createElement('script');
+      refinements.src = 'site-refinements.js';
+      refinements.defer = true;
+      document.head.appendChild(refinements);
+    }
   }
 
   function escapeHtml(value) {

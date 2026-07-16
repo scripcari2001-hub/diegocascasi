@@ -243,8 +243,14 @@
     }, 100);
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function init() {
     initMobileNavigation();
     waitForData();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
 }());

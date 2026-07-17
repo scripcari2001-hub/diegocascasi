@@ -3,207 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Contatti – Studio Legale Cascasi &amp; Bianchi</title>
-  <meta name="description" content="Contatta lo Studio Legale Cascasi &amp; Bianchi per richiedere un appuntamento e descrivere brevemente la tua esigenza legale.">
+  <title>Parliamo del tuo caso – Studio Legale Cascasi &amp; Bianchi</title>
+  <meta name="description" content="Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contatti – Studio Legale Cascasi &amp; Bianchi">
+  <meta property="og:title" content="Parliamo del tuo caso – Studio Legale Cascasi &amp; Bianchi">
   <meta property="og:description" content="Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.">
   <link rel="icon" type="image/png" sizes="32x32" href="logo.icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="accessibility-fixes.css">
-  <link rel="stylesheet" href="site-features.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="contatti">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-  <div class="topbar">
-    <span>Per fissare un appuntamento chiamare il numero&nbsp;</span><a href="tel:+390212345678">02 1234 5678</a>
-  </div>
+  <div class="topbar"><div class="container topbar-inner">
+    <span>Lo Studio riceve esclusivamente su appuntamento.</span>
+    <span class="topbar-emails"><a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a><span aria-hidden="true">·</span><a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a></span>
+  </div></div>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="brand">Studio Legale Cascasi &amp; Bianchi<span>Avvocato a Milano e Monza</span></a>
-      <nav class="nav" aria-label="Navigazione principale">
-        <a href="index.html">Home</a>
-        <a href="chi-siamo.html">Lo Studio</a>
-        <a href="aree.html">Aree di attività</a>
-        <a href="contatti.html" class="active">Contatti</a>
-        <a href="tel:+390212345678" class="btn-call">Chiama ora</a>
-      </nav>
-    </div>
-  </header>
+  <header class="header"><div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Studio Legale Cascasi &amp; Bianchi, Home"><span class="brand-name">Studio Legale Cascasi &amp; Bianchi</span><span class="brand-subtitle">Studio legale a Milano e Monza</span></a>
+    <button class="nav-toggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="mainNav" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="chi-siamo.html">Lo Studio</a><a href="aree.html">Aree di attività</a><a href="contatti.html" class="active">Contatti</a><a href="contatti.html#contactForm" class="nav-cta">Richiedi un appuntamento</a></nav>
+  </div></header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="hero-eyebrow">Contatti</p>
-        <h1>Parliamo del tuo caso</h1>
-        <p class="page-hero-sub">Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.</p>
+  <main id="contenuto">
+    <section class="page-hero"><div class="container"><p class="hero-eyebrow">Contatti</p><h1>Parliamo del tuo caso</h1><p class="page-hero-sub">Lo Studio riceve su appuntamento per garantire attenzione, riservatezza e continuità nella gestione di ogni pratica.</p></div></section>
+
+    <section class="section"><div class="container">
+      <div class="appointment-notice"><strong>Ricevimento esclusivamente su appuntamento</strong><p>Dopo l’invio della richiesta tramite il modulo o via email, il cliente verrà ricontattato per concordare data e orario dell’incontro.</p></div>
+      <p class="section-label">Sedi e recapiti</p><div class="divider"></div><h2>Contatta lo Studio</h2>
+      <div class="offices-grid">
+        <article class="office-card" data-index="0"><p class="office-kicker">Sede di Milano</p><h3>Avv. Diego Cascasi</h3><address>Via Donati 6, 20146 Milano</address><dl><div><dt>Email</dt><dd><a href="mailto:avvocatocascasi@studiolegalec.it">avvocatocascasi@studiolegalec.it</a></dd></div><div><dt>PEC</dt><dd><a href="mailto:diego.cascasi@milano.pecavvocati.it">diego.cascasi@milano.pecavvocati.it</a></dd></div></dl><a class="text-link" href="https://maps.google.com/?q=Via+Donati+6+Milano" target="_blank" rel="noopener noreferrer">Apri in Google Maps →</a></article>
+        <article class="office-card" data-index="1"><p class="office-kicker">Sede di Monza</p><h3>Avv. Cristina Bianchi</h3><address>Via Italia 28, 20900 Monza</address><dl><div><dt>Email</dt><dd><a href="mailto:avvocato.cristinabianchi@gmail.com">avvocato.cristinabianchi@gmail.com</a></dd></div><div><dt>PEC</dt><dd><a href="mailto:cristina.bianchi@monza.pecavvocati.it">cristina.bianchi@monza.pecavvocati.it</a></dd></div></dl><a class="text-link" href="https://maps.google.com/?q=Via+Italia+28+Monza" target="_blank" rel="noopener noreferrer">Apri in Google Maps →</a></article>
       </div>
-    </section>
+    </div></section>
 
-    <section class="section">
-      <div class="container">
-        <div class="contatti-grid">
-
-          <div class="contatti-info">
-            <p class="section-label">Dove siamo</p>
-            <div class="divider"></div>
-            <h2>Contatta lo Studio</h2>
-
-            <div class="info-block">
-              <div class="info-icon">
-                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <p class="info-label">Indirizzo</p>
-                <p class="info-value">Via Roma 12<br>20121 Milano (MI)</p>
-              </div>
-            </div>
-
-            <div class="info-block">
-              <div class="info-icon">
-                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.96a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <p class="info-label">Telefono</p>
-                <a href="tel:+390212345678" class="info-value info-link">02 1234 5678</a>
-              </div>
-            </div>
-
-            <div class="info-block">
-              <div class="info-icon">
-                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <p class="info-label">Email</p>
-                <a href="mailto:info@studiolegalecascasi.it" class="info-value info-link">info@studiolegalecascasi.it</a>
-              </div>
-            </div>
-
-            <div class="info-block">
-              <div class="info-icon">
-                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <p class="info-label">Orari di ricevimento</p>
-                <p class="info-value">Solo su appuntamento<br>Lun/Ven: 9:00 – 18:00</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contatti-form-wrap">
-            <p class="section-label">Scrivici</p>
-            <div class="divider"></div>
-            <h2>Richiedi un appuntamento</h2>
-            <p>Compila il modulo descrivendo brevemente la tua esigenza. Lo Studio ti ricontatterà nel più breve tempo possibile.</p>
-
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgelvek" method="POST" novalidate>
-              <input type="hidden" name="_subject" value="Nuova richiesta di appuntamento dal sito">
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="nome">Nome *</label>
-                  <input type="text" id="nome" name="nome" placeholder="Mario" autocomplete="given-name" maxlength="80" required>
-                </div>
-                <div class="form-group">
-                  <label for="cognome">Cognome *</label>
-                  <input type="text" id="cognome" name="cognome" placeholder="Rossi" autocomplete="family-name" maxlength="80" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="mario@email.it" autocomplete="email" maxlength="120" required>
-              </div>
-              <div class="form-group">
-                <label for="telefono">Telefono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+39 333 1234567" autocomplete="tel" inputmode="tel" maxlength="20">
-              </div>
-              <div class="form-group">
-                <label for="oggetto">Area di interesse *</label>
-                <select id="oggetto" name="oggetto" required>
-                  <option value="" disabled selected>Seleziona un’area</option>
-                  <option value="immobiliare">Diritto immobiliare</option>
-                  <option value="condominiale">Diritto condominiale</option>
-                  <option value="locazioni">Locazioni</option>
-                  <option value="contratti">Contratti e obbligazioni</option>
-                  <option value="appalti">Appalti e lavori edili</option>
-                  <option value="responsabilita">Responsabilità civile e risarcimento</option>
-                  <option value="crediti">Recupero crediti ed esecuzioni</option>
-                  <option value="famiglia">Diritto di famiglia e successioni</option>
-                  <option value="societario">Diritto societario e commerciale</option>
-                  <option value="consumatore">Tutela del consumatore</option>
-                  <option value="altro">Altro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="messaggio">Messaggio *</label>
-                <textarea id="messaggio" name="messaggio" rows="5" placeholder="Descrivi brevemente la tua situazione..." maxlength="2000" required></textarea>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" id="privacy" name="privacy" value="Accettata" required>
-                <label for="privacy">Ho letto e accetto la <a href="privacy.html">Privacy Policy</a> *</label>
-              </div>
-              <button type="submit" class="btn-submit">Invia richiesta</button>
-              <p class="form-note">* Campi obbligatori. I dati sono trattati secondo quanto indicato nella Privacy Policy.</p>
-            </form>
-
-            <div class="form-success" id="formSuccess" style="display:none;" role="status" aria-live="polite">
-              <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <h3>Richiesta inviata</h3>
-              <p>Lo Studio ti ricontatterà nel più breve tempo possibile.</p>
-            </div>
-          </div>
-
-        </div>
+    <section class="section section-cream"><div class="container contact-layout">
+      <div><p class="section-label">Scrivici</p><div class="divider"></div><h2>Richiedi un appuntamento</h2><p>Compila il modulo descrivendo brevemente la tua esigenza. Lo Studio ti ricontatterà nel più breve tempo possibile.</p></div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgelvek" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nuova richiesta di appuntamento dal sito">
+          <div class="form-row"><div class="form-group"><label for="nome">Nome *</label><input type="text" id="nome" name="nome" placeholder="Mario" autocomplete="given-name" maxlength="80" required></div><div class="form-group"><label for="cognome">Cognome *</label><input type="text" id="cognome" name="cognome" placeholder="Rossi" autocomplete="family-name" maxlength="80" required></div></div>
+          <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="mario@email.it" autocomplete="email" maxlength="120" required></div>
+          <div class="form-group"><label for="oggetto">Area di interesse *</label><select id="oggetto" name="oggetto" required><option value="" disabled selected>Seleziona un’area</option><option value="immobiliare">Diritto immobiliare</option><option value="condominiale">Diritto condominiale</option><option value="locazioni">Locazioni</option><option value="contratti">Contratti e obbligazioni</option><option value="appalti">Appalti e lavori edili</option><option value="responsabilita">Responsabilità civile e risarcimento</option><option value="crediti">Recupero crediti ed esecuzioni</option><option value="famiglia">Diritto di famiglia e successioni</option><option value="societario">Diritto societario e commerciale</option><option value="consumatore">Tutela del consumatore</option><option value="altro">Altro</option></select></div>
+          <div class="form-group"><label for="messaggio">Messaggio *</label><textarea id="messaggio" name="messaggio" rows="6" placeholder="Descrivi brevemente la tua situazione..." maxlength="3000" required></textarea></div>
+          <div class="form-group form-check"><input type="checkbox" id="privacy" name="privacy" value="Accettata" required><label for="privacy">Ho letto e accetto la <a href="privacy.html">Privacy Policy</a> *</label></div>
+          <button type="submit" class="btn-submit">Invia richiesta</button>
+          <p class="form-note">* Campi obbligatori. I dati sono trattati secondo quanto indicato nella Privacy Policy.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+        <div class="form-success" id="formSuccess" hidden role="status" aria-live="polite"><h3>Richiesta inviata</h3><p>Lo Studio ti ricontatterà nel più breve tempo possibile.</p></div>
       </div>
-    </section>
+    </div></section>
 
-    <div class="map-placeholder">
-      <div class="map-overlay">
-        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <p>Via Roma 12, 20121 Milano</p>
-        <a href="https://maps.google.com/?q=Via+Roma+12+Milano" target="_blank" class="btn-gold" rel="noopener noreferrer">Apri in Google Maps</a>
-      </div>
-    </div>
+    <section class="section"><div class="container faq-container">
+      <p class="section-label">Informazioni utili</p><div class="divider"></div><h2>Domande frequenti</h2>
+      <article class="faq-item" data-index="0"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">Lo Studio riceve senza appuntamento?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-1" hidden><p>No. Lo Studio riceve esclusivamente su appuntamento, da concordare dopo il primo contatto via email o tramite il modulo.</p></div></article>
+      <article class="faq-item" data-index="1"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">Dove si trovano le sedi?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-2" hidden><p>Lo Studio dispone di una sede a Milano, in Via Donati 6, e di una sede a Monza, in Via Italia 28.</p></div></article>
+      <article class="faq-item" data-index="2"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">Come posso inviare i documenti?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-3" hidden><p>Per un primo contatto puoi descrivere la situazione nel modulo. Le modalità di invio dei documenti verranno concordate direttamente con il professionista.</p></div></article>
+      <article class="faq-item" data-index="3"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">In quanto tempo riceverò una risposta?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-4" hidden><p>Lo Studio esamina le richieste e ricontatta il cliente nel più breve tempo possibile, compatibilmente con gli impegni professionali.</p></div></article>
+    </div></section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Studio Legale Cascasi &amp; Bianchi<span>Avvocato a Milano e Monza</span></div>
-          <p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano dal 2007.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigazione</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chi-siamo.html">Lo Studio</a></li>
-            <li><a href="aree.html">Aree di attività</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contatti</h4>
-          <p class="footer-contact-item">Via Roma 12, 20121 Milano (MI)</p>
-          <p class="footer-contact-item"><a href="tel:+390212345678">02 1234 5678</a></p>
-          <p class="footer-contact-item"><a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Studio Legale Cascasi &amp; Bianchi – P.IVA 12345678901</span>
-        <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container"><div class="footer-grid">
+    <div><div class="footer-brand"><span class="footer-brand-name">Studio Legale Cascasi &amp; Bianchi</span><span>Studio legale a Milano e Monza</span></div><p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano e Monza.</p><p class="footer-appointment">Lo Studio riceve esclusivamente su appuntamento.</p></div>
+    <div class="footer-col"><h2>Navigazione</h2><ul><li><a href="index.html">Home</a></li><li><a href="chi-siamo.html">Lo Studio</a></li><li><a href="aree.html">Aree di attività</a></li><li><a href="contatti.html">Contatti</a></li></ul></div>
+    <div class="footer-col"><h2>Email</h2><ul><li><a href="mailto:avvocatocascasi@studiolegalec.it">Avv. Diego Cascasi</a></li><li><a href="mailto:avvocato.cristinabianchi@gmail.com">Avv. Cristina Bianchi</a></li></ul></div>
+    <div class="footer-col"><h2>Sedi</h2><p>Via Donati 6, 20146 Milano</p><p>Via Italia 28, 20900 Monza</p></div>
+  </div><div class="footer-bottom"><span>© 2026 Studio Legale Cascasi &amp; Bianchi</span><span><a href="privacy.html">Privacy Policy</a> <span aria-hidden="true">·</span> <a href="cookie.html">Cookie Policy</a></span></div></div></footer>
 
-  <script src="script.js" defer></script>
-  <script src="site-enhancements.js" defer></script>
-  <script src="site-features.js" defer></script>
+  <nav class="mobile-contact-bar" aria-label="Contatti rapidi"><a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a><a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a><a href="contatti.html#contactForm">Appuntamento</a></nav>
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Informativa cookie" aria-live="polite"><p>Questo sito utilizza soltanto strumenti tecnici necessari al funzionamento e alla memorizzazione delle preferenze. <a href="cookie.html">Cookie Policy</a>.</p><button type="button" id="cookieAccept">Ho capito</button></div>
 </body>
 </html>

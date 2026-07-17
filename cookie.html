@@ -2,215 +2,41 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookie Policy – Studio Legale Cascasi</title>
-  <meta name="description" content="Informativa sull'uso dei cookie e delle preferenze locali del sito Studio Legale Cascasi.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cookie Policy – Studio Legale Cascasi &amp; Bianchi</title>
+  <meta name="description" content="Informativa sugli strumenti tecnici e sulle preferenze locali utilizzate dal sito dello Studio Legale Cascasi &amp; Bianchi.">
   <meta name="robots" content="noindex, follow">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cookie Policy – Studio Legale Cascasi &amp; Bianchi">
+  <meta property="og:description" content="Informativa sugli strumenti tecnici e sulle preferenze locali utilizzate dal sito dello Studio Legale Cascasi &amp; Bianchi.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="accessibility-fixes.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
-  <style>
-    .legal-body { max-width: 780px; margin: 0 auto; }
-    .legal-body h2 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; color:var(--navy); margin:40px 0 12px; padding-top:16px; border-top:1px solid var(--border); }
-    .legal-body h2:first-of-type { border-top:none; margin-top:0; }
-    .legal-body p { font-size:15px; color:#444; font-weight:300; margin-bottom:14px; max-width:100%; }
-    .legal-body ul { list-style:none; margin:0 0 16px; padding:0; display:flex; flex-direction:column; gap:8px; }
-    .legal-body ul li { font-size:15px; color:#444; font-weight:300; padding-left:18px; position:relative; }
-    .legal-body ul li::before { content:''; position:absolute; left:0; top:10px; width:6px; height:6px; border-radius:50%; background:var(--gold); }
-    .legal-body strong { font-weight:600; color:var(--navy); }
-    .legal-body a { color:var(--gold); }
-    .legal-meta { display:inline-block; background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:10px 18px; font-size:13px; color:var(--muted); margin-bottom:36px; }
-    .cookie-table { width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:14px; }
-    .cookie-table th { background:var(--navy); color:var(--white); padding:12px 14px; text-align:left; font-weight:500; font-size:12px; letter-spacing:0.5px; }
-    .cookie-table td { padding:11px 14px; border-bottom:1px solid var(--border); color:#444; font-weight:300; vertical-align:top; }
-    .cookie-table tr:last-child td { border-bottom:none; }
-    .cookie-table tr:nth-child(even) td { background:var(--cream); }
-    .cookie-prefs { background:var(--cream); border:1px solid var(--border); border-radius:16px; padding:32px; margin:28px 0; }
-    .cookie-prefs h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--navy); margin-bottom:20px; }
-    .pref-row { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; border-bottom:1px solid var(--border); }
-    .pref-row:last-of-type { border-bottom:none; }
-    .pref-info h4 { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:4px; }
-    .pref-info p { font-size:13px; color:var(--muted); margin:0; max-width:100%; }
-    .toggle { position:relative; width:46px; height:26px; flex-shrink:0; }
-    .toggle input { opacity:0; width:0; height:0; }
-    .toggle-slider { position:absolute; inset:0; background:#ccc; border-radius:26px; cursor:pointer; transition:background 0.3s; }
-    .toggle-slider::before { content:''; position:absolute; width:20px; height:20px; left:3px; top:3px; background:white; border-radius:50%; transition:transform 0.3s; }
-    .toggle input:checked + .toggle-slider { background:var(--navy); }
-    .toggle input:checked + .toggle-slider::before { transform:translateX(20px); }
-    .toggle input:disabled + .toggle-slider { background:var(--gold); cursor:not-allowed; }
-    .toggle input:disabled:checked + .toggle-slider::before { transform:translateX(20px); }
-    .pref-actions { display:flex; gap:12px; margin-top:24px; flex-wrap:wrap; }
-    .btn-save-prefs { padding:12px 28px; background:var(--navy); color:var(--white); font-family:'Jost',sans-serif; font-size:13px; font-weight:600; letter-spacing:1px; text-transform:uppercase; border:none; border-radius:8px; cursor:pointer; transition:background 0.2s; }
-    .btn-save-prefs:hover { background:var(--navy2); }
-    .btn-reject-all { padding:12px 28px; background:transparent; color:var(--muted); font-family:'Jost',sans-serif; font-size:13px; font-weight:500; border:1px solid var(--border); border-radius:8px; cursor:pointer; transition:border-color 0.2s,color 0.2s; }
-    .btn-reject-all:hover { border-color:var(--muted); color:var(--text); }
-    .pref-saved { display:none; font-size:13px; color:#4caf50; font-weight:500; align-items:center; gap:6px; }
-  </style>
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="cookie">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="topbar"><div class="container topbar-inner"><span>Lo Studio riceve esclusivamente su appuntamento.</span><span class="topbar-emails"><a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a><span aria-hidden="true">·</span><a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a></span></div></div>
+  <header class="header"><div class="container header-inner"><a href="index.html" class="brand" aria-label="Studio Legale Cascasi &amp; Bianchi, Home"><span class="brand-name">Studio Legale Cascasi &amp; Bianchi</span><span class="brand-subtitle">Studio legale a Milano e Monza</span></a><button class="nav-toggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Apri il menu"><span></span><span></span><span></span></button><nav class="nav" id="mainNav" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="chi-siamo.html">Lo Studio</a><a href="aree.html">Aree di attività</a><a href="contatti.html">Contatti</a><a href="contatti.html#contactForm" class="nav-cta">Richiedi un appuntamento</a></nav></div></header>
 
-  <div class="topbar">
-    <span>Per fissare un appuntamento chiamare il numero&nbsp;</span><a href="tel:+390212345678">02 1234 5678</a>
-  </div>
-
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="brand">Studio Legale Cascasi<span>Avvocato a Milano</span></a>
-      <nav class="nav" aria-label="Navigazione principale">
-        <a href="index.html">Home</a>
-        <a href="chi-siamo.html">Chi siamo</a>
-        <a href="aree.html">Aree di attività</a>
-        <a href="contatti.html">Contatti</a>
-        <a href="tel:+390212345678" class="btn-call">Chiama ora</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="hero-eyebrow">Documenti legali</p>
-        <h1>Cookie Policy</h1>
-        <p class="page-hero-sub">Informativa sull'uso dei cookie e delle preferenze salvate localmente dal sito.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="legal-body">
-
-          <span class="legal-meta">Ultimo aggiornamento: giugno 2026 &nbsp;·&nbsp; Versione 1.1</span>
-
-          <h2>1. Cosa sono i cookie</h2>
-          <p>I cookie sono piccoli file di testo che un sito può salvare sul dispositivo dell'utente. Il sito può anche usare il localStorage del browser per ricordare preferenze tecniche, come la scelta sul banner cookie.</p>
-
-          <h2>2. Strumenti utilizzati dal sito</h2>
-          <p>Al momento il sito salva le preferenze cookie nel localStorage del browser. I dati sono usati per ricordare se l'utente ha accettato, rifiutato o personalizzato le preferenze.</p>
-
-          <table class="cookie-table">
-            <thead>
-              <tr>
-                <th>Tipo</th>
-                <th>Nome</th>
-                <th>Finalità</th>
-                <th>Durata</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Locale</strong></td>
-                <td>cookieConsent</td>
-                <td>Memorizza la scelta sul banner</td>
-                <td>Fino a cancellazione browser</td>
-              </tr>
-              <tr>
-                <td><strong>Locale</strong></td>
-                <td>cookiePrefs</td>
-                <td>Memorizza preferenze analitiche</td>
-                <td>Fino a cancellazione browser</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>3. Cookie tecnici</h2>
-          <p>I cookie tecnici e le preferenze locali necessarie servono al corretto funzionamento del sito e alla memorizzazione delle scelte espresse dall'utente.</p>
-
-          <h2>4. Cookie analitici</h2>
-          <p>Il pannello consente di prestare o negare il consenso ai cookie analitici. Gli strumenti analitici devono essere caricati solo dopo il consenso dell'utente.</p>
-
-          <h2>5. Gestisci le tue preferenze</h2>
-          <p>Puoi modificare in qualsiasi momento le tue preferenze tramite il pannello qui sotto. I cookie tecnici non possono essere disattivati perché necessari al funzionamento del sito.</p>
-
-          <div class="cookie-prefs">
-            <h3>Le tue preferenze sui cookie</h3>
-
-            <div class="pref-row">
-              <div class="pref-info">
-                <h4>Cookie tecnici</h4>
-                <p>Necessari per il corretto funzionamento del sito.</p>
-              </div>
-              <label class="toggle">
-                <input type="checkbox" id="toggle-tecnici" checked disabled>
-                <span class="toggle-slider"></span>
-              </label>
-            </div>
-
-            <div class="pref-row">
-              <div class="pref-info">
-                <h4>Cookie analitici</h4>
-                <p>Utili per statistiche aggregate, solo previo consenso.</p>
-              </div>
-              <label class="toggle">
-                <input type="checkbox" id="toggle-analitici">
-                <span class="toggle-slider"></span>
-              </label>
-            </div>
-
-            <div class="pref-actions">
-              <button class="btn-save-prefs" id="savePrefs">Salva preferenze</button>
-              <button class="btn-reject-all" id="rejectAll">Rifiuta tutti i facoltativi</button>
-              <span class="pref-saved" id="prefSaved">✓ Preferenze salvate</span>
-            </div>
-          </div>
-
-          <h2>6. Come disabilitare i cookie dal browser</h2>
-          <p>In alternativa al pannello sopra, puoi cancellare cookie e dati locali direttamente dalle impostazioni del browser.</p>
-          <ul>
-            <li><strong>Chrome:</strong> Impostazioni → Privacy e sicurezza → Cookie e altri dati dei siti.</li>
-            <li><strong>Firefox:</strong> Impostazioni → Privacy e sicurezza → Cookie e dati dei siti web.</li>
-            <li><strong>Safari:</strong> Preferenze → Privacy → Gestisci dati dei siti web.</li>
-            <li><strong>Edge:</strong> Impostazioni → Cookie e autorizzazioni sito.</li>
-          </ul>
-
-          <h2>7. Servizi esterni</h2>
-          <p>Il sito carica font da Google Fonts e usa un servizio esterno per l'invio del modulo di contatto. I link verso Google Maps si aprono solo quando l'utente sceglie di aprire la mappa.</p>
-
-          <h2>8. Contatti e modifiche</h2>
-          <p>Per richieste relative ai cookie o alla privacy, è possibile contattare lo studio all'indirizzo <a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a>.</p>
-          <p>Il Titolare può modificare questa Cookie Policy. Le modifiche saranno efficaci dalla data di pubblicazione sul sito.</p>
-          <p>Per informazioni complete sul trattamento dei dati personali, consulta la <a href="privacy.html">Privacy Policy</a>.</p>
-
-        </div>
-      </div>
-    </section>
+  <main id="contenuto">
+    <section class="page-hero"><div class="container"><p class="hero-eyebrow">Documenti legali</p><h1>Cookie Policy</h1><p class="page-hero-sub">Informativa sugli strumenti tecnici e sulle preferenze salvate localmente dal sito.</p></div></section>
+    <section class="section"><div class="container legal-body">
+      <p class="legal-meta">Ultimo aggiornamento: luglio 2026 · Versione 1.2</p>
+      <h2>1. Cosa sono i cookie</h2><p>I cookie sono piccoli file di testo che un sito può salvare sul dispositivo dell’utente. Il sito può anche usare il localStorage del browser per ricordare preferenze tecniche.</p>
+      <h2>2. Strumenti utilizzati dal sito</h2><p>Il sito memorizza nel localStorage del browser la conferma di lettura dell’informativa cookie. Questa preferenza serve soltanto a non mostrare nuovamente l’avviso a ogni visita.</p>
+      <table class="cookie-table"><thead><tr><th>Tipo</th><th>Nome</th><th>Finalità</th><th>Durata</th></tr></thead><tbody><tr><td>Locale</td><td>cookieNoticeAccepted</td><td>Memorizza la conferma di lettura dell’informativa</td><td>Fino alla cancellazione dei dati del browser</td></tr></tbody></table>
+      <h2>3. Strumenti tecnici</h2><p>Gli strumenti tecnici e le preferenze locali sono necessari al corretto funzionamento del sito e non sono utilizzati per profilazione pubblicitaria.</p>
+      <h2>4. Servizi esterni</h2><p>Il sito utilizza Google Fonts per i caratteri tipografici, Google Maps soltanto tramite link esterni e Formspree per la trasmissione del modulo di contatto. L’apertura dei link esterni e l’invio del modulo possono comportare il trattamento di dati secondo le informative dei rispettivi fornitori.</p>
+      <h2>5. Gestione dal browser</h2><p>È possibile cancellare cookie e dati locali dalle impostazioni del browser. Dopo la cancellazione, l’avviso informativo potrà essere mostrato nuovamente.</p>
+      <h2>6. Contatti</h2><p>Per richieste relative alla privacy o agli strumenti tecnici del sito è possibile scrivere a <a href="mailto:avvocatocascasi@studiolegalec.it">avvocatocascasi@studiolegalec.it</a> oppure a <a href="mailto:avvocato.cristinabianchi@gmail.com">avvocato.cristinabianchi@gmail.com</a>.</p><p>Per informazioni complete sul trattamento dei dati personali consulta la <a href="privacy.html">Privacy Policy</a>.</p>
+    </div></section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Studio Legale Cascasi<span>Avvocato a Milano</span></div>
-          <p class="footer-desc">Consulenza e assistenza legale professionale in diritto penale, civile e di famiglia a Milano dal 2006.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigazione</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chi-siamo.html">Chi siamo</a></li>
-            <li><a href="aree.html">Aree di attività</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legale</h4>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="cookie.html">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Studio Legale Cascasi – P.IVA 12345678901</span>
-        <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
-  <script src="site-enhancements.js" defer></script>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><span class="footer-brand-name">Studio Legale Cascasi &amp; Bianchi</span><span>Studio legale a Milano e Monza</span></div><p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano e Monza.</p><p class="footer-appointment">Lo Studio riceve esclusivamente su appuntamento.</p></div><div class="footer-col"><h2>Navigazione</h2><ul><li><a href="index.html">Home</a></li><li><a href="chi-siamo.html">Lo Studio</a></li><li><a href="aree.html">Aree di attività</a></li><li><a href="contatti.html">Contatti</a></li></ul></div><div class="footer-col"><h2>Email</h2><ul><li><a href="mailto:avvocatocascasi@studiolegalec.it">Avv. Diego Cascasi</a></li><li><a href="mailto:avvocato.cristinabianchi@gmail.com">Avv. Cristina Bianchi</a></li></ul></div><div class="footer-col"><h2>Sedi</h2><p>Via Donati 6, 20146 Milano</p><p>Via Italia 28, 20900 Monza</p></div></div><div class="footer-bottom"><span>© 2026 Studio Legale Cascasi &amp; Bianchi</span><span><a href="privacy.html">Privacy Policy</a> <span aria-hidden="true">·</span> <a href="cookie.html">Cookie Policy</a></span></div></div></footer>
+  <nav class="mobile-contact-bar" aria-label="Contatti rapidi"><a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a><a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a><a href="contatti.html#contactForm">Appuntamento</a></nav>
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Informativa cookie" aria-live="polite"><p>Questo sito utilizza soltanto strumenti tecnici necessari al funzionamento e alla memorizzazione delle preferenze. <a href="cookie.html">Cookie Policy</a>.</p><button type="button" id="cookieAccept">Ho capito</button></div>
 </body>
 </html>

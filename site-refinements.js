@@ -13,6 +13,14 @@
     document.head.appendChild(link);
   }
 
+  function loadBranding() {
+    if (qs('script[src="studio-branding.js"]')) return;
+    const script = document.createElement('script');
+    script.src = 'studio-branding.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function initFaq() {
     qsa('.faq-item').forEach((item, index) => {
       const button = qs('.faq-question', item);
@@ -130,6 +138,7 @@
 
   function init() {
     loadStyles();
+    loadBranding();
     initFaq();
     removePhoneReferences();
     enhanceFooter();

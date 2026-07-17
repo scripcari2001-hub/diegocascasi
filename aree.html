@@ -1,187 +1,116 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Aree di attività – Studio Legale Cascasi &amp; Bianchi</title>
-  <meta name="description" content="Assistenza legale a Milano e Monza in diritto immobiliare, condominiale, locazioni, contratti, appalti, responsabilità civile, recupero crediti, famiglia, successioni, diritto societario e tutela del consumatore.">
+  <meta name="description" content="Lo Studio presta assistenza stragiudiziale e giudiziale, con particolare esperienza nel diritto immobiliare e condominiale.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Aree di attività – Studio Legale Cascasi &amp; Bianchi">
-  <meta property="og:description" content="Assistenza stragiudiziale e giudiziale in ambito civile, con particolare esperienza nel diritto immobiliare e condominiale.">
+  <meta property="og:description" content="Lo Studio presta assistenza stragiudiziale e giudiziale, con particolare esperienza nel diritto immobiliare e condominiale.">
   <link rel="icon" type="image/png" sizes="32x32" href="logo.icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="accessibility-fixes.css">
-  <link rel="stylesheet" href="site-features.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="aree">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-  <div class="topbar">
-    <span>Per fissare un appuntamento chiamare il numero&nbsp;</span><a href="tel:+390212345678">02 1234 5678</a>
-  </div>
+  <div class="topbar"><div class="container topbar-inner">
+    <span>Lo Studio riceve esclusivamente su appuntamento.</span>
+    <span class="topbar-emails"><a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a><span aria-hidden="true">·</span><a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a></span>
+  </div></div>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="brand">Studio Legale Cascasi &amp; Bianchi<span>Avvocato a Milano e Monza</span></a>
-      <nav class="nav" aria-label="Navigazione principale">
-        <a href="index.html">Home</a>
-        <a href="chi-siamo.html">Lo Studio</a>
-        <a href="aree.html" class="active">Aree di attività</a>
-        <a href="contatti.html">Contatti</a>
-        <a href="tel:+390212345678" class="btn-call">Chiama ora</a>
+  <header class="header"><div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Studio Legale Cascasi &amp; Bianchi, Home"><span class="brand-name">Studio Legale Cascasi &amp; Bianchi</span><span class="brand-subtitle">Studio legale a Milano e Monza</span></a>
+    <button class="nav-toggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="mainNav" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="chi-siamo.html">Lo Studio</a><a href="aree.html" class="active">Aree di attività</a><a href="contatti.html">Contatti</a><a href="contatti.html#contactForm" class="nav-cta">Richiedi un appuntamento</a></nav>
+  </div></header>
+
+  <main id="contenuto">
+    <section class="page-hero"><div class="container"><p class="hero-eyebrow">Diritto civile</p><h1>Aree di attività</h1><p class="page-hero-sub">Lo Studio presta assistenza stragiudiziale e giudiziale, con particolare esperienza nel diritto immobiliare e condominiale.</p></div></section>
+
+    <section class="area-index-section" aria-labelledby="area-index-title"><div class="container">
+      <h2 id="area-index-title">Consulta le aree di attività</h2>
+      <nav class="area-index" aria-label="Indice delle aree di attività">
+        <a href="#diritto-immobiliare"><span>01</span>Diritto immobiliare</a>
+        <a href="#diritto-condominiale"><span>02</span>Diritto condominiale</a>
+        <a href="#locazioni"><span>03</span>Locazioni e rapporti tra proprietari e conduttori</a>
+        <a href="#contratti-obbligazioni"><span>04</span>Contratti e obbligazioni</a>
+        <a href="#appalti-lavori-edili"><span>05</span>Appalti e lavori edili</a>
+        <a href="#responsabilita-civile"><span>06</span>Responsabilità civile e risarcimento del danno</a>
+        <a href="#recupero-crediti"><span>07</span>Recupero crediti ed esecuzioni</a>
+        <a href="#famiglia-successioni"><span>08</span>Diritto di famiglia e successioni</a>
+        <a href="#societario-commerciale"><span>09</span>Diritto societario e commerciale</a>
+        <a href="#tutela-consumatore"><span>10</span>Tutela del consumatore</a>
       </nav>
-    </div>
-  </header>
+    </div></section>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="hero-eyebrow">Diritto civile</p>
-        <h1>Aree di attività</h1>
-        <p class="page-hero-sub">Lo Studio presta assistenza stragiudiziale e giudiziale, con particolare esperienza nel diritto immobiliare e condominiale.</p>
+    <section class="section"><div class="container area-list-wrap">
+      <article class="area-card" data-index="0" id="diritto-immobiliare">
+        <button type="button" class="area-toggle" aria-controls="diritto-immobiliare-content" aria-expanded="true"><span class="area-number">01</span><span>Diritto immobiliare</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="diritto-immobiliare-content"><p>Lo Studio assiste privati, società, investitori e operatori del settore nelle problematiche connesse alla proprietà, al trasferimento e alla gestione degli immobili. Particolare attenzione è riservata alla fase preventiva e contrattuale.</p><ul><li>Consulenza nella compravendita di immobili</li><li>Redazione e verifica di proposte irrevocabili, preliminari e accordi collegati</li><li>Vizi, difformità urbanistiche, edilizie e catastali</li><li>Garanzie contrattuali e formalità pregiudizievoli</li><li>Controversie su proprietà, possesso, confini e servitù</li><li>Divisioni immobiliari e comunioni</li><li>Immobili gravati da ipoteche, pignoramenti o altre trascrizioni</li><li>Responsabilità di venditori, acquirenti, mediatori e professionisti</li></ul></div>
+      </article>
+      <article class="area-card" data-index="1" id="diritto-condominiale">
+        <button type="button" class="area-toggle" aria-controls="diritto-condominiale-content" aria-expanded="true"><span class="area-number">02</span><span>Diritto condominiale</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="diritto-condominiale-content"><p>Il diritto condominiale rappresenta una delle principali aree di attività dello Studio. L’assistenza è rivolta ad amministratori, condomìni e singoli condòmini, sia nella fase preventiva sia nel contenzioso.</p><ul><li>Regolamento condominiale e tabelle millesimali</li><li>Ripartizione delle spese ordinarie e straordinarie</li><li>Impugnazione e difesa delle deliberazioni assembleari</li><li>Recupero dei contributi condominiali insoluti</li><li>Responsabilità dell’amministratore e dei condòmini</li><li>Infiltrazioni, allagamenti, rumori, immissioni e danni</li><li>Uso e occupazione delle parti comuni</li><li>Decoro architettonico, impianti e opere</li><li>Lavori di manutenzione e rapporti con imprese e tecnici</li><li>Mediazione e contenzioso condominiale</li></ul></div>
+      </article>
+      <article class="area-card" data-index="2" id="locazioni">
+        <button type="button" class="area-toggle" aria-controls="locazioni-content" aria-expanded="true"><span class="area-number">03</span><span>Locazioni e rapporti tra proprietari e conduttori</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="locazioni-content"><p>Lo Studio presta consulenza e assistenza nei rapporti di locazione a uso abitativo e commerciale, occupandosi della redazione, interpretazione e cessazione dei contratti.</p><ul><li>Redazione e revisione dei contratti di locazione</li><li>Pagamento e aggiornamento del canone</li><li>Ripartizione delle spese</li><li>Morosità e recupero dei canoni</li><li>Sfratto per morosità o per finita locazione</li><li>Deposito cauzionale e danni all’immobile</li><li>Recesso, disdetta e risoluzione</li><li>Occupazione successiva alla cessazione del rapporto</li></ul></div>
+      </article>
+      <article class="area-card" data-index="3" id="contratti-obbligazioni">
+        <button type="button" class="area-toggle" aria-controls="contratti-obbligazioni-content" aria-expanded="true"><span class="area-number">04</span><span>Contratti e obbligazioni</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="contratti-obbligazioni-content"><p>Lo Studio assiste privati, professionisti e imprese nella predisposizione, interpretazione ed esecuzione dei contratti, con attenzione alla tutela preventiva e alla corretta regolamentazione degli obblighi.</p><ul><li>Redazione e revisione di contratti</li><li>Inadempimento contrattuale</li><li>Diffide ad adempiere</li><li>Risoluzione del contratto</li><li>Clausole penali e risarcimento del danno</li><li>Caparra confirmatoria e acconti</li><li>Contestazione di clausole contrattuali</li><li>Accordi transattivi</li></ul></div>
+      </article>
+      <article class="area-card" data-index="4" id="appalti-lavori-edili">
+        <button type="button" class="area-toggle" aria-controls="appalti-lavori-edili-content" aria-expanded="true"><span class="area-number">05</span><span>Appalti e lavori edili</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="appalti-lavori-edili-content"><p>Nell’ambito degli appalti privati, lo Studio assiste committenti, condomìni, imprese e professionisti nelle controversie relative all’esecuzione di lavori edili e di ristrutturazione.</p><ul><li>Esame e redazione dei contratti di appalto</li><li>Vizi e difetti delle opere</li><li>Ritardi nell’esecuzione e penali</li><li>Richieste di pagamento e contestazione dei corrispettivi</li><li>Responsabilità dell’impresa, del progettista e del direttore dei lavori</li><li>Danni provocati durante l’esecuzione</li><li>Accertamenti tecnici preventivi e consulenze tecniche</li><li>Risoluzione del contratto e richieste risarcitorie</li></ul></div>
+      </article>
+      <article class="area-card" data-index="5" id="responsabilita-civile">
+        <button type="button" class="area-toggle" aria-controls="responsabilita-civile-content" aria-expanded="true"><span class="area-number">06</span><span>Responsabilità civile e risarcimento del danno</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="responsabilita-civile-content"><p>Lo Studio presta assistenza nelle controversie relative a danni patrimoniali e non patrimoniali derivanti da inadempimenti, fatti illeciti, attività professionali, lavori edili o cattiva manutenzione degli immobili.</p><ul><li>Ricostruzione dei fatti</li><li>Valutazione delle responsabilità</li><li>Quantificazione del danno</li><li>Rapporti con compagnie assicurative e responsabili civili</li><li>Richieste risarcitorie e contenzioso</li></ul></div>
+      </article>
+      <article class="area-card" data-index="6" id="recupero-crediti">
+        <button type="button" class="area-toggle" aria-controls="recupero-crediti-content" aria-expanded="true"><span class="area-number">07</span><span>Recupero crediti ed esecuzioni</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="recupero-crediti-content"><p>Lo Studio assiste privati, condomìni, professionisti e imprese nel recupero dei crediti, dalla richiesta stragiudiziale di pagamento sino all’eventuale esecuzione forzata.</p><ul><li>Solleciti e diffide di pagamento</li><li>Ricorsi per decreto ingiuntivo</li><li>Opposizioni a decreto ingiuntivo</li><li>Atti di precetto</li><li>Pignoramenti mobiliari, immobiliari e presso terzi</li><li>Procedure esecutive</li><li>Accordi di rientro e transazioni</li></ul></div>
+      </article>
+      <article class="area-card" data-index="7" id="famiglia-successioni">
+        <button type="button" class="area-toggle" aria-controls="famiglia-successioni-content" aria-expanded="true"><span class="area-number">08</span><span>Diritto di famiglia e successioni</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="famiglia-successioni-content"><p>Lo Studio presta assistenza nelle principali questioni di diritto di famiglia e successorio, con un approccio riservato e attento alla delicatezza dei rapporti personali coinvolti.</p><ul><li>Separazioni e divorzi</li><li>Rapporti tra genitori e figli</li><li>Modifica delle condizioni di separazione o divorzio</li><li>Tutela patrimoniale nei rapporti familiari</li><li>Successioni e divisioni ereditarie</li><li>Tutela dei legittimari</li><li>Impugnazione di disposizioni testamentarie</li><li>Controversie tra coeredi</li></ul></div>
+      </article>
+      <article class="area-card" data-index="8" id="societario-commerciale">
+        <button type="button" class="area-toggle" aria-controls="societario-commerciale-content" aria-expanded="true"><span class="area-number">09</span><span>Diritto societario e commerciale</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="societario-commerciale-content"><p>Lo Studio assiste società, soci e amministratori nelle questioni civilistiche connesse alla costituzione, gestione e cessazione dell’attività imprenditoriale.</p><ul><li>Rapporti tra soci</li><li>Responsabilità degli amministratori</li><li>Interpretazione degli accordi societari</li><li>Recupero dei crediti commerciali</li><li>Controversie derivanti dai rapporti contrattuali dell’impresa</li></ul></div>
+      </article>
+      <article class="area-card" data-index="9" id="tutela-consumatore">
+        <button type="button" class="area-toggle" aria-controls="tutela-consumatore-content" aria-expanded="true"><span class="area-number">10</span><span>Tutela del consumatore</span><span class="area-plus" aria-hidden="true">+</span></button>
+        <div class="area-content" id="tutela-consumatore-content"><p>Lo Studio presta assistenza ai consumatori nelle controversie relative all’acquisto di beni e servizi, con riferimento a difetti di conformità, vizi, garanzie legali e inadempimenti.</p><ul><li>Contestazioni al venditore o al fornitore</li><li>Riparazione o sostituzione del bene</li><li>Riduzione del prezzo</li><li>Risoluzione del contratto</li><li>Risarcimento dei danni</li></ul></div>
+      </article>
+    </div></section>
+
+    <section class="section section-cream"><div class="container">
+      <p class="section-label">Assistenza completa</p><div class="divider"></div><h2>Dalla consulenza preventiva al contenzioso</h2>
+      <div class="activities-layout">
+        <ul class="activity-list"><li>Consulenza e pareri legali</li><li>Redazione e revisione di contratti</li><li>Diffide e comunicazioni</li><li>Negoziazione e accordi transattivi</li><li>Mediazione e soluzioni conciliative</li><li>Procedimenti giudiziari civili</li><li>Decreti ingiuntivi ed esecuzioni</li><li>Accertamenti tecnici e consulenze</li><li>Rapporti con imprese, tecnici e assicurazioni</li><li>Coordinamento con professionisti specializzati</li></ul>
+        <aside class="network-box"><h3>Una rete di professionisti</h3><p>Quando la pratica lo richiede, lo Studio coordina il supporto di notai, commercialisti, consulenti del lavoro, medici legali, ingegneri, architetti, geometri e altri tecnici.</p><a href="contatti.html#contactForm" class="btn-gold">Contatta lo Studio</a></aside>
       </div>
-    </section>
+    </div></section>
 
-    <section class="area-index-section" aria-labelledby="areaIndexTitle">
-      <div class="container">
-        <p class="section-label">Indice delle attività</p>
-        <h2 class="area-index-heading" id="areaIndexTitle">Vai direttamente all’area di interesse</h2>
-        <nav class="area-index" aria-label="Indice delle aree di attività">
-          <a href="#area-diritto-immobiliare">Diritto immobiliare</a>
-          <a href="#area-diritto-condominiale">Diritto condominiale</a>
-          <a href="#area-locazioni-e-rapporti-tra-proprietari-e-conduttori">Locazioni e rapporti tra proprietari e conduttori</a>
-          <a href="#area-contratti-e-obbligazioni">Contratti e obbligazioni</a>
-          <a href="#area-appalti-e-lavori-edili">Appalti e lavori edili</a>
-          <a href="#area-responsabilita-civile-e-risarcimento-del-danno">Responsabilità civile e risarcimento del danno</a>
-          <a href="#area-recupero-crediti-ed-esecuzioni">Recupero crediti ed esecuzioni</a>
-          <a href="#area-diritto-di-famiglia-e-successioni">Diritto di famiglia e successioni</a>
-          <a href="#area-diritto-societario-e-commerciale">Diritto societario e commerciale</a>
-          <a href="#area-tutela-del-consumatore">Tutela del consumatore</a>
-        </nav>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="area-block" id="area-diritto-immobiliare">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M6 21V8l6-5 6 5v13M9 12h6M9 16h6"/></svg></div>
-          <div class="area-text"><p class="section-label">01</p><h2>Diritto immobiliare</h2><p>Lo Studio assiste privati, società, investitori e operatori del settore nelle problematiche connesse alla proprietà, al trasferimento e alla gestione degli immobili. Particolare attenzione è riservata alla fase preventiva e contrattuale.</p><ul class="area-list"><li>Consulenza nella compravendita di immobili</li><li>Redazione e verifica di proposte irrevocabili, preliminari e accordi collegati</li><li>Vizi, difformità urbanistiche, edilizie e catastali</li><li>Garanzie contrattuali e formalità pregiudizievoli</li><li>Controversie su proprietà, possesso, confini e servitù</li><li>Divisioni immobiliari e comunioni</li><li>Immobili gravati da ipoteche, pignoramenti o altre trascrizioni</li><li>Responsabilità di venditori, acquirenti, mediatori e professionisti</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-diritto-condominiale">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21h16M5 10h14M7 10v11M12 10v11M17 10v11M3 7l9-4 9 4"/></svg></div>
-          <div class="area-text"><p class="section-label">02</p><h2>Diritto condominiale</h2><p>Il diritto condominiale rappresenta una delle principali aree di attività dello Studio. L’assistenza è rivolta ad amministratori, condomìni e singoli condòmini, sia nella fase preventiva sia nel contenzioso.</p><ul class="area-list"><li>Regolamento condominiale e tabelle millesimali</li><li>Ripartizione delle spese ordinarie e straordinarie</li><li>Impugnazione e difesa delle deliberazioni assembleari</li><li>Recupero dei contributi condominiali insoluti</li><li>Responsabilità dell’amministratore e dei condòmini</li><li>Infiltrazioni, allagamenti, rumori, immissioni e danni</li><li>Uso e occupazione delle parti comuni</li><li>Decoro architettonico, impianti e opere</li><li>Lavori di manutenzione e rapporti con imprese e tecnici</li><li>Mediazione e contenzioso condominiale</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-locazioni-e-rapporti-tra-proprietari-e-conduttori">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M6 21V8l6-5 6 5v13M9 12h6M9 16h6"/></svg></div>
-          <div class="area-text"><p class="section-label">03</p><h2>Locazioni e rapporti tra proprietari e conduttori</h2><p>Lo Studio presta consulenza e assistenza nei rapporti di locazione a uso abitativo e commerciale, occupandosi della redazione, interpretazione e cessazione dei contratti.</p><ul class="area-list"><li>Redazione e revisione dei contratti di locazione</li><li>Pagamento e aggiornamento del canone</li><li>Ripartizione delle spese</li><li>Morosità e recupero dei canoni</li><li>Sfratto per morosità o per finita locazione</li><li>Deposito cauzionale e danni all’immobile</li><li>Recesso, disdetta e risoluzione</li><li>Occupazione successiva alla cessazione del rapporto</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-contratti-e-obbligazioni">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg></div>
-          <div class="area-text"><p class="section-label">04</p><h2>Contratti e obbligazioni</h2><p>Lo Studio assiste privati, professionisti e imprese nella predisposizione, interpretazione ed esecuzione dei contratti, con attenzione alla tutela preventiva e alla corretta regolamentazione degli obblighi.</p><ul class="area-list"><li>Redazione e revisione di contratti</li><li>Inadempimento contrattuale</li><li>Diffide ad adempiere</li><li>Risoluzione del contratto</li><li>Clausole penali e risarcimento del danno</li><li>Caparra confirmatoria e acconti</li><li>Contestazione di clausole contrattuali</li><li>Accordi transattivi</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-appalti-e-lavori-edili">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 6l4 4M13 7l-8 8-1 4 4-1 8-8M15 3l6 6"/></svg></div>
-          <div class="area-text"><p class="section-label">05</p><h2>Appalti e lavori edili</h2><p>Nell’ambito degli appalti privati, lo Studio assiste committenti, condomìni, imprese e professionisti nelle controversie relative all’esecuzione di lavori edili e di ristrutturazione.</p><ul class="area-list"><li>Esame e redazione dei contratti di appalto</li><li>Vizi e difetti delle opere</li><li>Ritardi nell’esecuzione e penali</li><li>Richieste di pagamento e contestazione dei corrispettivi</li><li>Responsabilità dell’impresa, del progettista e del direttore dei lavori</li><li>Danni provocati durante l’esecuzione</li><li>Accertamenti tecnici preventivi e consulenze tecniche</li><li>Risoluzione del contratto e richieste risarcitorie</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-responsabilita-civile-e-risarcimento-del-danno">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="area-text"><p class="section-label">06</p><h2>Responsabilità civile e risarcimento del danno</h2><p>Lo Studio presta assistenza nelle controversie relative a danni patrimoniali e non patrimoniali derivanti da inadempimenti, fatti illeciti, attività professionali, lavori edili o cattiva manutenzione degli immobili.</p><ul class="area-list"><li>Ricostruzione dei fatti</li><li>Valutazione delle responsabilità</li><li>Quantificazione del danno</li><li>Rapporti con compagnie assicurative e responsabili civili</li><li>Richieste risarcitorie e contenzioso</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-recupero-crediti-ed-esecuzioni">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M16 8.5c-.7-.7-1.8-1.2-3-1.2-2 0-3.5 1.1-3.5 2.6 0 1.6 1.4 2.2 3.5 2.6 2.1.4 3.5 1 3.5 2.6 0 1.5-1.5 2.6-3.5 2.6-1.4 0-2.7-.5-3.5-1.4M12 5v14"/></svg></div>
-          <div class="area-text"><p class="section-label">07</p><h2>Recupero crediti ed esecuzioni</h2><p>Lo Studio assiste privati, condomìni, professionisti e imprese nel recupero dei crediti, dalla richiesta stragiudiziale di pagamento sino all’eventuale esecuzione forzata.</p><ul class="area-list"><li>Solleciti e diffide di pagamento</li><li>Ricorsi per decreto ingiuntivo</li><li>Opposizioni a decreto ingiuntivo</li><li>Atti di precetto</li><li>Pignoramenti mobiliari, immobiliari e presso terzi</li><li>Procedure esecutive</li><li>Accordi di rientro e transazioni</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-diritto-di-famiglia-e-successioni">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="area-text"><p class="section-label">08</p><h2>Diritto di famiglia e successioni</h2><p>Lo Studio presta assistenza nelle principali questioni di diritto di famiglia e successorio, con un approccio riservato e attento alla delicatezza dei rapporti personali coinvolti.</p><ul class="area-list"><li>Separazioni e divorzi</li><li>Rapporti tra genitori e figli</li><li>Modifica delle condizioni di separazione o divorzio</li><li>Tutela patrimoniale nei rapporti familiari</li><li>Successioni e divisioni ereditarie</li><li>Tutela dei legittimari</li><li>Impugnazione di disposizioni testamentarie</li><li>Controversie tra coeredi</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-diritto-societario-e-commerciale">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3M3 12h18"/></svg></div>
-          <div class="area-text"><p class="section-label">09</p><h2>Diritto societario e commerciale</h2><p>Lo Studio assiste società, soci e amministratori nelle questioni civilistiche connesse alla costituzione, gestione e cessazione dell’attività imprenditoriale.</p><ul class="area-list"><li>Rapporti tra soci</li><li>Responsabilità degli amministratori</li><li>Interpretazione degli accordi societari</li><li>Recupero dei crediti commerciali</li><li>Controversie derivanti dai rapporti contrattuali dell’impresa</li></ul></div>
-        </div>
-        <div class="area-divider"></div>
-
-        <div class="area-block" id="area-tutela-del-consumatore">
-          <div class="area-icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></div>
-          <div class="area-text"><p class="section-label">10</p><h2>Tutela del consumatore</h2><p>Lo Studio presta assistenza ai consumatori nelle controversie relative all’acquisto di beni e servizi, con riferimento a difetti di conformità, vizi, garanzie legali e inadempimenti.</p><ul class="area-list"><li>Contestazioni al venditore o al fornitore</li><li>Riparazione o sostituzione del bene</li><li>Riduzione del prezzo</li><li>Risoluzione del contratto</li><li>Risarcimento dei danni</li></ul></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-cream">
-      <div class="container">
-        <p class="section-label">Assistenza completa</p>
-        <div class="divider"></div>
-        <h2>Dalla consulenza preventiva al contenzioso</h2>
-        <div class="attivita-wrap">
-          <ul class="activity-list">
-            <li>Consulenza e pareri legali</li><li>Redazione e revisione di contratti</li><li>Diffide e comunicazioni</li><li>Negoziazione e accordi transattivi</li><li>Mediazione e soluzioni conciliative</li><li>Procedimenti giudiziari civili</li><li>Decreti ingiuntivi ed esecuzioni</li><li>Accertamenti tecnici e consulenze</li><li>Rapporti con imprese, tecnici e assicurazioni</li><li>Coordinamento con professionisti specializzati</li>
-          </ul>
-          <div class="attivita-cta">
-            <h3>Una rete di professionisti</h3>
-            <p>Quando la pratica lo richiede, lo Studio coordina il supporto di notai, commercialisti, consulenti del lavoro, medici legali, ingegneri, architetti, geometri e altri tecnici.</p>
-            <a href="contatti.html" class="btn-gold">Contatta lo Studio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-banner">
-      <div class="container">
-        <h2>Esporre il problema è il primo passo</h2>
-        <p>Lo Studio valuterà il caso, le possibili soluzioni, i rischi, i tempi e i costi dell’attività da intraprendere.</p>
-        <a href="contatti.html" class="btn-primary">Richiedi un appuntamento</a>
-      </div>
-    </section>
+    <section class="cta-banner"><div class="container"><h2>Esporre il problema è il primo passo</h2><p>Lo Studio valuterà il caso, le possibili soluzioni, i rischi, i tempi e i costi dell’attività da intraprendere.</p><a href="contatti.html#contactForm" class="btn-primary">Richiedi un appuntamento</a></div></section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Studio Legale Cascasi &amp; Bianchi<span>Avvocato a Milano e Monza</span></div>
-          <p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano dal 2007.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigazione</h4>
-          <ul><li><a href="index.html">Home</a></li><li><a href="chi-siamo.html">Lo Studio</a></li><li><a href="aree.html">Aree di attività</a></li><li><a href="contatti.html">Contatti</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contatti</h4>
-          <p class="footer-contact-item">Via Roma 12, 20121 Milano (MI)</p>
-          <p class="footer-contact-item"><a href="tel:+390212345678">02 1234 5678</a></p>
-          <p class="footer-contact-item"><a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Studio Legale Cascasi &amp; Bianchi – P.IVA 12345678901</span>
-        <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container"><div class="footer-grid">
+    <div><div class="footer-brand"><span class="footer-brand-name">Studio Legale Cascasi &amp; Bianchi</span><span>Studio legale a Milano e Monza</span></div><p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano e Monza.</p><p class="footer-appointment">Lo Studio riceve esclusivamente su appuntamento.</p></div>
+    <div class="footer-col"><h2>Navigazione</h2><ul><li><a href="index.html">Home</a></li><li><a href="chi-siamo.html">Lo Studio</a></li><li><a href="aree.html">Aree di attività</a></li><li><a href="contatti.html">Contatti</a></li></ul></div>
+    <div class="footer-col"><h2>Email</h2><ul><li><a href="mailto:avvocatocascasi@studiolegalec.it">Avv. Diego Cascasi</a></li><li><a href="mailto:avvocato.cristinabianchi@gmail.com">Avv. Cristina Bianchi</a></li></ul></div>
+    <div class="footer-col"><h2>Sedi</h2><p>Via Donati 6, 20146 Milano</p><p>Via Italia 28, 20900 Monza</p></div>
+  </div><div class="footer-bottom"><span>© 2026 Studio Legale Cascasi &amp; Bianchi</span><span><a href="privacy.html">Privacy Policy</a> <span aria-hidden="true">·</span> <a href="cookie.html">Cookie Policy</a></span></div></div></footer>
 
-  <script src="script.js" defer></script>
-  <script src="site-enhancements.js" defer></script>
-  <script src="site-features.js" defer></script>
+  <nav class="mobile-contact-bar" aria-label="Contatti rapidi"><a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a><a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a><a href="contatti.html#contactForm">Appuntamento</a></nav>
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Informativa cookie" aria-live="polite"><p>Questo sito utilizza soltanto strumenti tecnici necessari al funzionamento e alla memorizzazione delle preferenze. <a href="cookie.html">Cookie Policy</a>.</p><button type="button" id="cookieAccept">Ho capito</button></div>
 </body>
 </html>

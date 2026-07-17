@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Studio Legale Cascasi &amp; Bianchi – Studio legale a Milano e Monza</title>
   <meta name="description" content="Lo Studio Legale Cascasi &amp; Bianchi offre consulenza, assistenza e rappresentanza legale in ambito civile, con particolare esperienza nel diritto immobiliare e condominiale.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Studio Legale Cascasi &amp; Bianchi – Studio legale a Milano e Monza">
-  <meta property="og:description" content="Consulenza e assistenza legale in ambito civile, con particolare esperienza nel diritto immobiliare e condominiale.">
+  <meta property="og:description" content="Lo Studio Legale Cascasi &amp; Bianchi offre consulenza, assistenza e rappresentanza legale in ambito civile, con particolare esperienza nel diritto immobiliare e condominiale.">
   <link rel="icon" type="image/png" sizes="32x32" href="logo.icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="accessibility-fixes.css">
-  <link rel="stylesheet" href="site-features.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="index">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
   <div class="topbar">
-    <a href="contatti.html#contactForm">Lo Studio riceve esclusivamente su appuntamento</a>
+    <div class="container topbar-inner">
+      <span>Lo Studio riceve esclusivamente su appuntamento.</span>
+      <span class="topbar-emails">
+        <a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a>
+      </span>
+    </div>
   </div>
 
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="brand">Studio Legale Cascasi &amp; Bianchi<span>Studio legale a Milano e Monza</span></a>
-      <nav class="nav" aria-label="Navigazione principale">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Studio Legale Cascasi &amp; Bianchi, Home">
+        <span class="brand-name">Studio Legale Cascasi &amp; Bianchi</span>
+        <span class="brand-subtitle">Studio legale a Milano e Monza</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Apri il menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="mainNav" aria-label="Navigazione principale">
         <a href="index.html" class="active">Home</a>
         <a href="chi-siamo.html">Lo Studio</a>
         <a href="aree.html">Aree di attività</a>
         <a href="contatti.html">Contatti</a>
-        <a href="contatti.html#contactForm" class="btn-appointment">Richiedi un appuntamento</a>
+        <a href="contatti.html#contactForm" class="nav-cta">Richiedi un appuntamento</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenuto">
     <section class="hero">
       <div class="container">
         <div class="hero-inner">
-          <p class="hero-eyebrow">Studio Legale a Milano</p>
+          <p class="hero-eyebrow">Studio legale a Milano e Monza</p>
           <h1>Competenza, <em>dedizione</em> e attenzione al cliente</h1>
           <p class="hero-sub">Lo Studio Legale Cascasi &amp; Bianchi offre consulenza, assistenza e rappresentanza legale in ambito civile, con particolare esperienza nel diritto immobiliare e condominiale.</p>
           <div class="hero-btns">
             <a href="aree.html" class="btn-primary">Scopri le aree di attività</a>
-            <a href="contatti.html" class="btn-outline">Richiedi un appuntamento</a>
+            <a href="contatti.html#contactForm" class="btn-outline">Richiedi un appuntamento</a>
           </div>
         </div>
       </div>
@@ -58,26 +70,20 @@
         <div class="divider"></div>
         <h2>Assistenza legale personalizzata, concreta ed efficace</h2>
         <div class="home-cards">
-          <a href="aree.html" class="home-card">
-            <div class="home-card-icon">
-              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M6 21V8l6-5 6 5v13M9 12h6M9 16h6"/></svg>
-            </div>
+          <a class="home-card" data-index="0" href="aree.html#diritto-immobiliare">
+            <span class="card-number" aria-hidden="true">01</span>
             <h3>Diritto immobiliare</h3>
             <p>Assistenza nella compravendita, gestione e tutela degli immobili, con particolare attenzione alla fase preventiva e contrattuale.</p>
             <span class="card-link">Scopri di più →</span>
           </a>
-          <a href="aree.html" class="home-card">
-            <div class="home-card-icon">
-              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21h16M5 10h14M7 10v11M12 10v11M17 10v11M3 7l9-4 9 4"/></svg>
-            </div>
+          <a class="home-card" data-index="1" href="aree.html#diritto-condominiale">
+            <span class="card-number" aria-hidden="true">02</span>
             <h3>Diritto condominiale</h3>
             <p>Consulenza e difesa per amministratori, condomìni e singoli condòmini nelle questioni relative alla gestione delle parti comuni.</p>
             <span class="card-link">Scopri di più →</span>
           </a>
-          <a href="aree.html" class="home-card">
-            <div class="home-card-icon">
-              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg>
-            </div>
+          <a class="home-card" data-index="2" href="aree.html">
+            <span class="card-number" aria-hidden="true">03</span>
             <h3>Contratti e contenzioso civile</h3>
             <p>Assistenza stragiudiziale e giudiziale in materia di contratti, appalti, responsabilità civile, crediti, locazioni e successioni.</p>
             <span class="card-link">Tutte le attività →</span>
@@ -86,23 +92,23 @@
       </div>
     </section>
 
-    <section class="section home-reasons-section">
+    <section class="section section-cream">
       <div class="container">
         <p class="section-label">Perché rivolgersi allo Studio</p>
         <div class="divider"></div>
         <h2>Un’assistenza costruita sul caso concreto</h2>
         <div class="home-reasons">
-          <article class="reason-card">
+          <article class="reason-card" data-index="0">
             <span class="reason-number" aria-hidden="true">01</span>
             <h3>Rapporto diretto e trasparente</h3>
             <p>Lo Studio garantisce disponibilità, chiarezza nelle comunicazioni e aggiornamento costante sull’andamento delle pratiche, illustrando soluzioni, rischi, tempi e costi.</p>
           </article>
-          <article class="reason-card">
+          <article class="reason-card" data-index="1">
             <span class="reason-number" aria-hidden="true">02</span>
             <h3>Prevenzione e soluzione delle controversie</h3>
             <p>Particolare attenzione è riservata alla fase preventiva e contrattuale, valutando soluzioni stragiudiziali e conciliative quando possano tutelare efficacemente il cliente.</p>
           </article>
-          <article class="reason-card">
+          <article class="reason-card" data-index="2">
             <span class="reason-number" aria-hidden="true">03</span>
             <h3>Rete di professionisti</h3>
             <p>Lo Studio collabora con professionisti e consulenti qualificati, tra cui notai, commercialisti, consulenti del lavoro, medici legali, ingegneri, architetti, geometri e altri tecnici.</p>
@@ -124,11 +130,15 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">Studio Legale Cascasi &amp; Bianchi<span>Studio legale a Milano e Monza</span></div>
-          <p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano dal 2007.</p>
+          <div class="footer-brand">
+            <span class="footer-brand-name">Studio Legale Cascasi &amp; Bianchi</span>
+            <span>Studio legale a Milano e Monza</span>
+          </div>
+          <p class="footer-desc">Consulenza, assistenza e rappresentanza legale in ambito civile a Milano e Monza.</p>
+          <p class="footer-appointment">Lo Studio riceve esclusivamente su appuntamento.</p>
         </div>
         <div class="footer-col">
-          <h4>Navigazione</h4>
+          <h2>Navigazione</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="chi-siamo.html">Lo Studio</a></li>
@@ -137,20 +147,34 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contatti</h4>
-          <p class="footer-contact-item">Via Roma 12, 20121 Milano (MI)</p>
-          <p class="footer-contact-item"><a href="mailto:info@studiolegalecascasi.it">info@studiolegalecascasi.it</a></p>
+          <h2>Email</h2>
+          <ul>
+            <li><a href="mailto:avvocatocascasi@studiolegalec.it">Avv. Diego Cascasi</a></li>
+            <li><a href="mailto:avvocato.cristinabianchi@gmail.com">Avv. Cristina Bianchi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Sedi</h2>
+          <p>Via Donati 6, 20146 Milano</p>
+          <p>Via Italia 28, 20900 Monza</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Studio Legale Cascasi &amp; Bianchi – P.IVA 12345678901</span>
-        <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie.html">Cookie Policy</a></span>
+        <span>© 2026 Studio Legale Cascasi &amp; Bianchi</span>
+        <span><a href="privacy.html">Privacy Policy</a> <span aria-hidden="true">·</span> <a href="cookie.html">Cookie Policy</a></span>
       </div>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
-  <script src="site-enhancements.js" defer></script>
-  <script src="site-features.js" defer></script>
+  <nav class="mobile-contact-bar" aria-label="Contatti rapidi">
+    <a href="mailto:avvocatocascasi@studiolegalec.it">Email Milano</a>
+    <a href="mailto:avvocato.cristinabianchi@gmail.com">Email Monza</a>
+    <a href="contatti.html#contactForm">Appuntamento</a>
+  </nav>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Informativa cookie" aria-live="polite">
+    <p>Questo sito utilizza soltanto strumenti tecnici necessari al funzionamento e alla memorizzazione delle preferenze. <a href="cookie.html">Cookie Policy</a>.</p>
+    <button type="button" id="cookieAccept">Ho capito</button>
+  </div>
 </body>
 </html>

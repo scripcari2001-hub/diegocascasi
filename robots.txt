@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scripcari2001-hub.github.io/diegocascasi/sitemap.xml

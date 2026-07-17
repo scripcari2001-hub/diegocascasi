@@ -1,584 +1,586 @@
-/* ════════════════════════════════════════
-  Utili
-════════════════════════════════════════ */
+/* Studio Legale Cascasi & Bianchi — comportamento unico del sito */
+(() => {
+  "use strict";
 
-function set(selector, valore) {
-  const el = document.querySelector(selector);
-  if (el && valore !== undefined) el.textContent = valore;
-}
+  const qs = (selector, root = document) => root.querySelector(selector);
+  const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const page = document.body.dataset.page || "index";
 
-function setAll(selector, valore) {
-  document.querySelectorAll(selector).forEach(el => {
-    if (valore !== undefined) el.textContent = valore;
-  });
-}
-
-function setHTML(selector, html) {
-  const el = document.querySelector(selector);
-  if (el && html !== undefined) el.innerHTML = html;
-}
-
-function setAttr(selector, attributo, valore) {
-  const el = document.querySelector(selector);
-  if (el && valore !== undefined) el.setAttribute(attributo, valore);
-}
-
-function setAllAttr(selector, attributo, valore) {
-  document.querySelectorAll(selector).forEach(el => {
-    if (valore !== undefined) el.setAttribute(attributo, valore);
-  });
-}
-
-/* ════════════════════════════════════════
-  topbar · navigazione · footer · copyright
-════════════════════════════════════════ */
-function popolaComuni(d) {
-  const s = d.studio;
-  const n = d.nav;
-  const f = d.footer;
-
-/*  Topbar  */
-const topbarSpan = document.querySelector('.topbar span');
-const topbarLink = document.querySelector('.topbar a');
-
-if (topbarSpan && topbarLink) {
-  topbarSpan.textContent = d.topbar.testo + '\u00a0';
-  topbarLink.textContent = s.telefono;
-  topbarLink.href = s.telefonoLink;
-}
-
-  /*  Brand (nome studio + tag)  */
-  document.querySelectorAll('.brand').forEach(el => {
-    el.innerHTML = `${s.nome}<span>${s.sottoTitolo}</span>`;
-  });
-
-/* ── Navigazione ── */
-document.querySelectorAll('.nav a').forEach(a => {
-  const href = (a.getAttribute('href') || '').replace(/^\/|\.html$/g, '').toLowerCase();
-
-  if (!a.classList.contains('btn-call')) {
-    if (href === '' || href === 'index')      a.textContent = n.home;
-    else if (href === 'chi-siamo')            a.textContent = n.chiSiamo;
-    else if (href === 'aree')                 a.textContent = n.aree;
-    else if (href === 'contatti')             a.textContent = n.contatti;
+  function setText(selector, value, root = document) {
+    const element = qs(selector, root);
+    if (element && value !== undefined && value !== null) element.textContent = value;
   }
-});
 
-/* ── Bottone chiama ── */
-document.querySelectorAll('.btn-call').forEach(a => {
-  a.textContent = n.chiama;
-  a.href = s.telefonoLink;
-});
-
-  /*  brand  */
-  document.querySelectorAll('.footer-brand').forEach(el => {
-    el.innerHTML = `${s.nome}<span>${s.sottoTitolo}</span>`;
-  });
-
-  /*  descrizione  */
-  set('.footer-desc', `${f.descrizione} ${s.annoFondazione}.`);
-
-  /*  titoli colonne  */
-  const footerH4 = document.querySelectorAll('.footer-col h4');
-  if (footerH4[0]) footerH4[0].textContent = f.navTitolo;
-  if (footerH4[1]) footerH4[1].textContent = f.contattiTitolo;
-  if (footerH4[2]) footerH4[2].textContent = f.legaleTitolo;
-
-  /* contatti (indirizzo, tel, email)  */
-  const items = document.querySelectorAll('.footer-contact-item');
-  if (items[0]) items[0].textContent = s.indirizzo;
-  if (items[1]) items[1].innerHTML = `<a href="${s.telefonoLink}">${s.telefono}</a>`;
-  if (items[2]) items[2].innerHTML = `<a href="mailto:${s.email}">${s.email}</a>`;
-
-  /* link privacy e cookie  */
-  const footerLinks = document.querySelectorAll('.footer-bottom a');
-  if (footerLinks[0]) footerLinks[0].textContent = f.privacyLink;
-  if (footerLinks[1]) footerLinks[1].textContent = f.cookieLink;
-
-  /* copyright  */
-  const copy = document.querySelector('.footer-bottom span');
-  if (copy) copy.textContent = `© ${new Date().getFullYear()} ${s.nome} – P.IVA ${s.piva}`;
-}
-
-/* ════════════════════════════════════════
-  index
-════════════════════════════════════════ */
-function popolaHome(d) {
-  const h = d.home;
-  const s = d.studio;
-
-  /* Hero */
-  set('.hero .hero-eyebrow', h.heroOcchio);
-  const h1 = document.querySelector('.hero h1');
-  if (h1) h1.innerHTML = h.heroTitolo.replace(
-    h.heroTitoloEm, `<em>${h.heroTitoloEm}</em>`
-  );
-  set('.hero .hero-sub', h.heroSottotitolo);
-
-  const btns = document.querySelectorAll('.hero-btns a');
-  if (btns[0]) btns[0].textContent = h.heroBtnPrimario;
-  if (btns[1]) btns[1].textContent = h.heroBtnSecondario;
-
-  /* Sezione cards */
-  set('.section .section-label', h.sezioneOcchio);
-  set('.section h2', h.sezioneTitolo);
-
-  document.querySelectorAll('.home-card').forEach((card, i) => {
-    const c = h.cards[i];
-    if (!c) return;
-    card.href = c.link;
-    const h3 = card.querySelector('h3');
-    const p  = card.querySelector('p');
-    const a  = card.querySelector('.card-link');
-    if (h3) h3.textContent = c.titolo;
-    if (p)  p.textContent  = c.testo;
-    if (a)  a.textContent  = c.linkTesto;
-  });
-
-  /*  banner */
-  set('.cta-banner h2', h.ctaTitolo);
-  set('.cta-banner p',  h.ctaSottotitolo);
-  const ctaBtn = document.querySelector('.cta-banner .btn-primary');
-  if (ctaBtn) {
-    ctaBtn.href = s.telefonoLink;
-    ctaBtn.textContent = `${h.ctaBottone} – ${s.telefono}`;
+  function setLink(element, href, label) {
+    if (!element) return;
+    if (href) element.href = href;
+    if (label !== undefined) element.textContent = label;
   }
-}
 
-/* ════════════════════════════════════════
-  chi-siamo
-════════════════════════════════════════ */
-function popolaChiSiamo(d) {
-  const c = d.chiSiamo;
+  function clearAndAppendTextList(container, values, tag = "li") {
+    if (!container || !Array.isArray(values)) return;
+    container.replaceChildren(...values.map(value => {
+      const element = document.createElement(tag);
+      element.textContent = value;
+      return element;
+    }));
+  }
 
-  /* Hero */
-  set('.page-hero .hero-eyebrow', c.heroOcchio);
-  set('.page-hero h1', c.heroTitolo);
-  set('.page-hero-sub', c.heroSottotitolo);
+  function initNavigation() {
+    const toggle = qs(".nav-toggle");
+    const nav = qs("#mainNav");
+    if (!toggle || !nav) return;
 
-  /* foto */
-  const fotoSpan = document.querySelector('.img-placeholder span');
-  if (fotoSpan) fotoSpan.textContent = c.fotoPlaceholder;
+    const close = (restoreFocus = false) => {
+      nav.classList.remove("is-open");
+      toggle.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Apri il menu");
+      document.body.classList.remove("nav-open");
+      if (restoreFocus) toggle.focus();
+    };
 
-  /* Sezione profilo */
-  set('.studio-text .section-label', c.sezioneOcchio);
-  set('.studio-text h2', c.sezioneTitolo);
+    toggle.addEventListener("click", () => {
+      const opening = toggle.getAttribute("aria-expanded") !== "true";
+      nav.classList.toggle("is-open", opening);
+      toggle.classList.toggle("is-open", opening);
+      toggle.setAttribute("aria-expanded", String(opening));
+      toggle.setAttribute("aria-label", opening ? "Chiudi il menu" : "Apri il menu");
+      document.body.classList.toggle("nav-open", opening);
+    });
 
-  const pp = document.querySelectorAll('.studio-text > p:not(.section-label)');
-  if (pp[0]) pp[0].textContent = c.paragrafo1;
-  if (pp[1]) pp[1].textContent = c.paragrafo2;
-  if (pp[2]) pp[2].textContent = c.paragrafo3;
+    nav.addEventListener("click", event => {
+      if (event.target.closest("a")) close();
+    });
+    document.addEventListener("click", event => {
+      if (nav.classList.contains("is-open") && !event.target.closest(".header")) close();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) close(true);
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 980) close();
+    });
+  }
 
-  /* Statistiche */
-  document.querySelectorAll('.detail-item').forEach((item, i) => {
-    const stat = c.statistiche[i];
-    if (!stat) return;
-    const num   = item.querySelector('.detail-num');
-    const label = item.querySelector('.detail-label');
-    if (num) {
-      num.dataset.target = stat.numero;
-      num.dataset.suffix = stat.suffisso;
-      num.textContent    = '0' + stat.suffisso;
+  function renderCommon(data) {
+    const studio = data?.studio;
+    const professionals = data?.professionisti;
+    if (!studio || !Array.isArray(professionals)) return;
+
+    qsa(".brand-name,.footer-brand-name").forEach(el => { el.textContent = studio.nome; });
+    qsa(".brand-subtitle,.footer-brand-name + span").forEach(el => { el.textContent = studio.sottoTitolo; });
+    qsa(".footer-desc").forEach(el => { el.textContent = data.footer?.descrizione || studio.descrizione; });
+    qsa(".footer-appointment").forEach(el => { el.textContent = studio.ricevimento; });
+
+    const topbar = qs(".topbar-inner");
+    if (topbar) {
+      const notice = qs(":scope > span:first-child", topbar);
+      if (notice) notice.textContent = studio.ricevimento;
+      const emailLinks = qsa(".topbar-emails a", topbar);
+      professionals.slice(0, 2).forEach((person, index) => {
+        setLink(emailLinks[index], `mailto:${person.email}`, index === 0 ? "Email Milano" : "Email Monza");
+      });
     }
-    if (label) label.textContent = stat.etichetta;
-  });
 
-  /* Valori – label sezione */
-  const valoriSection = document.querySelector('.section-cream');
-  if (valoriSection) {
-    const lbl = valoriSection.querySelector('.section-label');
-    const h2  = valoriSection.querySelector('h2');
-    if (lbl) lbl.textContent = c.valoriOcchio;
-    if (h2)  h2.textContent  = c.valoriTitolo;
-  }
+    const navLabels = data.nav || {};
+    qsa("#mainNav a").forEach(link => {
+      const href = link.getAttribute("href") || "";
+      if (link.classList.contains("nav-cta")) link.textContent = navLabels.appuntamento || "Richiedi un appuntamento";
+      else if (href.startsWith("index")) link.textContent = navLabels.home || "Home";
+      else if (href.startsWith("chi-siamo")) link.textContent = navLabels.chiSiamo || "Lo Studio";
+      else if (href.startsWith("aree")) link.textContent = navLabels.aree || "Aree di attività";
+      else if (href.startsWith("contatti")) link.textContent = navLabels.contatti || "Contatti";
+    });
 
-  document.querySelectorAll('.valore-card').forEach((card, i) => {
-    const v = c.valori[i];
-    if (!v) return;
-    const h3 = card.querySelector('h3');
-    const p  = card.querySelector('p');
-    if (h3) h3.textContent = v.titolo;
-    if (p)  p.textContent  = v.testo;
-  });
-
-  /*  banner */
-  set('.cta-banner h2', c.ctaTitolo);
-  set('.cta-banner p',  c.ctaSottotitolo);
-  const ctaBtn = document.querySelector('.cta-banner .btn-primary');
-  if (ctaBtn) ctaBtn.textContent = c.ctaBottone;
-}
-
-/* ════════════════════════════════════════
-  aree
-════════════════════════════════════════ */
-function popolaAree(d) {
-  const a = d.aree;
-
-  /* Hero */
-  set('.page-hero .hero-eyebrow', a.heroOcchio);
-  set('.page-hero h1', a.heroTitolo);
-  set('.page-hero-sub', a.heroSottotitolo);
-
-  /* Blocchi specializzazioni */
-  document.querySelectorAll('.area-block').forEach((block, i) => {
-    const spec = a.specializzazioni[i];
-    if (!spec) return;
-    const label = block.querySelector('.section-label');
-    const h2    = block.querySelector('h2');
-    const p     = block.querySelector('p');
-    const list  = block.querySelector('.area-list');
-    if (label) label.textContent = spec.numero;
-    if (h2)    h2.textContent    = spec.titolo;
-    if (p)     p.textContent     = spec.testo;
-    if (list)  list.innerHTML    = spec.voci.map(v => `<li>${v}</li>`).join('');
-  });
-
-  /* Sezione "Nel dettaglio" */
-  const cream = document.querySelector('.section-cream');
-  if (cream) {
-    set('.section-cream .section-label', a.attivitaOcchio);
-    set('.section-cream h2', a.attivitaTitolo);
-  }
-
-  /* Lista attività */
-  const actList = document.querySelector('.activity-list');
-  if (actList) {
-    actList.innerHTML = a.attivita.map(item => `<li>${item}</li>`).join('');
-  }
-
-  /* Box laterale */
-  const ctaBox = document.querySelector('.attivita-cta');
-  if (ctaBox) {
-    const h3  = ctaBox.querySelector('h3');
-    const p   = ctaBox.querySelector('p');
-    const btn = ctaBox.querySelector('a');
-    if (h3)  h3.textContent  = a.ctaBoxTitolo;
-    if (p)   p.textContent   = a.ctaBoxTesto;
-    if (btn) btn.textContent = a.ctaBoxBottone;
-  }
-
-  /*  banner */
-  set('.cta-banner h2', a.ctaTitolo);
-  set('.cta-banner p',  a.ctaSottotitolo);
-  const ctaBannerBtn = document.querySelector('.cta-banner .btn-primary');
-  if (ctaBannerBtn) ctaBannerBtn.textContent = a.ctaBottone;
-}
-
-/* ════════════════════════════════════════
-  contatti
-════════════════════════════════════════ */
-function popolaContatti(d) {
-  const c = d.contatti;
-  const s = d.studio;
-
-  /* Hero */
-  set('.page-hero .hero-eyebrow', c.heroOcchio);
-  set('.page-hero h1', c.heroTitolo);
-  set('.page-hero-sub', c.heroSottotitolo);
-
-  /* titoli */
-  set('.contatti-info .section-label', c.infoOcchio);
-  set('.contatti-info h2', c.infoTitolo);
-
-  /* Info blocks (indirizzo, tel, email, orari) */
-  const blocks = document.querySelectorAll('.info-block');
-
-  if (blocks[0]) {
-    const lbl = blocks[0].querySelector('.info-label');
-    const val = blocks[0].querySelector('.info-value');
-    if (lbl) lbl.textContent = c.labelIndirizzo;
-    if (val) val.innerHTML   = s.indirizzo.replace(', ', '<br>');
-  }
-  if (blocks[1]) {
-    const lbl  = blocks[1].querySelector('.info-label');
-    const link = blocks[1].querySelector('.info-link');
-    if (lbl)  lbl.textContent  = c.labelTelefono;
-    if (link) { link.href = s.telefonoLink; link.textContent = s.telefono; }
-  }
-  if (blocks[2]) {
-    const lbl  = blocks[2].querySelector('.info-label');
-    const link = blocks[2].querySelector('.info-link');
-    if (lbl)  lbl.textContent  = c.labelEmail;
-    if (link) { link.href = `mailto:${s.email}`; link.textContent = s.email; }
-  }
-  if (blocks[3]) {
-    const lbl = blocks[3].querySelector('.info-label');
-    const val = blocks[3].querySelector('.info-value');
-    if (lbl) lbl.textContent = c.labelOrari;
-    if (val) val.innerHTML   = s.orari.replace(' — ', '<br>');
-  }
-
-  /* titoli */
-  set('.contatti-form-wrap .section-label', c.formOcchio);
-  set('.contatti-form-wrap h2', c.formTitolo);
-  const formSub = document.querySelector('.contatti-form-wrap > p');
-  if (formSub) formSub.textContent = c.formSottotitolo;
-
-  /* campi */
-  const labels = document.querySelectorAll('.contact-form label');
-  const labelMap = {
-    'nome':     c.formLabelNome,
-    'cognome':  c.formLabelCognome,
-    'email':    c.formLabelEmail,
-    'telefono': c.formLabelTelefono,
-    'oggetto':  c.formLabelOggetto,
-    'messaggio':c.formLabelMessaggio
-  };
-  labels.forEach(label => {
-    const forAttr = label.getAttribute('for');
-    if (forAttr && labelMap[forAttr]) {
-      /* Mantieni l'asterisco se presente */
-      const hasStar = label.textContent.includes('*');
-      label.textContent = labelMap[forAttr] + (hasStar ? ' *' : '');
-    }
-  });
-
-  /* checkbox privacy */
-  const privacyLabel = document.querySelector('label[for="privacy"]');
-  if (privacyLabel) {
-    privacyLabel.innerHTML =
-      `${c.formPrivacy} <a href="privacy.html">${c.formPrivacyLink}</a> *`;
-  }
-
-  /* placeholder  */
-  setAttr('#nome',      'placeholder', c.formPlaceholderNome);
-  setAttr('#cognome',   'placeholder', c.formPlaceholderCognome);
-  setAttr('#email',     'placeholder', c.formPlaceholderEmail);
-  setAttr('#telefono',  'placeholder', c.formPlaceholderTelefono);
-  setAttr('#messaggio', 'placeholder', c.formPlaceholderMessaggio);
-
-  /* select opzioni */
-  const select = document.getElementById('oggetto');
-  if (select) {
-    select.innerHTML =
-      `<option value="" disabled selected>${c.formPlaceholderOggetto}</option>` +
-      c.formOpzioni.map(o =>
-        `<option value="${o.value}">${o.testo}</option>`
-      ).join('');
-  }
-
-  /* bottone e nota */
-  const submitBtn = document.querySelector('.btn-submit');
-  if (submitBtn) submitBtn.textContent = c.formBottone;
-  set('.form-note', c.formNota);
-
-  /* Messaggio di successo */
-  set('#formSuccess h3', c.successTitolo);
-  set('#formSuccess p',  c.successTesto);
-
-  /* Mappa */
-  const mapLink = document.querySelector('.map-overlay a');
-  if (mapLink) {
-    mapLink.href = c.mappaLink;
-    mapLink.textContent = c.mappaTasto;
-  }
-  const mapAddr = document.querySelector('.map-overlay p');
-  if (mapAddr) mapAddr.textContent = s.indirizzoMappa;
-}
-
-/* ════════════════════════════════════════
-  CONTATORI ANIMATI
-════════════════════════════════════════ */
-function animateCounter(el) {
-  const target    = parseInt(el.dataset.target, 10);
-  const suffix    = el.dataset.suffix || '';
-  const duration  = 1400;
-  const step      = 16;
-  const increment = target / (duration / step);
-  let current     = 0;
-
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) { current = target; clearInterval(timer); }
-    el.textContent = Math.floor(current) + suffix;
-  }, step);
-}
-
-/* ════════════════════════════════════════
-  ANIMAZIONI 
-════════════════════════════════════════ */
-function initAnimazioni() {
-  const revealEls = document.querySelectorAll(
-    '.spec-card, .valore-card, .home-card, .activity-list li, .attivita-cta, .area-block, .info-block'
-  );
-  revealEls.forEach(el => el.classList.add('reveal-hidden'));
-
-  const revealObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-visible');
-        revealObs.unobserve(entry.target);
+    qsa(".footer-col").forEach(column => {
+      const title = qs("h2", column)?.textContent.trim().toLowerCase();
+      if (title === "email") {
+        const links = qsa("a", column);
+        professionals.slice(0, 2).forEach((person, index) => setLink(links[index], `mailto:${person.email}`, person.nome));
+      } else if (title === "sedi") {
+        const rows = qsa("p", column);
+        professionals.slice(0, 2).forEach((person, index) => {
+          if (rows[index]) rows[index].textContent = person.indirizzo;
+        });
       }
     });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => revealObs.observe(el));
 
-  /* Contatori animati */
-  const studioDetail = document.querySelector('.studio-detail');
-  if (studioDetail) {
-    const counters = studioDetail.querySelectorAll('.detail-num[data-target]');
-    const cObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { counters.forEach(animateCounter); cObs.disconnect(); }
-      });
-    }, { threshold: 0.4 });
-    cObs.observe(studioDetail);
-  }
-
-/* Active nav */
-const current = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
-document.querySelectorAll('.nav a').forEach(a => {
-  a.classList.remove('active');
-  const href = (a.getAttribute('href') || '')
-    .replace(/^\/|\.html$/g, '')
-    .toLowerCase();
-
-  if (href === current || (current === 'index' && href === '')) {
-    a.classList.add('active');
-  }
-});
-}
-
-/* ════════════════════════════════════════
-  invio email
-════════════════════════════════════════ */
-function initForm() {
-  const form        = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-  if (!form) return;
-
-  const btnOrigText = document.querySelector('.btn-submit')?.textContent || 'Invia messaggio';
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    let valid = true;
-    form.querySelectorAll('[required]').forEach(field => {
-      field.style.borderColor = '';
-      const vuoto = field.type === 'checkbox' ? !field.checked : !field.value.trim();
-      if (vuoto) { field.style.borderColor = '#e57373'; valid = false; }
+    qsa(".mobile-contact-bar a").forEach((link, index) => {
+      if (index < 2 && professionals[index]) {
+        link.href = `mailto:${professionals[index].email}`;
+        link.textContent = index === 0 ? "Email Milano" : "Email Monza";
+      }
     });
-    if (!valid) return;
 
-    const btn = form.querySelector('.btn-submit');
-    btn.disabled    = true;
-    btn.textContent = window._jsonData?.contatti?.formBottoneInvio || 'Invio in corso…';
+    const copyright = qs(".footer-bottom > span:first-child");
+    if (copyright) copyright.textContent = data.footer?.copyright || `© ${new Date().getFullYear()} ${studio.nome}`;
+  }
 
-    try {
-      const res = await fetch(form.action, {
-        method:  'POST',
-        body:    new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
+  function updateSeo(data) {
+    if (!data?.studio || page === "privacy" || page === "cookie") return;
+    const studioName = data.studio.nome;
+    let title = `${studioName} – ${data.studio.sottoTitolo}`;
+    let description = data.home?.heroSottotitolo || data.studio.descrizione;
+    if (page === "chi-siamo") {
+      title = `${data.chiSiamo?.heroTitolo || "Lo Studio"} – ${studioName}`;
+      description = data.chiSiamo?.heroSottotitolo || description;
+    } else if (page === "aree") {
+      title = `${data.aree?.heroTitolo || "Aree di attività"} – ${studioName}`;
+      description = data.aree?.heroSottotitolo || description;
+    } else if (page === "contatti") {
+      title = `${data.contatti?.heroTitolo || "Contatti"} – ${studioName}`;
+      description = data.contatti?.heroSottotitolo || description;
+    }
+    document.title = title;
+    ["meta[name=description]", "meta[property='og:description']"].forEach(selector => {
+      const meta = qs(selector);
+      if (meta) meta.content = description;
+    });
+    const ogTitle = qs("meta[property='og:title']");
+    if (ogTitle) ogTitle.content = title;
+  }
 
-      if (res.ok) {
-        form.style.display = 'none';
-        if (formSuccess) {
-          formSuccess.style.display       = 'flex';
-          formSuccess.style.flexDirection = 'column';
-          formSuccess.style.alignItems    = 'center';
-        }
+  function setTitleWithEmphasis(element, title, emphasized) {
+    if (!element || !title) return;
+    element.replaceChildren();
+    const position = emphasized ? title.indexOf(emphasized) : -1;
+    if (position < 0) {
+      element.textContent = title;
+      return;
+    }
+    element.append(document.createTextNode(title.slice(0, position)));
+    const em = document.createElement("em");
+    em.textContent = emphasized;
+    element.append(em, document.createTextNode(title.slice(position + emphasized.length)));
+  }
+
+  function renderHome(data) {
+    const home = data.home;
+    if (!home) return;
+    setText(".hero .hero-eyebrow", home.heroOcchio);
+    setTitleWithEmphasis(qs(".hero h1"), home.heroTitolo, home.heroTitoloEm);
+    setText(".hero-sub", home.heroSottotitolo);
+    const heroButtons = qsa(".hero-btns a");
+    setLink(heroButtons[0], "aree.html", home.heroBtnPrimario);
+    setLink(heroButtons[1], "contatti.html#contactForm", home.heroBtnSecondario);
+
+    const activitySection = qs(".home-cards")?.closest(".section");
+    setText(".section-label", home.sezioneOcchio, activitySection);
+    setText("h2", home.sezioneTitolo, activitySection);
+    qsa(".home-card").forEach((card, index) => {
+      const item = home.cards?.[index];
+      if (!item) return;
+      card.href = item.link;
+      setText("h3", item.titolo, card);
+      setText("p", item.testo, card);
+      setText(".card-link", item.linkTesto, card);
+    });
+
+    const reasonsSection = qs(".home-reasons")?.closest(".section");
+    setText(".section-label", home.motiviOcchio, reasonsSection);
+    setText("h2", home.motiviTitolo, reasonsSection);
+    qsa(".reason-card").forEach((card, index) => {
+      const item = data.chiSiamo?.valori?.[index];
+      if (!item) return;
+      setText("h3", item.titolo, card);
+      setText("p", item.testo, card);
+    });
+
+    setText(".cta-banner h2", home.ctaTitolo);
+    setText(".cta-banner p", home.ctaSottotitolo);
+    setText(".cta-banner .btn-primary", home.ctaBottone);
+  }
+
+  function renderProfessional(card, person) {
+    if (!card || !person) return;
+    card.id = person.id || "";
+    const photo = qs(".professional-photo", card);
+    if (photo) {
+      photo.setAttribute("aria-label", person.fotoAlt || `Foto di ${person.nome}`);
+      photo.replaceChildren();
+      if (person.foto) {
+        const image = document.createElement("img");
+        image.src = person.foto;
+        image.alt = person.fotoAlt || `Foto di ${person.nome}`;
+        image.loading = "lazy";
+        image.decoding = "async";
+        photo.append(image);
       } else {
-        const json = await res.json().catch(() => ({}));
-        alert('Errore: ' + (json.error || 'Riprova più tardi.'));
-        btn.disabled    = false;
-        btn.textContent = btnOrigText;
+        const initials = document.createElement("span");
+        initials.setAttribute("aria-hidden", "true");
+        initials.textContent = person.iniziali || "";
+        const label = document.createElement("small");
+        label.textContent = "Foto da inserire";
+        photo.append(initials, label);
       }
-    } catch {
-      alert('Errore di rete. Controlla la connessione e riprova.');
-      btn.disabled    = false;
-      btn.textContent = btnOrigText;
     }
-  });
-}
-
-/* ════════════════════════════════════════
-  COOKIE 
-════════════════════════════════════════ */
-function initCookieBanner(cb) {
-  if (!document.getElementById('cookieBanner')) {
-    document.body.insertAdjacentHTML('beforeend', `
-      <div id="cookieBanner" role="dialog" aria-label="Consenso cookie">
-        <p class="banner-text">
-          ${cb.testo} <a href="cookie.html">${cb.linkTesto}</a>.
-        </p>
-        <div class="banner-btns">
-          <button class="banner-accept" id="bannerAccept">${cb.btnAccetta}</button>
-          <button class="banner-reject" id="bannerReject">${cb.btnRifiuta}</button>
-          <button class="banner-prefs" onclick="window.location='cookie.html'">${cb.btnPersonalizza}</button>
-        </div>
-      </div>
-    `);
+    setText("h2", person.nome, card);
+    setText(".professional-register", person.albo, card);
+    const bio = qs(".professional-bio", card);
+    if (bio && Array.isArray(person.paragrafi)) {
+      bio.replaceChildren(...person.paragrafi.map(text => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text;
+        return paragraph;
+      }));
+    }
+    const contactRows = qsa(".professional-contacts > div", card);
+    if (contactRows[0]) setText("dd", person.indirizzo, contactRows[0]);
+    if (contactRows[1]) setLink(qs("a", contactRows[1]), `mailto:${person.email}`, person.email);
+    if (contactRows[2]) setLink(qs("a", contactRows[2]), `mailto:${person.pec}`, person.pec);
   }
 
-  const banner  = document.getElementById('cookieBanner');
-  if (!localStorage.getItem('cookieConsent')) {
-    setTimeout(() => banner.classList.add('visible'), 600);
-  }
+  function renderStudio(data) {
+    const content = data.chiSiamo;
+    if (!content) return;
+    setText(".page-hero .hero-eyebrow", content.heroOcchio);
+    setText(".page-hero h1", content.heroTitolo);
+    setText(".page-hero-sub", content.heroSottotitolo);
+    const professionalsSection = qs(".professionals-grid")?.closest(".section");
+    setText(".section-label", content.sezioneOcchio, professionalsSection);
+    setText("h2", content.sezioneTitolo, professionalsSection);
+    setText(".section-intro", content.sezioneSottotitolo, professionalsSection);
+    qsa(".professional-card").forEach((card, index) => renderProfessional(card, data.professionisti?.[index]));
 
-  function hideBanner() {
-    banner.classList.remove('visible');
-    setTimeout(() => banner.remove(), 400);
-  }
-
-  document.getElementById('bannerAccept')?.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'accepted');
-    localStorage.setItem('cookiePrefs', JSON.stringify({ analitici: true }));
-    hideBanner();
-  });
-  document.getElementById('bannerReject')?.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'rejected');
-    localStorage.setItem('cookiePrefs', JSON.stringify({ analitici: false }));
-    hideBanner();
-  });
-}
-
-/* ════════════════════════════════════════
-  Caricamento JSON
-════════════════════════════════════════ */
-fetch('contenuti.json', { cache: 'no-store' })
-  .then(res => {
-    if (!res.ok) throw new Error('File non trovato');
-    return res.json();
-  })
-  .then(data => {
-    window._jsonData = data;
-
-    popolaComuni(data);
-
-const path = window.location.pathname.replace(/\/$/, '');
-let page = (path.split('/').pop() || 'index').toLowerCase();
-
-const host = location.hostname.toLowerCase();
-const isGithubPages = host === 'github.io' || host.endsWith('.github.io');
-if (isGithubPages) {
-  const repo = (location.pathname.split('/')[1] || '').toLowerCase();
-  if (page === repo) page = 'index';
-}
-
-if (page === 'index' || page === 'index.html') {
-  popolaHome(data);
-} else if (page === 'chi-siamo' || page === 'chi-siamo.html') {
-  popolaChiSiamo(data);
-} else if (page === 'aree' || page === 'aree.html') {
-  popolaAree(data);
-} else if (page === 'contatti' || page === 'contatti.html') {
-  popolaContatti(data);
-}
-
-    initAnimazioni();
-    initForm();
-    initCookieBanner(data.cookieBanner);
-  })
-  .catch(err => {
-    console.warn('contenuti.json non caricato:', err.message);
-    initAnimazioni();
-    initForm();
-    initCookieBanner({
-      testo: 'Utilizziamo cookie tecnici e analitici. Leggi la',
-      linkTesto: 'Cookie Policy',
-      btnAccetta: 'Accetta tutti',
-      btnRifiuta: 'Solo necessari',
-      btnPersonalizza: 'Personalizza'
+    const valuesSection = qs(".values-grid")?.closest(".section");
+    setText(".section-label", content.valoriOcchio, valuesSection);
+    setText("h2", content.valoriTitolo, valuesSection);
+    qsa(".value-card").forEach((card, index) => {
+      const value = content.valori?.[index];
+      if (!value) return;
+      setText("h3", value.titolo, card);
+      setText("p", value.testo, card);
     });
-  });
+    setText(".cta-banner h2", content.ctaTitolo);
+    setText(".cta-banner p", content.ctaSottotitolo);
+    setText(".cta-banner .btn-primary", content.ctaBottone);
+  }
+
+  function renderAreas(data) {
+    const areas = data.aree;
+    if (!areas) return;
+    setText(".page-hero .hero-eyebrow", areas.heroOcchio);
+    setText(".page-hero h1", areas.heroTitolo);
+    setText(".page-hero-sub", areas.heroSottotitolo);
+    setText("#area-index-title", areas.indiceTitolo);
+
+    const indexLinks = qsa(".area-index a");
+    qsa(".area-card").forEach((card, index) => {
+      const area = areas.specializzazioni?.[index];
+      if (!area) return;
+      const id = area.id || `area-${index + 1}`;
+      const contentId = `${id}-content`;
+      card.id = id;
+      const toggle = qs(".area-toggle", card);
+      if (toggle) toggle.setAttribute("aria-controls", contentId);
+      setText(".area-number", area.numero, card);
+      const titleSpan = qsa(".area-toggle > span", card)[1];
+      if (titleSpan) titleSpan.textContent = area.titolo;
+      const content = qs(".area-content", card);
+      if (content) content.id = contentId;
+      setText(".area-content > p", area.testo, card);
+      clearAndAppendTextList(qs(".area-content ul", card), area.voci);
+      const indexLink = indexLinks[index];
+      if (indexLink) {
+        indexLink.href = `#${id}`;
+        const number = qs("span", indexLink);
+        indexLink.replaceChildren();
+        if (number) {
+          number.textContent = area.numero;
+          indexLink.append(number);
+        }
+        indexLink.append(document.createTextNode(area.titolo));
+      }
+    });
+
+    const activitiesSection = qs(".activities-layout")?.closest(".section");
+    setText(".section-label", areas.attivitaOcchio, activitiesSection);
+    setText("h2", areas.attivitaTitolo, activitiesSection);
+    clearAndAppendTextList(qs(".activity-list"), areas.attivita);
+    setText(".network-box h3", areas.ctaBoxTitolo);
+    setText(".network-box p", areas.ctaBoxTesto);
+    setText(".network-box a", areas.ctaBoxBottone);
+    setText(".cta-banner h2", areas.ctaTitolo);
+    setText(".cta-banner p", areas.ctaSottotitolo);
+    setText(".cta-banner .btn-primary", areas.ctaBottone);
+  }
+
+  function renderOffice(card, person) {
+    if (!card || !person) return;
+    setText(".office-kicker", person.sedeNome, card);
+    setText("h3", person.nome, card);
+    setText("address", person.indirizzo, card);
+    const rows = qsa("dl > div", card);
+    if (rows[0]) setLink(qs("a", rows[0]), `mailto:${person.email}`, person.email);
+    if (rows[1]) setLink(qs("a", rows[1]), `mailto:${person.pec}`, person.pec);
+    setLink(qs(".text-link", card), person.mappaLink, "Apri in Google Maps →");
+  }
+
+  function renderContacts(data) {
+    const contacts = data.contatti;
+    if (!contacts) return;
+    setText(".page-hero .hero-eyebrow", contacts.heroOcchio);
+    setText(".page-hero h1", contacts.heroTitolo);
+    setText(".page-hero-sub", contacts.heroSottotitolo);
+    setText(".appointment-notice strong", contacts.avvisoTitolo);
+    setText(".appointment-notice p", contacts.avvisoTesto);
+    const officeSection = qs(".offices-grid")?.closest(".section");
+    setText(".section-label", contacts.infoOcchio, officeSection);
+    setText("h2", contacts.infoTitolo, officeSection);
+    qsa(".office-card").forEach((card, index) => renderOffice(card, data.professionisti?.[index]));
+
+    const formSection = qs(".contact-layout")?.closest(".section");
+    setText(".section-label", contacts.formOcchio, formSection);
+    setText("h2", contacts.formTitolo, formSection);
+    const intro = qs(".contact-layout > div:first-child > p:last-child");
+    if (intro) intro.textContent = contacts.formSottotitolo;
+    const labels = {
+      nome: contacts.formLabelNome,
+      cognome: contacts.formLabelCognome,
+      email: contacts.formLabelEmail,
+      oggetto: contacts.formLabelOggetto,
+      messaggio: contacts.formLabelMessaggio
+    };
+    Object.entries(labels).forEach(([id, label]) => {
+      const element = qs(`label[for='${id}']`);
+      if (element && label) element.textContent = `${label} *`;
+    });
+    const placeholders = {
+      nome: contacts.formPlaceholderNome,
+      cognome: contacts.formPlaceholderCognome,
+      email: contacts.formPlaceholderEmail,
+      messaggio: contacts.formPlaceholderMessaggio
+    };
+    Object.entries(placeholders).forEach(([id, value]) => {
+      const field = qs(`#${id}`);
+      if (field && value) field.placeholder = value;
+    });
+    const select = qs("#oggetto");
+    if (select && Array.isArray(contacts.formOpzioni)) {
+      const current = select.value;
+      select.replaceChildren();
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.disabled = true;
+      placeholder.textContent = contacts.formPlaceholderOggetto;
+      select.append(placeholder);
+      contacts.formOpzioni.forEach(optionData => {
+        const option = document.createElement("option");
+        option.value = optionData.value;
+        option.textContent = optionData.testo;
+        select.append(option);
+      });
+      select.value = current || "";
+    }
+    const privacyLabel = qs("label[for=privacy]");
+    if (privacyLabel) {
+      privacyLabel.replaceChildren(document.createTextNode(`${contacts.formPrivacy} `));
+      const link = document.createElement("a");
+      link.href = "privacy.html";
+      link.textContent = contacts.formPrivacyLink;
+      privacyLabel.append(link, document.createTextNode(" *"));
+    }
+    setText(".btn-submit", contacts.formBottone);
+    setText(".form-note", contacts.formNota);
+    setText("#formSuccess h3", contacts.successTitolo);
+    setText("#formSuccess p", contacts.successTesto);
+
+    const faqSection = qs(".faq-container");
+    setText(".section-label", contacts.faqOcchio, faqSection);
+    setText("h2", contacts.faqTitolo, faqSection);
+    qsa(".faq-item").forEach((item, index) => {
+      const faq = contacts.faq?.[index];
+      if (!faq) return;
+      const button = qs(".faq-question", item);
+      const icon = qs("span", button);
+      if (button) {
+        button.replaceChildren(document.createTextNode(faq.domanda));
+        if (icon) button.append(icon);
+      }
+      setText(".faq-answer p", faq.risposta, item);
+    });
+  }
+
+  function renderPage(data) {
+    window.siteContent = data;
+    renderCommon(data);
+    updateSeo(data);
+    if (page === "index") renderHome(data);
+    else if (page === "chi-siamo") renderStudio(data);
+    else if (page === "aree") renderAreas(data);
+    else if (page === "contatti") renderContacts(data);
+  }
+
+  function initAreas() {
+    const cards = qsa(".area-card");
+    if (!cards.length) return;
+    cards.forEach((card, index) => {
+      const button = qs(".area-toggle", card);
+      if (!button) return;
+      button.addEventListener("click", () => {
+        if (window.innerWidth > 760) return;
+        const opening = !card.classList.contains("is-open");
+        card.classList.toggle("is-open", opening);
+        button.setAttribute("aria-expanded", String(opening));
+      });
+      if (index === 0) card.classList.add("is-open");
+    });
+
+    const openHash = () => {
+      const target = qs(window.location.hash);
+      if (!target?.classList.contains("area-card")) return;
+      target.classList.add("is-open");
+      qs(".area-toggle", target)?.setAttribute("aria-expanded", "true");
+    };
+    openHash();
+    window.addEventListener("hashchange", openHash);
+  }
+
+  function initFaq() {
+    qsa(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const answer = document.getElementById(button.getAttribute("aria-controls"));
+        const opening = button.getAttribute("aria-expanded") !== "true";
+        button.setAttribute("aria-expanded", String(opening));
+        if (answer) answer.hidden = !opening;
+      });
+    });
+  }
+
+  function clearError(field) {
+    field.removeAttribute("aria-invalid");
+    const error = qs(`#${field.id}-error`);
+    if (error) error.remove();
+    field.removeAttribute("aria-describedby");
+  }
+
+  function showError(field, message) {
+    clearError(field);
+    field.setAttribute("aria-invalid", "true");
+    const error = document.createElement("small");
+    error.className = "field-error";
+    error.id = `${field.id}-error`;
+    error.textContent = message;
+    field.setAttribute("aria-describedby", error.id);
+    field.closest(".form-group")?.append(error);
+  }
+
+  function validateForm(form) {
+    let valid = true;
+    qsa("[required]", form).forEach(field => {
+      clearError(field);
+      const empty = field.type === "checkbox" ? !field.checked : !String(field.value).trim();
+      if (empty) {
+        valid = false;
+        showError(field, field.type === "checkbox" ? "Devi accettare la Privacy Policy." : "Compila questo campo.");
+      }
+    });
+    const email = qs("#email", form);
+    if (email?.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      valid = false;
+      showError(email, "Inserisci un indirizzo email valido.");
+    }
+    return valid;
+  }
+
+  function initForm() {
+    const form = qs("#contactForm");
+    if (!form) return;
+    const status = qs("#formStatus");
+    const success = qs("#formSuccess");
+    const button = qs(".btn-submit", form);
+    const originalLabel = button?.textContent || "Invia richiesta";
+
+    form.addEventListener("input", event => {
+      if (event.target.matches("input,select,textarea")) clearError(event.target);
+    });
+    form.addEventListener("change", event => {
+      if (event.target.matches("input,select,textarea")) clearError(event.target);
+    });
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      if (!validateForm(form)) {
+        qs("[aria-invalid=true]", form)?.focus();
+        return;
+      }
+      if (button) {
+        button.disabled = true;
+        button.textContent = window.siteContent?.contatti?.formBottoneInvio || "Invio in corso…";
+      }
+      if (status) {
+        status.className = "form-status";
+        status.textContent = "";
+      }
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        if (!response.ok) throw new Error("Invio non riuscito");
+        form.hidden = true;
+        if (success) success.hidden = false;
+      } catch {
+        if (status) {
+          status.className = "form-status error";
+          status.textContent = "Non è stato possibile inviare la richiesta. Puoi scrivere direttamente a uno degli indirizzi email indicati sopra.";
+        }
+        if (button) {
+          button.disabled = false;
+          button.textContent = originalLabel;
+        }
+      }
+    });
+  }
+
+  function initCookieNotice() {
+    const banner = qs("#cookieBanner");
+    const button = qs("#cookieAccept");
+    if (!banner || !button) return;
+    let accepted = false;
+    try { accepted = localStorage.getItem("cookieNoticeAccepted") === "true"; } catch { accepted = false; }
+    if (!accepted) window.setTimeout(() => banner.classList.add("visible"), 400);
+    button.addEventListener("click", () => {
+      try { localStorage.setItem("cookieNoticeAccepted", "true"); } catch { /* storage non disponibile */ }
+      banner.classList.remove("visible");
+    });
+  }
+
+  function initReveal() {
+    const elements = qsa(".home-card,.reason-card,.value-card,.professional-card,.area-card,.office-card,.network-box,.faq-item");
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    elements.forEach(el => el.classList.add("reveal"));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08 });
+    elements.forEach(el => observer.observe(el));
+  }
+
+  async function loadContent() {
+    try {
+      const response = await fetch("contenuti.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      renderPage(await response.json());
+    } catch (error) {
+      console.warn("Contenuti dinamici non caricati; vengono mantenuti i testi HTML.", error);
+    }
+  }
+
+  function init() {
+    initNavigation();
+    initAreas();
+    initFaq();
+    initForm();
+    initCookieNotice();
+    initReveal();
+    loadContent();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
+  else init();
+})();

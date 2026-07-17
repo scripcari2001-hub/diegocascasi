@@ -2,7 +2,7 @@
 body[data-page="aree"] .area-index-section {
   position: relative;
   overflow: hidden;
-  padding: 62px 0 70px;
+  padding: 58px 0 66px;
   border-bottom: 1px solid var(--border);
   background:
     radial-gradient(circle at 8% 14%, rgba(184, 154, 90, .12), transparent 25%),
@@ -16,7 +16,7 @@ body[data-page="aree"] .area-index-section .container {
 }
 
 body[data-page="aree"] .area-index-section h2 {
-  margin: 0 auto 34px;
+  margin: 0 auto 32px;
   text-align: center;
   font-size: clamp(30px, 4vw, 42px);
 }
@@ -30,25 +30,26 @@ body[data-page="aree"] .area-index {
 body[data-page="aree"] .area-index a {
   position: relative;
   display: grid;
-  grid-template-rows: auto 76px minmax(48px, auto);
-  min-height: 214px;
+  grid-template-rows: auto 58px minmax(66px, auto);
+  min-height: 194px;
   align-content: start;
   align-items: center;
   justify-items: center;
-  gap: 12px;
+  gap: 10px;
   overflow: hidden;
-  padding: 17px 15px 20px;
+  padding: 16px 14px 18px;
   border: 1px solid rgba(184, 154, 90, .28);
   border-radius: 16px;
-  background: rgba(255, 255, 255, .9);
+  background: rgba(255, 255, 255, .92);
   box-shadow: 0 8px 26px rgba(13, 31, 53, .06);
   color: var(--navy);
   font-family: "Cormorant Garamond", serif;
   font-size: 18px;
-  font-weight: 600;
-  line-height: 1.18;
+  font-weight: 700;
+  line-height: 1.26;
   text-align: center;
   text-decoration: none;
+  text-wrap: balance;
   transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
 }
 
@@ -68,15 +69,15 @@ body[data-page="aree"] .area-index a > span {
   grid-row: 1;
   justify-self: start;
   display: inline-flex;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: var(--navy);
   color: var(--gold2);
   font-family: "Cormorant Garamond", serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   box-shadow: 0 6px 16px rgba(13, 31, 53, .15);
 }
@@ -84,14 +85,14 @@ body[data-page="aree"] .area-index a > span {
 body[data-page="aree"] .area-index a::after {
   grid-row: 2;
   justify-self: center;
-  width: 68px;
-  height: 68px;
+  width: 52px;
+  height: 52px;
   border: 1px solid rgba(184, 154, 90, .25);
-  border-radius: 18px;
+  border-radius: 14px;
   background-color: var(--cream);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 37px 37px;
+  background-size: 28px 28px;
   content: "";
   transition: transform .22s ease, background-color .22s ease;
 }
@@ -101,7 +102,7 @@ body[data-page="aree"] .area-index a:hover {
   border-color: var(--gold);
   background: #fff;
   box-shadow: 0 18px 42px rgba(13, 31, 53, .13);
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 body[data-page="aree"] .area-index a:hover::before {
@@ -111,10 +112,10 @@ body[data-page="aree"] .area-index a:hover::before {
 
 body[data-page="aree"] .area-index a:hover::after {
   background-color: #fff;
-  transform: scale(1.07);
+  transform: scale(1.06);
 }
 
-/* Icone vettoriali: casa, condominio, chiave, contratto, lavori, bilancia, crediti, famiglia, impresa, consumatore */
+/* Icone vettoriali delle aree */
 body[data-page="aree"] .area-index a[href="#diritto-immobiliare"]::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d1f35' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11 12 4l9 7'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M9 20v-6h6v6'/%3E%3C/svg%3E");
 }
@@ -147,9 +148,7 @@ body[data-page="aree"] .area-index a[href="#tutela-consumatore"]::after {
 }
 
 /* Schede dettagliate */
-body[data-page="aree"] .area-list-wrap {
-  gap: 20px;
-}
+body[data-page="aree"] .area-list-wrap { gap: 20px; }
 
 body[data-page="aree"] .area-card {
   position: relative;
@@ -190,9 +189,7 @@ body[data-page="aree"] .area-number {
   box-shadow: 0 7px 18px rgba(13, 31, 53, .16);
 }
 
-body[data-page="aree"] .area-content {
-  padding: 0 32px 32px 104px;
-}
+body[data-page="aree"] .area-content { padding: 0 32px 32px 104px; }
 
 body[data-page="aree"] .area-content > p {
   max-width: 900px;
@@ -203,9 +200,7 @@ body[data-page="aree"] .area-content > p {
   line-height: 1.75;
 }
 
-body[data-page="aree"] .area-content ul {
-  gap: 10px 14px;
-}
+body[data-page="aree"] .area-content ul { gap: 10px 14px; }
 
 body[data-page="aree"] .area-content li {
   min-height: 44px;
@@ -224,9 +219,7 @@ body[data-page="aree"] .area-content li::before {
   transform: translateY(-50%);
 }
 
-body[data-page="aree"] .activities-layout {
-  gap: 42px;
-}
+body[data-page="aree"] .activities-layout { gap: 42px; }
 
 body[data-page="aree"] .activity-list li {
   position: relative;
@@ -267,90 +260,55 @@ body[data-page="aree"] .network-box::after {
 }
 
 @media (max-width: 1040px) {
-  body[data-page="aree"] .area-index {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  body[data-page="aree"] .area-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
-  body[data-page="aree"] .area-index-section {
-    padding: 48px 0 54px;
-  }
-
-  body[data-page="aree"] .area-index-section h2 {
-    margin-bottom: 26px;
-    text-align: left;
-  }
-
-  body[data-page="aree"] .area-index {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
+  body[data-page="aree"] .area-index-section { padding: 46px 0 52px; }
+  body[data-page="aree"] .area-index-section h2 { margin-bottom: 25px; text-align: left; }
+  body[data-page="aree"] .area-index { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 
   body[data-page="aree"] .area-index a {
-    min-height: 190px;
-    grid-template-rows: auto 64px minmax(44px, auto);
-    padding: 14px 12px 17px;
+    grid-template-rows: auto 50px minmax(62px, auto);
+    min-height: 174px;
+    padding: 14px 12px 16px;
     border-radius: 14px;
-    font-size: 16px;
+    font-size: 16.5px;
+    line-height: 1.24;
   }
 
   body[data-page="aree"] .area-index a::after {
-    width: 58px;
-    height: 58px;
-    border-radius: 15px;
-    background-size: 32px 32px;
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    background-size: 25px 25px;
   }
 
   body[data-page="aree"] .area-index a > span {
-    width: 32px;
-    height: 32px;
+    width: 31px;
+    height: 31px;
     font-size: 14px;
   }
 
-  body[data-page="aree"] .area-card:hover {
-    transform: none;
-  }
-
-  body[data-page="aree"] .area-toggle {
-    grid-template-columns: 42px minmax(0, 1fr) 32px;
-    gap: 12px;
-    padding: 18px 17px 18px 20px;
-    font-size: 21px;
-  }
-
-  body[data-page="aree"] .area-number {
-    width: 40px;
-    height: 40px;
-    font-size: 15px;
-  }
-
-  body[data-page="aree"] .area-content {
-    padding: 0 17px 20px 20px;
-  }
-
-  body[data-page="aree"] .area-content ul {
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page="aree"] .network-box {
-    position: relative;
-    top: auto;
-  }
+  body[data-page="aree"] .area-card:hover { transform: none; }
+  body[data-page="aree"] .area-toggle { grid-template-columns: 42px minmax(0, 1fr) 32px; gap: 12px; padding: 18px 17px 18px 20px; font-size: 21px; }
+  body[data-page="aree"] .area-number { width: 40px; height: 40px; font-size: 15px; }
+  body[data-page="aree"] .area-content { padding: 0 17px 20px 20px; }
+  body[data-page="aree"] .area-content ul { grid-template-columns: 1fr; }
+  body[data-page="aree"] .network-box { position: relative; top: auto; }
 }
 
 @media (max-width: 480px) {
-  body[data-page="aree"] .area-index {
-    grid-template-columns: 1fr;
-  }
+  body[data-page="aree"] .area-index { grid-template-columns: 1fr; }
 
   body[data-page="aree"] .area-index a {
-    min-height: 176px;
-    grid-template-columns: 42px 70px minmax(0, 1fr);
+    grid-template-columns: 38px 54px minmax(0, 1fr);
     grid-template-rows: 1fr;
+    min-height: 108px;
     justify-items: start;
+    padding: 16px;
+    font-size: 18px;
     text-align: left;
-    padding: 18px;
   }
 
   body[data-page="aree"] .area-index a > span {

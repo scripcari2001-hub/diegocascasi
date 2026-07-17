@@ -5,26 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Gestione contenuti – Studio Legale Cascasi &amp; Bianchi</title>
-  <style>
-    [data-slate-string="true"] { word-break: normal; }
-  </style>
 </head>
 <body>
   <noscript>Per usare il pannello di gestione devi attivare JavaScript.</noscript>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    (function () {
-      function hidePhoneFields() {
-        document.querySelectorAll('label, h2, h3, span, p').forEach(function (node) {
-          var text = (node.textContent || '').trim().toLowerCase();
-          if (!text.includes('telefono') && !text.includes('chiama')) return;
-          var container = node.closest('[class*="ControlContainer"], [class*="ObjectWidget"], [class*="ListItem"], [class*="Field"]');
-          if (container) container.style.display = 'none';
-        });
-      }
-      new MutationObserver(hidePhoneFields).observe(document.body, { childList: true, subtree: true });
-      window.setInterval(hidePhoneFields, 500);
-    }());
-  </script>
 </body>
 </html>

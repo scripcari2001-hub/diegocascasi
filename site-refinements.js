@@ -4,6 +4,19 @@
 
   const qs = (selector, root = document) => root.querySelector(selector);
   const qsa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+  const FALLBACK_EMAIL = 'info@studiolegalecascasi.it';
+
+  function getStudioEmail() {
+    const dynamicEmail = window._jsonData?.studio?.email;
+    if (dynamicEmail) return dynamicEmail;
+
+    const existingEmailLink = qs('a[href^="mailto:"]');
+    if (existingEmailLink) {
+      return existingEmailLink.getAttribute('href').replace(/^mailto:/i, '').split('?')[0];
+    }
+
+    return FALLBACK_EMAIL;
+  }
 
   function loadStyles() {
     if (qs('link[href="site-refinements.css"]')) return;
@@ -39,6 +52,51 @@
     });
   }
 
+  function ensureEmailContact() {
+    const email = getStudioEmail();
+    const mailto = `mailto:${email}`;
+
+    qsa('.topbar').forEach(topbar => {
+      const desiredHtml = `<span>Per fissare un appuntamento scrivi a&nbsp;</span><a href="${mailto}">${email}</a>`;
+      if (topbar.innerHTML !== desiredHtml) topbar.innerHTML = desiredHtml;
+    });
+
+    const contactInfo = qs('.contatti-info');
+    if (contactInfo && !qs('a[href^="mailto:"]', contactInfo)) {
+      const emailBlock = document.createElement('div');
+      emailBlock.className = 'info-block';
+      emailBlock.innerHTML = `
+        <div class="info-icon">
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <p class="info-label">Email</p>
+          <a href="${mailto}" class="info-value info-link">${email}</a>
+        </div>`;
+
+      const hoursBlock = qsa('.info-block', contactInfo).find(block =>
+        block.textContent.toLowerCase().includes('orari')
+      );
+      if (hoursBlock) contactInfo.insertBefore(emailBlock, hoursBlock);
+      else contactInfo.appendChild(emailBlock);
+    }
+
+    qsa('.footer').forEach(footer => {
+      const contactColumn = qsa('.footer-col', footer).find(column =>
+        qs('h4', column)?.textContent.trim().toLowerCase() === 'contatti'
+      );
+      if (!contactColumn || qs('a[href^="mailto:"]', contactColumn)) return;
+
+      const emailItem = document.createElement('p');
+      emailItem.className = 'footer-contact-item';
+      emailItem.innerHTML = `<a href="${mailto}">${email}</a>`;
+
+      const appointmentNote = qs('.footer-appointment-note', contactColumn);
+      if (appointmentNote) contactColumn.insertBefore(emailItem, appointmentNote);
+      else contactColumn.appendChild(emailItem);
+    });
+  }
+
   function removePhoneReferences() {
     qsa('a[href^="tel:"]').forEach(link => {
       if (link.classList.contains('btn-call')) {
@@ -51,10 +109,6 @@
         if (removable) removable.remove();
         else link.remove();
       }
-    });
-
-    qsa('.topbar').forEach(topbar => {
-      topbar.innerHTML = '<a href="contatti.html#contactForm">Lo Studio riceve esclusivamente su appuntamento</a>';
     });
 
     qsa('.contact-form .form-group').forEach(group => {
@@ -77,6 +131,8 @@
       homeCta.href = 'contatti.html#contactForm';
       homeCta.textContent = 'Richiedi un appuntamento';
     }
+
+    ensureEmailContact();
   }
 
   function enhanceFooter() {
@@ -98,12 +154,14 @@
         firstColumn.appendChild(links);
       }
     });
+    ensureEmailContact();
   }
 
   function replaceMobileContactBar(data) {
     const existing = qs('.mobile-contact-bar');
     if (!existing || !data?.studio) return false;
-    const email = data.studio.email ? `mailto:${data.studio.email}` : 'contatti.html#contactForm';
+    const emailAddress = data.studio.email || getStudioEmail();
+    const email = `mailto:${emailAddress}`;
     const maps = data.contatti?.mappaLink || 'https://maps.google.com/';
     existing.innerHTML = `
       <a href="${email}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Email</span></a>

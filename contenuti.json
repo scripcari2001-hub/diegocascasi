@@ -231,7 +231,7 @@
     "formBottoneInvio": "Invio in corso…",
     "formOcchio": "Scrivici",
     "formLabelCognome": "Cognome",
-    "formPrivacy": "Ho letto e accetto la",
+    "formPrivacy": "Dichiaro di aver letto la",
     "formPlaceholderCognome": "Rossi",
     "formPlaceholderNome": "Mario",
     "formLabelOggetto": "Area di interesse",
@@ -299,7 +299,7 @@
       },
       {
         "domanda": "Dove si trovano le sedi?",
-        "risposta": "Lo Studio dispone di una sede a Milano, in Via Piazzetta Guastalla 15, e di una sede a Monza, in Via Italia 28."
+        "risposta": "Lo Studio dispone di una sede a Milano, in Via Donati 6, e di una sede a Monza, in Via Italia 28."
       },
       {
         "domanda": "Come posso inviare i documenti?",
@@ -321,13 +321,13 @@
   },
   "professionisti": [
     {
-      "foto": "",
+      "foto": "uploads/chatgpt-image-24-lug-2026-09_39_43.png",
       "fotoAlt": "Foto dell’Avv. Diego Cascasi",
-      "mappaLink": "https://www.google.com/maps/place/Piazzetta+Guastalla,+15,+20122+Milano",
+      "mappaLink": "https://maps.google.com/?q=Via+Donati+6+Milano",
       "iniziali": "DC",
       "sedeNome": "Sede di Milano",
       "pec": "diego.cascasi@milano.pecavvocati.it",
-      "indirizzo": "Via Piazzetta Guastalla 15, 20122 Milano",
+      "indirizzo": "Via Donati 6, 20146 Milano",
       "albo": "Iscritto all’Albo degli Avvocati di Milano dal 2007.",
       "paragrafi": [
         "L’Avv. Diego Cascasi opera a Milano dal 2007, anno della sua iscrizione all’Albo degli Avvocati di Milano. Lo Studio si rivolge a privati, professionisti, amministratori di condominio, imprese e società.",
@@ -348,7 +348,7 @@
       "indirizzo": "Via Italia 28, 20900 Monza",
       "albo": "Iscritta all’Albo dell’Ordine degli Avvocati di Monza dal 2008.",
       "paragrafi": [
-        "L’Avv. Cristina Bianchi è iscritta all’Albo dell’Ordine degli Avvocati di Monza dal 2008."
+        "L’Avv. Cristina Bianchi è iscritta all’Albo dell’Ordine degli Avvocati di Monza dal 2008 e presta l’attività professionale in tutto il diritto civile tout court, affrontando con particolare attenzione le tematiche del diritto di famiglia e dei minori, con un approccio fondato su ascolto, preparazione tecnica e capacità di accompagnare i clienti nelle situazioni più delicate."
       ],
       "nome": "Avv. Cristina Bianchi",
       "id": "cristina-bianchi",

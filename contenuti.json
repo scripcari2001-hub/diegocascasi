@@ -299,7 +299,7 @@
       },
       {
         "domanda": "Dove si trovano le sedi?",
-        "risposta": "Lo Studio dispone di una sede a Milano, in Via Donati 6, e di una sede a Monza, in Via Italia 28."
+        "risposta": "Lo Studio dispone di una sede a Milano, in Piazzetta Guastalla 15, e di una sede a Monza, in Via Italia 28."
       },
       {
         "domanda": "Come posso inviare i documenti?",
@@ -323,11 +323,11 @@
     {
       "foto": "uploads/chatgpt-image-24-lug-2026-09_39_43.png",
       "fotoAlt": "Foto dell’Avv. Diego Cascasi",
-      "mappaLink": "https://maps.google.com/?q=Via+Donati+6+Milano",
+      "mappaLink": "https://maps.google.com/?q=Piazzetta+Guastalla+15+Milano",
       "iniziali": "DC",
       "sedeNome": "Sede di Milano",
       "pec": "diego.cascasi@milano.pecavvocati.it",
-      "indirizzo": "Via Donati 6, 20146 Milano",
+      "indirizzo": "Piazzetta Guastalla 15, 20122 Milano",
       "albo": "Iscritto all’Albo degli Avvocati di Milano dal 2007.",
       "paragrafi": [
         "L’Avv. Diego Cascasi opera a Milano dal 2007, anno della sua iscrizione all’Albo degli Avvocati di Milano. Lo Studio si rivolge a privati, professionisti, amministratori di condominio, imprese e società.",

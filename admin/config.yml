@@ -7,10 +7,10 @@ backend:
 
 publish_mode: simple
 locale: it
-site_url: https://scripcari2001-hub.github.io/diegocascasi/
-display_url: https://scripcari2001-hub.github.io/diegocascasi/
+site_url: https://studiolegalecascasibianchi.it
+display_url: https://studiolegalecascasibianchi.it
 media_folder: "uploads"
-public_folder: "/diegocascasi/uploads"
+public_folder: "/uploads"
 
 editor:
   preview: false

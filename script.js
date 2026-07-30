@@ -225,9 +225,7 @@
         const initials = document.createElement("span");
         initials.setAttribute("aria-hidden", "true");
         initials.textContent = person.iniziali || "";
-        const caption = document.createElement("small");
-        caption.textContent = "Foto da inserire";
-        photo.append(initials, caption);
+        photo.append(initials);
       }
     }
 
@@ -399,7 +397,10 @@
     }
 
     setText(".btn-submit", contacts.formBottone);
-    setText(".form-note", contacts.formNota);
+    const formNote = qs(".form-note");
+    if (formNote && contacts.formNota && contacts.formNota.length > formNote.textContent.length) {
+      formNote.textContent = contacts.formNota;
+    }
     setText("#formSuccess h3", contacts.successTitolo);
     setText("#formSuccess p", contacts.successTesto);
 
@@ -410,8 +411,8 @@
       const faq = contacts.faq?.[index];
       if (!faq) return;
       const button = qs(".faq-question", item);
-      const icon = qs("span", button);
       if (button) {
+        const icon = qs("span", button);
         button.replaceChildren(document.createTextNode(faq.domanda));
         if (icon) button.append(icon);
       }
@@ -503,7 +504,7 @@
       const empty = field.type === "checkbox" ? !field.checked : !String(field.value).trim();
       if (empty) {
         valid = false;
-        showFieldError(field, field.type === "checkbox" ? "Devi accettare la Privacy Policy." : "Compila questo campo.");
+        showFieldError(field, field.type === "checkbox" ? "Devi confermare di aver letto la Privacy Policy." : "Compila questo campo.");
       }
     });
     const email = qs("#email", form);

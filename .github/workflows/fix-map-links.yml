@@ -1,0 +1,47 @@
+name: Corregge link Google Maps
+
+on:
+  push:
+    paths:
+      - ".github/workflows/fix-map-links.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix-map-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+
+      - name: Corregge i collegamenti delle due sedi
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              "https://maps.google.com/?q=Piazzetta+Guastalla+15+Milano": "https://www.google.com/maps/search/?api=1&query=Piazzetta%20Guastalla%2015%2C%2020122%20Milano%20MI%2C%20Italia",
+              "https://maps.google.com/?q=Via+Italia+28+Monza": "https://www.google.com/maps/search/?api=1&query=Via%20Italia%2028%2C%2020900%20Monza%20MB%2C%20Italia",
+          }
+
+          for filename in ("contatti.html", "contenuti.json"):
+              path = Path(filename)
+              text = path.read_text(encoding="utf-8")
+              original = text
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+              if text == original:
+                  raise SystemExit(f"Nessun collegamento da correggere in {filename}")
+              path.write_text(text, encoding="utf-8")
+              print(f"Aggiornato: {filename}")
+          PY
+
+      - name: Salva le modifiche e rimuove il workflow temporaneo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contatti.html contenuti.json
+          git rm .github/workflows/fix-map-links.yml
+          git commit -m "Corregge i link Google Maps delle sedi di Milano e Monza"
+          git push

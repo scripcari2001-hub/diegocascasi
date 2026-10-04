@@ -1,36 +1,29 @@
-name: Correggi barra contatti mobile
+name: Fix mobile contact bar
 
 on:
   push:
     paths:
-      - ".github/workflows/fix-mobile-contact-bar.yml"
+      - '.github/workflows/fix-mobile-contact-bar.yml'
 
 permissions:
   contents: write
 
 jobs:
-  fix-mobile-bar:
+  fix:
     runs-on: ubuntu-latest
     steps:
-      - name: Scarica il repository
-        uses: actions/checkout@v4
-
-      - name: Stabilizza la barra fissa su mobile
+      - uses: actions/checkout@v4
+      - name: Append mobile fix
+        shell: bash
         run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          path = Path('style.css')
-          text = path.read_text(encoding='utf-8')
-          marker = '/* Stabilizzazione barra contatti mobile */'
-          block = r'''
+          if ! grep -q 'Stabilizzazione barra contatti mobile' style.css; then
+            cat >> style.css <<'EOF'
 
 /* Stabilizzazione barra contatti mobile */
 @media (max-width:760px) {
   body {
     padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
   }
-
   .mobile-contact-bar {
     position: fixed !important;
     top: auto !important;
@@ -41,34 +34,27 @@ jobs:
     min-height: 0;
     height: calc(62px + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform;
     isolation: isolate;
   }
-
   .mobile-contact-bar a {
     height: 62px;
   }
 }
-'''
-          if marker not in text:
-              text = text.rstrip() + block + '\n'
-              path.write_text(text, encoding='utf-8')
-          PY
-
-      - name: Salva la correzione
+EOF
+          fi
+      - name: Commit fix
+        shell: bash
         run: |
           if git diff --quiet; then
-            echo "Nessuna modifica necessaria"
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add style.css
-          git commit -m "Stabilizza la barra contatti su mobile"
+          git commit -m 'Stabilizza la barra contatti su mobile'
           git push
-
-# trigger

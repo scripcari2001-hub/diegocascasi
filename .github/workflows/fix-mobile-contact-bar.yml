@@ -70,3 +70,5 @@ jobs:
           git add style.css
           git commit -m "Stabilizza la barra contatti su mobile"
           git push
+
+# trigger
